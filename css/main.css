@@ -24,7 +24,13 @@ html {
   background-color: rgb(28, 30, 33);
 }
 
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
 .topnav {
+  position: relative;
   background-color: rgba(0, 0, 0, 0.13);
   overflow: hidden;
   font-family: 'Indie Flower', cursive;
@@ -45,7 +51,7 @@ html {
 .active {
   background-color: #4CAF50;
   color: white;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
@@ -55,7 +61,8 @@ html {
 
 /* Add a dark background on topnav links */
 .topnav a:hover {
-  background-color: rgb(41, 41, 41);
+  /* background-color: rgb(41, 41, 41); */
+  font-weight: bold;
   color: white;
 }
 
@@ -65,29 +72,63 @@ html {
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  grid-template-columns: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
   grid-gap: 1.5rem;
-  width: 80%;
+  width: 100%;
   overflow: hidden;
   
 }
 
 .container {
+  align-items: center;
+  justify-content: center;
+  margin: auto;
   background-color: rgb(43, 46, 51);
   border-radius: 0.5rem;
   padding: 1em;
-  width: 95;
+  width: 50%;
 }
 
 /* CSS GRID END */
 
 p {
   font-size: 1em;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+table, th, td {
+  font-weight: lighter;
+  border: 1px solid rgba(0, 0, 0, 0.300);
+  border-collapse: collapse;
+  border-spacing: 0;
+  overflow-x: auto;
+}
+
+#tableHeader {
+  background-color: #4CAF50;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px;
+}
+
+th {
+  height: 3em;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(54, 58, 65);
+}
+
+a {
+  color: brown;
 }
 
 /*
@@ -392,10 +433,15 @@ textarea {
     align-items: center;
     justify-content: center;
     margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
     grid-gap: 1.5rem;
-    width: 80%;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    width: 100%;
+  }
+
+  .container {
+    width: 75%;
+    overflow: hidden;
   }
 }
 /* Smartphones (portrait and landscape) ----------- */
