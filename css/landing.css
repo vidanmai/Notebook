@@ -1,0 +1,38 @@
+#landing {
+    width: 85%;
+    align-items: center;
+    margin: auto;
+}
+
+.card {
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: rgba(43, 46, 51, 0.671);
+    border-radius: 0.5rem;
+    padding: 1em;
+    width: 50%;
+    text-align: center;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+/* Smartphones Less than 600 pixels wide ----------- */
+@media screen and (max-width: 600px) {
+    #landing {
+        display: none;
+    }
+
+    .grid-container {
+        display: block;
+    }
+    
+    .container {
+        display: block;
+      }
+  }
