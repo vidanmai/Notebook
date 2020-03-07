@@ -1,38 +1,103 @@
-#landing {
-    width: 85%;
-    align-items: center;
-    margin: auto;
-}
-
-.card {
+.grid-container {
+    grid-template-columns: auto auto;
     align-items: center;
     justify-content: center;
     margin: auto;
-    background-color: rgba(43, 46, 51, 0.671);
-    border-radius: 0.5rem;
-    padding: 1em;
-    width: 50%;
-    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    grid-gap: 1.5rem;
+    width: 100%;
   }
 
-  .centered {
+  .container {
+    width: 85%;
+    overflow: hidden;
+  }
+
+  #left-container {
+      height: 80vh;
+  }
+
+  #left-container img {
+      height: 60vh;
+  }
+
+  p {
+      font-size: 1.5em;
+  }
+
+  @media screen and (max-width: 600px) {
+
+    #left-container {
+        height: auto;
+    }
+  
+    #left-container img {
+        height: auto;
+    }
+
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+
+  .topnav a:first-child:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive a.icon {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    right: 0;
+    top: 0;
   }
 
-/* Smartphones Less than 600 pixels wide ----------- */
-@media screen and (max-width: 600px) {
-    #landing {
-        display: none;
-    }
-
-    .grid-container {
-        display: block;
-    }
-    
-    .container {
-        display: block;
-      }
+  .active {
+    background-color: rgba(0, 0, 0, 0);
   }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .topnav {
+    background-color: #4CAF50;
+  }
+
+  .topnav.responsive {
+    background-color: rgba(0, 0, 0, 0.13);
+    position: relative;
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  .topnav.responsive a:first-child {
+    background-color: #4CAF50;
+  }
+
+  /* GRID CONTAINERS */
+
+  .grid-container {
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    grid-gap: 1.5rem;
+    width: 100%;
+  }
+
+  .container {
+    width: 75%;
+    overflow: hidden;
+  }
+}
