@@ -32,6 +32,48 @@ html {
   height: auto;
 }
 
+.flow-text {
+  font-size: 1.2rem;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.collapsible {
+  border: #000;
+}
+
+.collapsible-header {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.collapsible-body {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.collection .collection-item {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.collection a.collection-item {
+  color: rgb(255, 255, 255);
+}
+
+.collection .collection-item.active {
+  background-color: #43a047;
+  color: #eafaf9;
+}
+
+.collection a.collection-item:not(.active):hover {
+  background-color: #43a047;
+}
+
+
 .topnav {
   position: relative;
   background-color: rgba(0, 0, 0, 0.13);
@@ -54,7 +96,7 @@ html {
 }
 
 /* Add an active class to highlight the current page */
-.active {
+.active-tab {
   background-color: #4CAF50;
   color: white;
   font-weight: bold;
@@ -85,16 +127,6 @@ html {
   width: 100%;
   overflow: hidden;
   
-}
-
-.container {
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  background-color: rgb(43, 46, 51);
-  border-radius: 0.5rem;
-  padding: 1em;
-  width: 50%;
 }
 
 /* CSS GRID END */
@@ -459,11 +491,6 @@ textarea {
     margin-bottom: 2em;
     grid-gap: 1.5rem;
     width: 100%;
-  }
-
-  .container {
-    width: 75%;
-    overflow: hidden;
   }
 }
 /* Smartphones (portrait and landscape) ----------- */

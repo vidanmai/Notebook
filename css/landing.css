@@ -1,17 +1,20 @@
+#landing {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background: rgb(244, 8, 0);
+  background: -moz-linear-gradient(127deg, rgba(244, 8, 0, 1) 0%, rgba(241, 96, 48, 1) 48%, rgba(240, 62, 185, 1) 100%);
+  background: -webkit-linear-gradient(127deg, rgba(244, 8, 0, 1) 0%, rgba(241, 96, 48, 1) 48%, rgba(240, 62, 185, 1) 100%);
+  background: linear-gradient(127deg, rgba(244, 8, 0, 1) 0%, rgba(241, 96, 48, 1) 48%, rgba(240, 62, 185, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f40800", endColorstr="#f03eb9", GradientType=1);
+}
+
 .grid-container {
-    grid-template-columns: auto auto;
+    grid-template-columns: 2fr 2fr;
     align-items: center;
     justify-content: center;
     margin: auto;
-    margin-top: 2em;
-    margin-bottom: 2em;
     grid-gap: 1.5rem;
     width: 100%;
-  }
-
-  .container {
-    width: 85%;
-    overflow: hidden;
   }
 
   #left-container {
@@ -19,7 +22,11 @@
   }
 
   #left-container img {
-      height: 60vh;
+      height: 75vh;
+  }
+
+  #right-container {
+    opacity: 0.95;
   }
 
   p {
@@ -27,6 +34,11 @@
   }
 
   @media screen and (max-width: 600px) {
+
+    h1 {
+      font-size: 9.2vw;
+      word-wrap: break-word;
+    }
 
     #left-container {
         height: auto;
@@ -85,13 +97,18 @@
 
   /* GRID CONTAINERS */
 
+  #landing {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
   .grid-container {
     grid-template-columns: auto;
     align-items: center;
     justify-content: center;
     margin: auto;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     grid-gap: 1.5rem;
     width: 100%;
   }

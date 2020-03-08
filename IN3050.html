@@ -9,7 +9,10 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
-
+  <!--Google icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Materialize css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 
@@ -20,20 +23,45 @@
   <div class="topnav" id="myTopnav">
     <a href="index.html" id="logo">Vi Dan</a>
     <a href="#projects">Projects 🚀</a>
-    <a href="courses.html" class="active">Courses 📚</a>
+    <a href="courses.html" class="active-tab">Courses 📚</a>
     <a href="#blog ">Blog 🤳</a>
     <a href="#about">About 👨‍💻</a>
     <a href="#contact">Contact 📧</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
-
-  <div class="grid-container">
-    <div class="container">
-      <h1>IN3050! 😃</h1>
-      <img src="https://cdn.appenresources.com/wp-content/uploads/2019/10/iStock-1181216327-750x422.jpg"
-        alt="source: https://cdn.appenresources.com/wp-content/uploads/2019/10/iStock-1181216327-750x422.jpg" class="responsive box">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, officia. Dignissimos corporis eligendi odit dolorum earum. Itaque, ullam mollitia. Labore a velit blanditiis ab itaque nulla maxime rerum eligendi ullam?</p>
+  
+  <!-- Page layout -->
+  <!-- Dropdown button -->
+  <ul id="dropdown" class="dropdown-content">
+    <li><a href="#">Close</a></li>
+    <li><a href="IN3050.html">IN3050</a></li>
+    <li><a href="search-and-optimization.html">Search and optimization</a></li>
+    <li><a href="#!">Evolutionary Algorithms</a></li>
+    <li><a href="#!">Supervised classification</a></li>
+    <li><a href="#!">Linear regression</a></li>
+    <li><a href="logistic_regression.html">Logistic regression</a></li>
+    <li><a href="#!">Linear classifiers</a></li>
+  </ul>
+  <a class="btn dropdown-trigger grey darken-4" href="" data-target="dropdown">Subjects<i
+      class="material-icons right">arrow_drop_down</i></a>
+  
+  <div class="row">
+    <div class="col s12 red">
+      <p>s12</p>
     </div>
+    <div class="col s12 m4 l3 blue">
+      <p>s12 m4</p>
+    </div>
+    <div class="col s12 m4 l6 green">
+      <p>s12 m4</p>
+    </div>
+    <div class="col s12 m4 l3 yellow">
+      <p>s12 m4</p>
+    </div>
+  </div>
+  <div class="container">
+    <h2>IN3050</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi facilis tempora laudantium, accusamus exercitationem ratione voluptas perferendis impedit amet? Impedit maiores facilis possimus ab voluptatibus. Expedita quos atque labore aperiam?</p>
   </div>
   <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -45,8 +73,6 @@
   <script>
     window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')
   </script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
@@ -60,6 +86,10 @@
     ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
+  <!-- Materialize js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -9,7 +9,9 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
-
+  <!--Google icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 
@@ -20,35 +22,66 @@
   <div class="topnav" id="myTopnav">
     <a href="index.html" id="logo">Vi Dan</a>
     <a href="#projects">Projects 🚀</a>
-    <a href="courses.html" class="active">Courses 📚</a>
+    <a href="courses.html" class="active-tab">Courses 📚</a>
     <a href="#blog ">Blog 🤳</a>
     <a href="#about">About 👨‍💻</a>
     <a href="#contact">Contact 📧</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
-
-  <div class="grid-container">
-    <div class="container">
-      <h1>Courses! 😃</h1>
-      <p>Here is an overview of courses</p>
-      <table>
-        <tr id="tableHeader">
-          <th>Course</th>
-          <th>Name</th>
-          <th>Link</th>
-        </tr>
-        <tr>
-          <td>IN1010</th>
-          <td>Objektorientert programmering</th>
-          <td><a href="IN1010.html">Theory</a></th>
-        </tr>
-        <tr>
-          <td>IN3050</th>
-          <td>Introduksjon til kunstig intelligens og maskinlæring</th>
-          <td><a href="IN3050.html">Theory</a></th>
-        </tr>
-      </table>
+  <div class="container">
+    <br>
+    <h3 class="card teal darken-2">Courses</h3>
+    <br>
+    <div class="row">
+      <div class="col s12 m3">
+        <a href="IN1010.html">
+          <div class="card grey darken-4">
+            <div class="card-image">
+              <img class="responsive-img" src="img/java.JPG">
+              <a href="IN1010.html" class="btn-floating halfway-fab waves-effect waves-light red"><i
+                  class="material-icons">keyboard_arrow_right</i></a>
+            </div>
+            <div class="card-content">
+              <p>IN1010 - teori</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col s12 m4">
+        <div class="card grey darken-4">
+          <a href="IN3050.html">
+            <div class="card-image">
+              <img class="responsive-img"
+                src="https://cdn.appenresources.com/wp-content/uploads/2019/10/iStock-1181216327-750x422.jpg">
+              <a href="IN3050.html" class="btn-floating halfway-fab waves-effect waves-light red"><i
+                  class="material-icons">keyboard_arrow_right</i></a>
+            </div>
+            <div class="card-content">
+              <p>IN3050 - teori</p>
+            </div>
+            </div>
+          </a>
+      </div>
     </div>
+
+    <table>
+      <tr id="tableHeader">
+        <th>Course</th>
+        <th>Name</th>
+        <th>Link</th>
+      </tr>
+      <tr>
+        <td>IN1010</th>
+        <td>Objektorientert programmering</th>
+        <td><a href="IN1010.html">Theory</a></th>
+      </tr>
+      <tr>
+        <td>IN3050</th>
+        <td>Introduksjon til kunstig intelligens og maskinlæring</th>
+        <td><a href="IN3050.html">Theory</a></th>
+      </tr>
+    </table>
+    <br>
   </div>
   <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
