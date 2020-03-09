@@ -84,6 +84,11 @@ html {
   font-family: 'Indie Flower', cursive;
 }
 
+#course-nav {
+  position: fixed;
+  width: 20vw;
+}
+
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;

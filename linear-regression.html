@@ -39,16 +39,16 @@
         <li><a href="search-and-optimization.html">Search and optimization</a></li>
         <li><a href="#!">Evolutionary Algorithms</a></li>
         <li><a href="#!">Supervised classification</a></li>
-        <li><a href="#!">Linear regression</a></li>
-        <li><a href="#!">Logistic regression</a></li>
+        <li><a href="linear-regression.html">Linear regression</a></li>
+        <li><a href="logistic_regression.html">Logistic regression</a></li>
         <li><a href="#!">Linear classifiers</a></li>
       </ul>
       <a class="btn dropdown-trigger grey darken-4" href="" data-target="dropdown">Subjects<i
           class="material-icons right">arrow_drop_down</i></a>
     </div>
     <!-- Side course navigation -->
-    <div class="col s12 m4 l3 hide-on-med-and-down">
-      <div class="collection">
+    <div class="col s12 m4 l3 hide-on-small-only">
+      <div class="collection" id="course-nav">
         <a href="IN3050.html" class="collection-item">IN3050</a>
         <a href="search-and-optimization.html" class="collection-item">Search and optimization</a>
         <a href="#!" class="collection-item">Evolutionary Algorithms</a>
@@ -61,12 +61,51 @@
     <!-- Middle content -->
     <div class="col s12 m4 l6">
       <h3 class="center-align">Linear Regression</h3>
-      <img
-        src="https://i0.wp.com/dataaspirant.com/wp-content/uploads/2016/04/logisticregression.png?resize=768%2C384&ssl=1"
-        class="responsive-img center" alt="">
-      <p class="flow-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi optio autem voluptatem? Velit enim deserunt dolorum doloribus numquam ipsa repudiandae suscipit temporibus atque! A est incidunt eaque quasi, pariatur quibusdam!
-      </p>
+        <img
+          src="https://miro.medium.com/max/640/1*LEmBCYAttxS6uI6rEyPLMQ.png"
+          class="responsive-img center" alt="">
+        <div class="section">
+          <p class="flow-text">
+            In Machine Learning, a fundamental algorithm to start with is a linear regression algorithm. This provides
+            a
+            good base to build on and learn other ML algorithms.
+          </p>
+        </div>
+        <div class="section">
+            <h5>What is linear regression?</h5>
+            <p class="flow-text">
+                The objective of a linear regression model is to find a relationship between one or more features (independent variables) and a continuous target variable (dependent variable). When there is only feature it is called Uni-variate Linear Regression and if there are multiple features, it is called
+                Multiple Linear Regression.
+            </p>
+        </div>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Linear_regression.svg/1200px-Linear_regression.svg.png"
+          class="responsive-img center" alt="" style=background-color:aliceblue;>
+        <div class="section">
+            <p class="flow-text">
+                Simple linear regression is a type of regression analysis where the number of indepedent variables is one and there is a linear relationship between the indepedent(x) and dependent(y) variable. The red line in the above graph is referred to as the best fit straight line. Based on the given data points, we try to plot a line that models the points the best. The line can be modelled based on the linear equation shown below.
+            </p>
+        </div>
+        <blockquote>
+            <p class="flow-text center">
+              y = a_0 + a_1 * x
+            </p>
+        </blockquote>
+        <div class="section">
+            <p class="flow-text">The motive of the linear regression algorithm is to find the best values for a_0 and a_1. Before we move on to the algorithm, we must understand important concepts for linear regression.</p>
+        </div>
+        <br>
+        <div class="section">
+            <h5>Cost function</h5>
+            <p class="flow-text">
+                The cost function helps us to figure out the best possible values for a_0 and a_1 which would provide the <u>best line</u> for the data points. Since we want the best values for a_0 and a_1, we convert this search problem into a minimization problem where we would like to minimize the error between the <u>predicted value</u> and the <u>actual value</u>.
+            </p>
+        </div>
+        <img src="https://miro.medium.com/max/486/1*wQCSNJ486WxL4mZ3FOYtgw.png" class="responsive-img center" alt="">
+        <p class="center">Minimization and Cost function</p>
+
+        <div class="section">
+        </div>
     </div>
     <!-- Right side content -->
     <div class="col s12 m4 l3 red">
