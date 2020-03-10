@@ -80,7 +80,7 @@
         </div>
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Linear_regression.svg/1200px-Linear_regression.svg.png"
-          class="responsive-img center" alt="" style=background-color:aliceblue;>
+          class="responsive-img center" alt="" style=background-color:white;>
         <div class="section">
             <p class="flow-text">
                 Simple linear regression is a type of regression analysis where the number of indepedent variables is one and there is a linear relationship between the indepedent(x) and dependent(y) variable. The red line in the above graph is referred to as the best fit straight line. Based on the given data points, we try to plot a line that models the points the best. The line can be modelled based on the linear equation shown below.
@@ -103,8 +103,39 @@
         </div>
         <img src="https://miro.medium.com/max/486/1*wQCSNJ486WxL4mZ3FOYtgw.png" class="responsive-img center" alt="">
         <p class="center">Minimization and Cost function</p>
-
         <div class="section">
+          We choose the above function to minimize. The difference between the <u>predicted values</u> and <u>ground truth values</u> measures the error difference. We square the error difference (2 in exponent) and sum over all data points and divide that value by total number of data points. This cost function is also known as the <strong>Mean Squared Error (MSE) function</strong>. We will use this MSE function to change the values of a_0 and a_1 such that the MSE value settles at the minima.
+        </div>
+        <div class="section">
+          <h5>Gradient Descent</h5>
+          <p class="flow-text">
+            The next important concept needed to understand linear regression is gradient descent. Gradient descent is a method of updating a_0 and a_1 to reduce the cost function (MSE). The idea is that we start with some values for a_0 and a_1 and then we change these values iteratively to reduce the cost. Gradient descent helps us on how to change the values.
+          </p>
+        </div>
+        <img src="https://miro.medium.com/proxy/0*QwE8M4MupSdqA3M4.png" alt="" class="responsive-img center">
+        <div class="section">
+          <p class="flow-text">
+            To draw an analogy, imagine a u-curve or a pit in the shape of U and you are standing at the topmost point in the pit. Your objective is to reach the bottom of the pit. The catch is that you can only take a discrete number of steps to reach the bottom. If you decide to take one step at a time, you would eventually reach the bottom of the pit but this would take a longer time. If you choose to take longer steps each time, you would reach sooner but, there is a chance that you might overshoot the bottom of the pit and not exactly the bottom. In the gradient descent algorithm, the number of steps you take is the <u>learning rate</u>. This decides on how fast the algorithm converges to the minima.
+          </p>
+        </div>
+        <img src="https://miro.medium.com/max/926/0*GrBkYv2vodl_swFI.png" alt="" class="responsive-img center">
+        <p class="center">Convex vs non-convex function</p>
+        <div class="section">
+          <p class="flow-text">
+            Sometimes the cost function can be a non-convex fnction where you could settle at a local minima, but for linear regression, it is always a convex function.
+          </p>
+        </div>
+        <div class="section">
+          <p class="flow-text">
+            <h5>How do we use gradient descent?</h5>
+            <p class="flow-text">To update a_0 and a_1, we take gradients from the cost function. To find these gradients, we take <u>partial derivatives</u> with resepct to a_0 and a_1. To understand how partial derivatives are found below, it requires some calculus. The partial derivatives are the gradients and they are used to update the values of a_0 and a_1.</p>
+          </p>
+        </div>
+        <div class="section">
+          <h5>Conclusion</h5>
+          <p class="flow-text">
+            Linear regression is an algorithm that is basic in Machine Learning. We will later see other methods/algorithms for achieving a plot that models the data points the best.
+          </p>
         </div>
     </div>
     <!-- Right side content -->
