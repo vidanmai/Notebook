@@ -151,7 +151,8 @@ html {
   margin-bottom: 1.2em;
 }
 
-img {
+.responsive-img {
+  margin-top: 1em;
 }
 
 p {
