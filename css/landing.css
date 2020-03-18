@@ -62,9 +62,10 @@
   .btn {
     background-color: red;
     width: 70%;
-    font-size: 2em;
+    font-size: 1.5em;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
   }
-
   .btn:hover {
     background-color: #4CAF50;
   }
@@ -100,5 +101,42 @@
     .grid-container {
       display: none;
     }
+
+    .course-grid {
+      display: none;
+    }
+
+}
+
+@media screen and (max-height: 800px) {
+
+  .container {
+    width: 100%;
+    padding-top: 1em;
+  }
+
+  .container img {
+    height: 30vh;
+    width: auto;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+  .course-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2.5rem;
+    padding-right: 2rem;
+  }
+
+  .card {
+    margin: 0;
+    width: 100%;
+    height: 35vh;
+  }
+
+  .card img {
+    height: 20vh;
+  }
 
 }

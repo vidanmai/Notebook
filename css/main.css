@@ -50,13 +50,13 @@ html {
   height: auto;
   font-family: 'Roboto';
   font-weight: bold;
-  padding-left: 4em;
   margin-bottom: 5vh;
 }
 
 .card {
-  margin: 10px;
   width: 70%;
+  margin-left: auto;
+  margin-right: auto;
   transition: all .15s ease-in-out;
 }
 
@@ -115,6 +115,8 @@ html {
   font-family: 'Indie Flower', cursive;
   padding-left: 50px;
   padding-right: 50px;
+  letter-spacing: 5px;
+  font-size: 1.3rem;
 }
 
 #main {
@@ -134,27 +136,28 @@ html {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 1.3em;
   margin: 10px;
 }
 
-/* Add an active class to highlight the current page */
 .active-tab {
   border: 1px solid #43a047;
-  color: white;
-  font-weight: bold;
 }
+
+.topnav a:hover {
+  color: #ffffff;
+}
+
+.active-tab:hover {
+  border: 1px solid deeppink;
+  transition: border 0.25s ease-in-out;
+}
+
+/* Add an active class to highlight the current page */
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
   display: none;
-}
-
-/* Add a dark background on topnav links */
-.topnav a:hover {
-  /* background-color: rgb(41, 41, 41); */
-  font-weight: bold;
-  color: white;
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
@@ -464,14 +467,19 @@ textarea {
     page-break-after: avoid;
   }
 }
+
 /* Smartphones Less than 600 pixels wide ----------- */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px), (max-height: 800px) {
   .topnav {
     position: relative;
   }
 
   #main {
     padding-top: 0;
+  }
+
+  .topnav.responsive #logo {
+    border-bottom: 1px solid #4CAF50;
   }
 
   .container {
@@ -488,8 +496,8 @@ textarea {
     float: right;
     right: 0;
     top: 0;
-    padding-top: 1em;
-    padding-right: 1em;
+    padding-top: 1.5rem;
+    padding-right: 1.5rem;
   }
   .topnav.responsive a {
     float: none;
@@ -507,7 +515,25 @@ textarea {
   .course-grid {
     grid-template-columns: auto;
   }
+
+  .card {
+    height: 80%;
+    width: 75%;
+  }
 }
+
+@media screen and(min-width: 450px) and (max-height: 750px) {
+
+  .course-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card {
+    height: 80%;
+    width: 75%;
+  }
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-width : 320px) and (max-width : 480px) {
   /* Styles */
