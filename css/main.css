@@ -42,6 +42,33 @@ html {
   margin-right: auto;
 }
 
+.course-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+  font-family: 'Roboto';
+  font-weight: bold;
+  padding-left: 4em;
+  margin-bottom: 5vh;
+}
+
+.card {
+  margin: 10px;
+  width: 70%;
+  transition: all .15s ease-in-out;
+}
+
+.card img {
+  height: 20vh;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: all .1s ease-in-out;
+}
+
 .collapsible {
   border: #000;
 }
@@ -73,22 +100,25 @@ html {
   background-color: #43a047;
 }
 
-
 .topnav {
   position: fixed;
   width: 100%;
   top: 0;
-  background-color: rgb(19, 20, 22);
+  background-color: rgb(28, 30, 33);
   overflow: hidden;
   z-index: 100;
+  border-bottom: solid 1px #313131;
+  padding: 10px;
 }
 
 #logo {
   font-family: 'Indie Flower', cursive;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 #main {
-  margin-top: 10vh;
+  padding-top: 15vh;
 }
 
 #course-nav {
@@ -105,11 +135,12 @@ html {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 1.5em;
+  margin: 10px;
 }
 
 /* Add an active class to highlight the current page */
 .active-tab {
-  background-color: #4CAF50;
+  border: 1px solid #43a047;
   color: white;
   font-weight: bold;
 }
@@ -128,21 +159,6 @@ html {
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 
-/* CSS Grid container */
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  grid-gap: 1.5rem;
-  width: 100%;
-  overflow: hidden;
-  
-}
-
-/* CSS GRID END */
-
 .box {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
   0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -153,6 +169,11 @@ html {
 
 .responsive-img {
   margin-top: 1em;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
+  padding: 10px;
 }
 
 p {
@@ -445,69 +466,46 @@ textarea {
 }
 /* Smartphones Less than 600 pixels wide ----------- */
 @media screen and (max-width: 600px) {
+  .topnav {
+    position: relative;
+  }
+
+  #main {
+    padding-top: 0;
+  }
+
+  .container {
+    margin-top: 0;
+  }
 
   .topnav a:not(:first-child) {
     display: none;
   }
 
-  .topnav a:first-child:hover {
-    background-color: #4CAF50;
-    color: white;
-  }
-
   .topnav a.icon {
-    float: right;
-    display: block;
-  }
-
-  .topnav.responsive a.icon {
     position: absolute;
+    display: block;
+    float: right;
     right: 0;
     top: 0;
+    padding-top: 1em;
+    padding-right: 1em;
   }
-
-  .active {
-    background-color: rgba(0, 0, 0, 0);
-  }
-
   .topnav.responsive a {
     float: none;
     display: block;
     text-align: left;
   }
 
-  .topnav {
-    background-color: #4CAF50;
-  }
-
-  #main {
-    margin-top: 10vh;
-  }
-
   .topnav.responsive {
-    background-color: rgba(0, 0, 0, 0.13);
     position: relative;
-    float: none;
     display: block;
     width: 100%;
     text-align: left;
   }
 
-  .topnav.responsive a:first-child {
-    background-color: #4CAF50;
-  }
-
-  /* GRID CONTAINERS */
-
-  .grid-container {
+  .course-grid {
     grid-template-columns: auto;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    grid-gap: 1.5rem;
-    width: 100%;
   }
 }
 /* Smartphones (portrait and landscape) ----------- */

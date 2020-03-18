@@ -1,32 +1,72 @@
-#landing {
-  margin-top: 10vh;
-  margin-bottom: 1em;
-  background: rgb(244, 8, 0);
-  background: -moz-linear-gradient(127deg, rgba(244, 8, 0, 1) 0%, rgba(241, 96, 48, 1) 48%, rgba(240, 62, 185, 1) 100%);
-  background: -webkit-linear-gradient(127deg, rgba(244, 8, 0, 1) 0%, rgba(241, 96, 48, 1) 48%, rgba(240, 62, 185, 1) 100%);
-  background: linear-gradient(127deg, rgba(244, 8, 0, 1) 0%, rgba(241, 96, 48, 1) 48%, rgba(240, 62, 185, 1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f40800", endColorstr="#f03eb9", GradientType=1);
-}
+
+/* Indie Flower font */
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+/*Roboto font */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 .grid-container {
-    grid-template-columns: 2fr 2fr;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    grid-gap: 1.5rem;
-    width: 100%;
-  }
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+  background-color:#e2dac1;
+  font-family: 'Indie Flower',
+  cursive;
+  font-weight: bold;
+}
+
+#mobileLanding {
+  margin-top: 20vh;
+  display: none;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+  font-family: 'Roboto';
+  font-weight: bold;
+  padding-left: 4em;
+}
+
+#main {
+  margin-top: 18vh;
+}
+
+.container {
+  width: 60%;
+}
 
   #left-container {
-      height: 80vh;
+    width: 100%;
+    background-color: #101357;
+    padding-top: 18vh;
   }
 
   #left-container img {
-      height: 75vh;
+    width: 50%;
   }
 
   #right-container {
-    opacity: 0.95;
+    width: 100%;
+  }
+
+  #landing-img {
+    margin-top: 18vh;
+    width: 50%;
+  }
+
+  .btn {
+    background-color: red;
+    width: 70%;
+    font-size: 2em;
+  }
+
+  .btn:hover {
+    background-color: #4CAF50;
   }
 
   p {
@@ -35,86 +75,30 @@
 
   @media screen and (max-width: 600px) {
 
-    h1 {
-      font-size: 9.2vw;
-      word-wrap: break-word;
+    #mobileLanding {
+      display: block;
+      font-size: medium;
+      margin-top: 0;
+      padding-top: 0;
+      padding-bottom: 2em;
+      width: 80%;
     }
 
-    #left-container {
-        height: auto;
-    }
-  
-    #left-container img {
-        height: auto;
+    .container {
+      width: 100%;
+      padding-top: 1em;
     }
 
-  .topnav a:not(:first-child) {
-    display: none;
-  }
+    .container img {
+      height: 30vh;
+      width: auto;
+    }
 
-  .topnav a:first-child:hover {
-    background-color: #4CAF50;
-    color: white;
-  }
+    h2 {
+      font-size: 2em;
+    }
+    .grid-container {
+      display: none;
+    }
 
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-
-  .topnav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  .active {
-    background-color: rgba(0, 0, 0, 0);
-  }
-
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-
-  .topnav {
-    background-color: #4CAF50;
-  }
-
-  .topnav.responsive {
-    background-color: rgba(0, 0, 0, 0.13);
-    position: relative;
-    float: none;
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
-
-  .topnav.responsive a:first-child {
-    background-color: #4CAF50;
-  }
-
-  /* GRID CONTAINERS */
-
-  #landing {
-    margin-top: 10vh;
-    margin-bottom: 0;
-  }
-
-  .grid-container {
-    grid-template-columns: auto;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    grid-gap: 1.5rem;
-    width: 100%;
-  }
-
-  .container {
-    width: 75%;
-    overflow: hidden;
-  }
 }
