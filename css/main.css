@@ -120,7 +120,7 @@ html {
 }
 
 #main {
-  padding-top: 15vh;
+  padding-top: 13vh;
 }
 
 #course-nav {
@@ -146,11 +146,7 @@ html {
 
 .topnav a:hover {
   color: #ffffff;
-}
-
-.active-tab:hover {
-  border: 1px solid deeppink;
-  transition: border 0.25s ease-in-out;
+  font-weight: bold;
 }
 
 /* Add an active class to highlight the current page */
@@ -160,7 +156,18 @@ html {
   display: none;
 }
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+.dropdown-content li>a,
+.dropdown-content li>span {
+  color: #4CAF50;
+}
+
+.dropdown-content {
+  background-color: #202020;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(0, 0, 0, 0.700);
+}
 
 .box {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),

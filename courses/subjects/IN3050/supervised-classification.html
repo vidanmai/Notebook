@@ -32,7 +32,7 @@
 
   <!-- Page layout -->
   <div class="row" id="main">
-    <div class="col s12 hide-on-large-only">
+    <div class="col s12 hide-on-large-only center">
       <ul id="dropdown" class="dropdown-content">
         <li><a href="#">Close</a></li>
         <li><a href="../../in3050.html">IN3050</a></li>
@@ -47,7 +47,7 @@
           class="material-icons right">arrow_drop_down</i></a>
     </div>
     <!-- Side course navigation -->
-    <div class="col s12 m4 l3 hide-on-small-only">
+    <div class="col s12 m3 l3 hide-on-small-only">
       <div class="collection" id="course-nav">
         <a href="../../in3050.html" class="collection-item">IN3050</a>
         <a href="search-and-optimization.html" class="collection-item">Search and optimization</a>
@@ -59,7 +59,7 @@
       </div>
     </div>
     <!-- Middle content -->
-    <div class="col s12 m4 l6">
+    <div class="col s12 m6 l6 middle-content">
       <h3 class="center-align">Supervised classification</h3>
       <img src="https://miro.medium.com/max/977/1*DjUEt5--t6lCjYG_MuZlLg.png" class="responsive-img center" alt="">
       <br>
@@ -122,7 +122,7 @@
       </div>
       </div>
       <div class="section">
-        <h5>Machine learning in python</h5>
+        <h5 class="center">Machine learning in python</h5>
         <p class="flow-text">To do machine learning, we need data. To make it simple, we use scikit-learn to construct a
           synthetic dataset with:</p>
         <ul class="list flow-text">
@@ -133,7 +133,7 @@
         </ul>
       </div>
       <div class="section">
-        <h5>ML algorithms and visualization</h5>
+        <h5 class="center">ML algorithms and visualization</h5>
         <p class="flow-text">To illustrate ML algorithms, it is easiest to use: </p>
         <ul class="list flow-text">
           <li>2 numerical features</li>
@@ -150,10 +150,47 @@
         </ol>
       </div>
       <div class="section">
-        <h5>Distance</h5>
+        <h5 class="center">Distance</h5>
         <p class="flow-text">The assumption is based on points that are close together in feature space are similar. There are some notion of distance in <u>feature space</u>, normally Euclidean distance (L2).
         <img src="img/feature_space.JPG" alt="" class="responsive-img center">
         </p>
+      </div>
+      <div class="section">
+        <h5 class="center">More classes</h5>
+        <p class="flow-text">
+          A binary classifier with odd <i>k</i> always reaches a decision. With more than 2 classes, there might be a draw.
+          <br>Possible ways out:
+          <ul>
+            <li>Alt. 1: Back off to k-1, etc. until there is a majority class</li>
+            <li>Alt. 2: Weight classes by distance from target, take the weighted max.</li>
+          </ul>
+        </p>
+      </div>
+      <div class="section">
+        <h6><u>kNN with varying <i>k</i></u></h6>
+        <p class="flow-text">Don't train on test data. It can be legitimate to test performance on train data and compare to test data for overfitting.</p>
+        <br>
+        The best <i>k</i> differ from task to task.
+      </div>
+      <div class="section">
+        <h6><u>Determine <i>k</i></u></h6>
+        To determine the best <i>k</i> for a specific task, split your development set in:
+        <ul>
+          <li>One set for training</li>
+          <li>One set for tuning <i>k</i></li>
+        </ul>
+        Test for various ks on the tuning set. Choose the best performing k for your model. When your have determined <i>k</i>, you may test with this <i>k</i> on the final test set.
+        <br>Dont use the same set for tuning as for final evaluation.
+      </div>
+      <div class="section">
+        <h5>Perceptron</h5>
+        <ol>
+          <li>A set of inputs: x_1, x_2, ... x_m</li>
+          <li>A set of weights: w_1, w_2, ... w_m</li>
+          <li>An adder</li>
+          <li>An activation function</li>
+          <img src="img/activation_function.JPG" alt="" class="responsive-img">
+        </ol>
       </div>
       <div class="section">
         <h5><strong>Conclusion</strong></h5>
@@ -163,7 +200,7 @@
       </div>
     </div>
     <!-- Right side content -->
-    <div class="col s12 m4 l3 red">
+    <div class="col s12 m2 l3 red">
       <p>s12 m4</p>
     </div>
   </div>
@@ -192,8 +229,8 @@
   <script src="https://www.google-analytics.com/analytics.js" async></script>
   <!-- Materialize js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+  <script src="../../../js/plugins.js"></script>
+  <script src="../../../js/main.js"></script>
 </body>
 
 </html>
