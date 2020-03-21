@@ -125,7 +125,7 @@ html {
 
 #course-nav {
   position: fixed;
-  width: 20vw;
+  width: 15wv;
 }
 
 /* Style the links inside the navigation bar */
@@ -136,7 +136,7 @@ html {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 1.3em;
+  font-size: 1.2em;
   margin: 10px;
 }
 
@@ -181,9 +181,9 @@ html {
   margin-top: 1em;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
-  padding: 10px;
+  padding: 1rem;
 }
 
 p {
@@ -229,6 +229,20 @@ a {
   color: brown;
 }
 
+#slide-out {
+}
+
+#slide-out a {
+
+}
+
+.table-of-contents {
+  position: fixed;
+}
+
+.table-of-contents a.active {
+  color: #f2f2f2;
+}
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301

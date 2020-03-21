@@ -47,7 +47,7 @@
           class="material-icons right">arrow_drop_down</i></a>
     </div>
     <!-- Side course navigation -->
-    <div class="col s12 m3 l3 hide-on-small-only">
+    <div class="col s12 m2 l2 hide-on-small-only">
       <div class="collection" id="course-nav">
         <a href="../../in3050.html" class="collection-item">IN3050</a>
         <a href="search-and-optimization.html" class="collection-item">Search and optimization</a>
@@ -59,160 +59,185 @@
       </div>
     </div>
     <!-- Middle content -->
-    <div class="col s12 m6 l6 middle-content">
-      <h3 class="center-align">Supervised classification</h3>
-      <img src="https://miro.medium.com/max/977/1*DjUEt5--t6lCjYG_MuZlLg.png" class="responsive-img center" alt="">
-      <br>
-      <div class="section">
-        <h5 class="center">Types of Machine learning </h5>
-        <img src="../../../img/types_ml.JPG" alt="" class="responsive-img center">
-      </div>
-      <div class="section">
-        <h5>Machine Learning</h5>
-        <p class="flow-text">
-          The ability of a program to <strong>learn from experience</strong> - that is, to modify its execution on the basis of newly acquired information. 
-          <br>
-          <br>
-          Machine learning is about automatically extracting relevant information from data and aqpplying it to analyze new data.
-          <br>
-          <br>
-          <strong>Generalization:</strong> Provide sensible outputs for inputs not encountered during training.
-          <br>
-          <br>
-          The learning process is iterative.
-        </p>
-      </div>
-      <div class="section">
-        <h5>Supervised Learning</h5>
-        <p class="flow-text">
-          We need a well defined set of observations, O (possible inputs) and a set of target values, T (possible output values).
-          <br>
-          The goal is to determine a mapping, Y, from O to T. We will acquire a training set of examples from OxT. The <u>training phase</u> will consist of Y learning from the training set. Ideally we want to have Y(o_j) = t_j on the training data. 
-          <br>
-          When Y is learned, it can be used to <strong>predict</strong> values for new items, y(o).
-        </p>
-      <div class="section">
-        <h5 class="center">Supervised learning - two types</h5>
-        <img src="../../../img/types_learning.JPG" alt="" class="responsive-img center">
-      </div>
-      <div class="section">
-        <h5 class="center">Classification</h5>
-        <div class="row">
-          <div class="col s12 m6">
-            <p class="flow-text">
-              How can we decide to which class the new item belongs?
-              <br>
-              <br>
-              We have to look for similarities to objects in the various classes.
-              <br>
-              <br>
-              To do to this we need to:
-              <ul class="flow-text">
-                <li>- Describe attributes of the objects</li>
-                <li>- Find similarities in terms of attributes</li>
-              </ul>
-              <br>
-              <br>
-            </p>
-          </div>
-          <div class="col s12 m6">
-            <img src="../../../img/classification.JPG" alt="" class="responsive-img box center">
+    <div class="col s12 m8 l8 middle-content">
+      <div class="container">
+        <h3 class="center-align">Supervised classification</h3>
+        <img src="https://miro.medium.com/max/977/1*DjUEt5--t6lCjYG_MuZlLg.png" class="responsive-img center" alt="">
+        <br>
+        <div class="section">
+          <h5 class="center">Types of Machine learning </h5>
+          <img src="../../../img/types_ml.JPG" alt="" class="responsive-img center">
+        </div>
+        <div id="machine-learning" class="section scrollspy">
+          <h5>Machine Learning</h5>
+          <p class="flow-text">
+            The ability of a program to <strong>learn from experience</strong> - that is, to modify its execution on the
+            basis of newly acquired information.
+            <br>
+            <br>
+            Machine learning is about automatically extracting relevant information from data and aqpplying it to
+            analyze new data.
+            <br>
+            <br>
+            <strong>Generalization:</strong> Provide sensible outputs for inputs not encountered during training.
+            <br>
+            <br>
+            The learning process is iterative.
+          </p>
+        </div>
+        <div id="supervised-learning" class="section scrollspy">
+          <h5>Supervised Learning</h5>
+          <p class="flow-text">
+            We need a well defined set of observations, O (possible inputs) and a set of target values, T (possible
+            output values).
+            <br>
+            The goal is to determine a mapping, Y, from O to T. We will acquire a training set of examples from OxT. The
+            <u>training phase</u> will consist of Y learning from the training set. Ideally we want to have Y(o_j) = t_j
+            on the training data.
+            <br>
+            When Y is learned, it can be used to <strong>predict</strong> values for new items, y(o).
+          </p>
+          <div class="section scrollspy">
+            <h5 class="center">Supervised learning - two types</h5>
+            <img src="../../../img/types_learning.JPG" alt="" class="responsive-img center">
           </div>
         </div>
-      </div>
-      </div>
-      <div class="section">
-        <h5 class="center">Machine learning in python</h5>
-        <p class="flow-text">To do machine learning, we need data. To make it simple, we use scikit-learn to construct a
-          synthetic dataset with:</p>
-        <ul class="list flow-text">
-          <li>2 classes</li>
-          <li>2 numerical features</li>
-          <li>200 items</li>
-        <p class="flow-text">A general form for representing data is by storing features in one list and the labels in another list of the same length. For example, y[14] is the label the dataset ascribes to the input x[14].</p>
-        </ul>
-      </div>
-      <div class="section">
-        <h5 class="center">ML algorithms and visualization</h5>
-        <p class="flow-text">To illustrate ML algorithms, it is easiest to use: </p>
-        <ul class="list flow-text">
-          <li>2 numerical features</li>
-          <li>Show classes with colors, symbols or both</li>
-        </ul>
-        <img class="white responsive-img center" src="img/Dataset.png" alt="">
-      </div>
-      <div class="section">
-        <h5>kNN - k Nearest Neighbors algorithm</h5>
-        <ol>
-          <li>Calculate the distance to all the training instances</li>
-          <li>Pick the k nearest ones</li>
-          <li>Choose the majority class for this set</li>
-        </ol>
-      </div>
-      <div class="section">
-        <h5 class="center">Distance</h5>
-        <p class="flow-text">The assumption is based on points that are close together in feature space are similar. There are some notion of distance in <u>feature space</u>, normally Euclidean distance (L2).
-        <img src="img/feature_space.JPG" alt="" class="responsive-img center">
-        </p>
-      </div>
-      <div class="section">
-        <h5 class="center">More classes</h5>
-        <p class="flow-text">
-          A binary classifier with odd <i>k</i> always reaches a decision. With more than 2 classes, there might be a draw.
-          <br>Possible ways out:
-          <ul>
-            <li>Alt. 1: Back off to k-1, etc. until there is a majority class</li>
-            <li>Alt. 2: Weight classes by distance from target, take the weighted max.</li>
+        <div id="classification" class="section scrollspy">
+          <h5 class="center">Classification</h5>
+          <div class="row">
+            <div class="col s12 m6">
+              <p class="flow-text">
+                How can we decide to which class the new item belongs?
+                <br>
+                <br>
+                We have to look for similarities to objects in the various classes.
+                <br>
+                <br>
+                To do to this we need to:
+                <ul class="flow-text">
+                  <li>- Describe attributes of the objects</li>
+                  <li>- Find similarities in terms of attributes</li>
+                </ul>
+                <br>
+                <br>
+              </p>
+            </div>
+            <div class="col s12 m6">
+              <img src="../../../img/classification.JPG" alt="" class="responsive-img box center">
+            </div>
+          </div>
+        </div>
+        <div class="section scrollspy">
+          <h5 class="center">Machine learning in python</h5>
+          <p class="flow-text">To do machine learning, we need data. To make it simple, we use scikit-learn to construct
+            a
+            synthetic dataset with:</p>
+          <ul class="list flow-text">
+            <li>2 classes</li>
+            <li>2 numerical features</li>
+            <li>200 items</li>
+            <p class="flow-text">A general form for representing data is by storing features in one list and the labels
+              in another list of the same length. For example, y[14] is the label the dataset ascribes to the input
+              x[14].</p>
           </ul>
-        </p>
-      </div>
-      <div class="section">
-        <h6><u>kNN with varying <i>k</i></u></h6>
-        <p class="flow-text">Don't train on test data. It can be legitimate to test performance on train data and compare to test data for overfitting.</p>
-        <br>
-        The best <i>k</i> differ from task to task.
-      </div>
-      <div class="section">
-        <h6><u>Determine <i>k</i></u></h6>
-        To determine the best <i>k</i> for a specific task, split your development set in:
-        <ul>
-          <li>One set for training</li>
-          <li>One set for tuning <i>k</i></li>
-        </ul>
-        Test for various ks on the tuning set. Choose the best performing k for your model. When your have determined <i>k</i>, you may test with this <i>k</i> on the final test set.
-        <br>Dont use the same set for tuning as for final evaluation.
-      </div>
-      <div class="section">
-        <h5 class="center">Perceptron</h5>
-        <img src="img/perceptron.JPG" alt="" class="responsive-img center">
-        <br>
-        <ol class="flow-text">
-          <li>A set of inputs: x_1, x_2, ... x_m</li>
-          <li>A set of weights: w_1, w_2, ... w_m</li>
-          <li>An adder</li>
-          <li>An activation function</li>
-          <img src="img/activation_function.JPG" alt="" class="responsive-img">
-        </ol>
-        <h6>Perceptrons are binary classifiers (0/1)</h6>
-        <br>
-        <h6>The dot product: </h6>
-        <blockquote>
-          In mathematics, the dot product or scalar product is an algebraic operation that takes two equal-length sequences of numbers (usually coordinate vectors) and returns a single number. In Euclidean geometry, the dot product of the Cartesian coordinates of two vectors is widely used and often called "the" inner product (or rarely projection product) of Euclidean space even though it is not the only inner product that can be defined on Euclidean space.
-        </blockquote>
-        <p class="flow-text">
+        </div>
+        <div class="section scrollspy">
+          <h5 class="center">ML algorithms and visualization</h5>
+          <p class="flow-text">To illustrate ML algorithms, it is easiest to use: </p>
+          <ul class="list flow-text">
+            <li>2 numerical features</li>
+            <li>Show classes with colors, symbols or both</li>
+          </ul>
+          <img class="white responsive-img center" src="img/Dataset.png" alt="">
+        </div>
+        <div class="section scrollspy">
+          <h5>kNN - k Nearest Neighbors algorithm</h5>
+          <ol>
+            <li>Calculate the distance to all the training instances</li>
+            <li>Pick the k nearest ones</li>
+            <li>Choose the majority class for this set</li>
+          </ol>
+        </div>
+        <div class="section">
+          <h5 class="center">Distance</h5>
+          <p class="flow-text">The assumption is based on points that are close together in feature space are similar.
+            There are some notion of distance in <u>feature space</u>, normally Euclidean distance (L2).
+            <img src="img/feature_space.JPG" alt="" class="responsive-img center">
+          </p>
+        </div>
+        <div class="section">
+          <h5 class="center">More classes</h5>
+          <p class="flow-text">
+            A binary classifier with odd <i>k</i> always reaches a decision. With more than 2 classes, there might be a
+            draw.
+            <br>Possible ways out:
+            <ul>
+              <li>Alt. 1: Back off to k-1, etc. until there is a majority class</li>
+              <li>Alt. 2: Weight classes by distance from target, take the weighted max.</li>
+            </ul>
+          </p>
+        </div>
+        <div class="section">
+          <h6><u>kNN with varying <i>k</i></u></h6>
+          <p class="flow-text">Don't train on test data. It can be legitimate to test performance on train data and
+            compare to test data for overfitting.</p>
+          <br>
+          The best <i>k</i> differ from task to task.
+        </div>
+        <div class="section">
+          <h6><u>Determine <i>k</i></u></h6>
+          To determine the best <i>k</i> for a specific task, split your development set in:
+          <ul>
+            <li>One set for training</li>
+            <li>One set for tuning <i>k</i></li>
+          </ul>
+          Test for various ks on the tuning set. Choose the best performing k for your model. When your have determined
+          <i>k</i>, you may test with this <i>k</i> on the final test set.
+          <br>Dont use the same set for tuning as for final evaluation.
+        </div>
+        <div class="section scrollspy">
+          <h5 class="center">Perceptron</h5>
+          <img src="img/perceptron.JPG" alt="" class="responsive-img center">
+          <br>
+          <ol class="flow-text">
+            <li>A set of inputs: x_1, x_2, ... x_m</li>
+            <li>A set of weights: w_1, w_2, ... w_m</li>
+            <li>An adder</li>
+            <li>An activation function</li>
+            <img src="img/activation_function.JPG" alt="" class="responsive-img">
+          </ol>
+          <h6>Perceptrons are binary classifiers (0/1)</h6>
+          <br>
+          <h6>The dot product: </h6>
+          <blockquote>
+            In mathematics, the dot product or scalar product is an algebraic operation that takes two equal-length
+            sequences of numbers (usually coordinate vectors) and returns a single number. In Euclidean geometry, the
+            dot product of the Cartesian coordinates of two vectors is widely used and often called "the" inner product
+            (or rarely projection product) of Euclidean space even though it is not the only inner product that can be
+            defined on Euclidean space.
+          </blockquote>
+          <p class="flow-text">
 
-        </p>
-      </div>
-      <div class="section">
-        <h5><strong>Conclusion</strong></h5>
-        <p class="flow-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nesciunt, sequi vitae fugiat consequuntur autem, laborum beatae inventore tempora dicta, cum repudiandae a libero eius laboriosam delectus? Sit, illum vitae?
-        </p>
+          </p>
+        </div>
+        <div class="section">
+          <h5><strong>Conclusion</strong></h5>
+          <p class="flow-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nesciunt, sequi vitae fugiat consequuntur
+            autem, laborum beatae inventore tempora dicta, cum repudiandae a libero eius laboriosam delectus? Sit, illum
+            vitae?
+          </p>
+        </div>
       </div>
     </div>
     <!-- Right side content -->
-    <div class="col s12 m2 l3 red">
-      <p>s12 m4</p>
+    <div class="col s12 m2 l2 hide-on-small-only">
+      <ul class="section table-of-contents">
+        <h6>Table of contents</h6>
+        <li><a href="#machine-learning">Machine Learning</a></li>
+        <li><a href="#supervised-learning">Supervised learning</a></li>
+        <li><a href="#classification">Classification</a></li>
+      </ul>
     </div>
   </div>
   <!--[if IE]>

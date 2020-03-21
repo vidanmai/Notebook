@@ -59,15 +59,9 @@
     width: 50%;
   }
 
-  .btn {
-    background-color: red;
-    width: 70%;
-    font-size: 1.5em;
-    padding-top: 1rem;
-    padding-bottom: 3rem;
-  }
-  .btn:hover {
-    background-color: #4CAF50;
+  #landing-button {
+    font-size: 1.5rem;
+    width: 40%;
   }
 
   p {
