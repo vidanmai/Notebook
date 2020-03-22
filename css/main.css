@@ -11,7 +11,7 @@
    Base styles: opinionated defaults
    ========================================================================== */
 /*IBM PLEX SANS FONT*/
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700i&display=swap');
 
 /* Indie Flower font */
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
@@ -37,13 +37,59 @@ html {
   background-color: #121212;
 }
 
+nav {
+  background-color: transparent;
+  box-shadow: none !important;
+}
+
+.nav-wrapper {
+}
+
+.content-wrapper {
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav li a {
+  font-size: 1.5rem;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+nav ul a {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+#logo {
+  font-family: 'IBM Plex Sans',
+  sans-serif;
+  letter-spacing: 5px;
+}
+
+nav ul a:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+.icon:hover {
+  margin-top: -10%;
+  transition: all 0.1s ease-in-out;
+}
+
+.material-tooltip {
+  background-color: #121212;
+  font-size: 1.2rem;
+}
 .responsive {
   width: 100%;
   height: auto;
-}
-
-.flow-text {
-  font-size: 1.2rem;
 }
 
 .center {
@@ -110,73 +156,13 @@ html {
   background-color: #43a047;
 }
 
-.topnav {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background-color: var(--background-color);
-  overflow: hidden;
-  z-index: 100;
-  border-bottom: solid 1px #313131;
-  padding: 10px;
-}
-
-#logo {
-  font-family: 'Indie Flower', cursive;
-  padding-left: 50px;
-  padding-right: 50px;
-  letter-spacing: 5px;
-  font-size: 1.3rem;
-}
-
 #main {
-  padding-top: 13vh;
+  padding-top: 5vh;
 }
 
 #course-nav {
   position: fixed;
   width: 15%;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  display: flex;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 1.2em;
-  margin: 10px;
-}
-
-.active-tab {
-  border: 1px solid #43a047;
-}
-
-.topnav a:hover {
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/* Add an active class to highlight the current page */
-
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-  display: none;
-}
-
-.dropdown-content li>a,
-.dropdown-content li>span {
-  color: #4CAF50;
-}
-
-.dropdown-content {
-  background-color: #202020;
-}
-
-.dropdown-content a:hover {
-  background-color: rgba(0, 0, 0, 0.700);
 }
 
 .box {
@@ -198,7 +184,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 1.3rem;
+}
+
+.flow-text {
+  font-size: 1.3rem;
 }
 
 table {
@@ -502,49 +492,9 @@ textarea {
 
 /* For tablet and mobile */
 @media screen and (max-width: 768px) and (max-height:1024px) {
-  .topnav {
-    position: relative;
-  }
 
-  #main {
-    padding-top: 0;
-  }
-
-  .container {
-    margin-top: 0;
-    width: 100%;
-  }
-
-  .topnav a:not(:first-child) {
-    display: none;
-  }
-
-  .topnav a.icon {
-    position: absolute;
-    display: block;
-    float: right;
-    right: 0;
-    top: 0;
-    padding-top: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-
-  .active-tab {
-    border: 0;
-    border-bottom: 1px solid var(--green-color);
-  }
-
-  .topnav.responsive {
-    position: relative;
-    display: block;
-    width: 100%;
-    text-align: left;
+  #logo {
+    font-size: 1.2rem;
   }
 
   .course-grid {
@@ -564,11 +514,22 @@ textarea {
   }
 }
 
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  /* STYLES GO HERE */
+  nav li a {
+    font-size: 1rem;
+  }
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-width : 320px) and (max-width : 480px) {
   /* Styles */
   .course-grid {
     grid-template-columns: auto;
+  }
+
+  .content-wrapper {
+    width: 100%;
   }
 }
 
@@ -586,6 +547,11 @@ textarea {
 /* iPads (portrait) ----------- */
 @media only screen and (min-width : 768px) and (max-height: 1366px) and (orientation: portrait) {
   /* Styles */
+
+  nav li a {
+    font-size: 1rem;
+  }
+
   .course-grid {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1rem;
@@ -593,6 +559,10 @@ textarea {
 
   .card img {
     height: 10vh;
+  }
+
+  .content-wrapper {
+    width: 90%;
   }
 }
 
@@ -606,6 +576,7 @@ textarea {
   .card img {
     height: 20vh;
   }
+
 }
 
 /* Desktops and laptops ----------- */

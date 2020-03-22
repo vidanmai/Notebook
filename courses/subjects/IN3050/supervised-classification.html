@@ -180,20 +180,26 @@
         <div class="section">
           <h6><u>kNN with varying <i>k</i></u></h6>
           <p class="flow-text">Don't train on test data. It can be legitimate to test performance on train data and
-            compare to test data for overfitting.</p>
+            compare to test data for overfitting.
           <br>
           The best <i>k</i> differ from task to task.
+          </p>
         </div>
         <div class="section">
           <h6><u>Determine <i>k</i></u></h6>
-          To determine the best <i>k</i> for a specific task, split your development set in:
-          <ul>
-            <li>One set for training</li>
-            <li>One set for tuning <i>k</i></li>
-          </ul>
-          Test for various ks on the tuning set. Choose the best performing k for your model. When your have determined
-          <i>k</i>, you may test with this <i>k</i> on the final test set.
-          <br>Dont use the same set for tuning as for final evaluation.
+          <p class="flow-text">
+            To determine the best <i>k</i> for a specific task, split your development set in:
+            <ul class="flow-text">
+              <li>One set for training</li>
+              <li>One set for tuning <i>k</i></li>
+            </ul>
+          </p>
+          <p class="flow-text">
+            Test for various ks on the tuning set. Choose the best performing k for your model. When your have
+            determined
+            <i>k</i>, you may test with this <i>k</i> on the final test set.
+            <br>Dont use the same set for tuning as for final evaluation.
+          </p>
         </div>
         <div class="section scrollspy">
           <h5 class="center">Perceptron</h5>
@@ -208,16 +214,13 @@
           </ol>
           <h6>Perceptrons are binary classifiers (0/1)</h6>
           <br>
-          <h6>The dot product: </h6>
-          <blockquote>
-            In mathematics, the dot product or scalar product is an algebraic operation that takes two equal-length
-            sequences of numbers (usually coordinate vectors) and returns a single number. In Euclidean geometry, the
-            dot product of the Cartesian coordinates of two vectors is widely used and often called "the" inner product
-            (or rarely projection product) of Euclidean space even though it is not the only inner product that can be
-            defined on Euclidean space.
-          </blockquote>
+          <h5>Definition</h5>
+          <p>
+            The perceptron is an algorithm for a learning for learning a binary classifier called a <strong>threshold function</strong>: a function that maps its input <strong>x</strong> (a real valued vector) to an output value <strong>f(x)</strong> (a single binary value).
+          </p>
+          <img class="white responsive-img center" src="img/perceptron_formula.svg" alt="">
           <p class="flow-text">
-
+            <strong>w</strong> is a vector of real-valued weights, <strong>w * x</strong> is the dot product.
           </p>
         </div>
         <div class="section">
@@ -238,13 +241,11 @@
         <li><a href="#supervised-learning">Supervised learning</a></li>
         <li><a href="#classification">Classification</a></li>
       </ul>
-    </div>
   </div>
   <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
   <!-- Add your site or application content here -->
-  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script>

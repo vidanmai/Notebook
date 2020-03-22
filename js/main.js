@@ -1,11 +1,23 @@
-function myFunction() {
-    let x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
+console.log("hello world")
+
+window.onscroll = function () {
+    makeNavTransparent()
+};
+
+function makeNavTransparent() {
+    let nav = document.getElementById("navbar");
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+        nav.style.background = "#121212";
+        nav.style.transition = "all .1s";
+
     } else {
-        x.className = "topnav";
+        nav.style.backgroundColor = "transparent";
+        nav.style.border = "0";
     }
 }
+
+const toolTip = document.querySelectorAll('.tooltipped');
+M.Tooltip.init(toolTip, {});
 
 const sideNav = document.querySelectorAll('.sidenav');
 M.Sidenav.init(sideNav, {});
