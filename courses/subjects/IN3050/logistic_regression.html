@@ -20,72 +20,87 @@
 </head>
 
 <body>
-  <div class="topnav" id="myTopnav">
-    <a href="../../../index.html" id="logo">Vi Dan</a>
-    <a href="#projects">Projects 🚀</a>
-    <a href="../../../courses.html" class="active-tab">Courses 📚</a>
-    <a href="#blog ">Blog 🤳</a>
-    <a href="#about">About 👨‍💻</a>
-    <a href="#contact">Contact 📧</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  <!-- Navbar -->
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper" id="navbar">
+        <div class="content-wrapper">
+          <a href="../../../index.html" class="brand-logo active-tab" id="logo">[Notebook]</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"
+              id="sidenav-icon">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li class="tooltipped" data-position="bottom" data-tooltip="Projects"><a href="../../../projects.html"><img
+                  src="../../../icons/rocket.svg" alt="" class="icon"></a></li>
+            <li class="tooltipped" data-position="bottom" data-tooltip="Courses"><a href="../../../courses.html"><img
+                  src="../../../icons/knowledge_color.svg" alt="" class="icon"></a></li>
+            <li class="tooltipped" data-position="bottom" data-tooltip="Blog"><a href="../../../blog.html"><img
+                  src="../../../icons/blogger.svg" alt="" class="icon"></a></li>
+            <li><a class="waves-effect btn red darken-2" href="../../../contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </div>
+  <ul class="sidenav" id="mobile-demo">
+    <li><a class="waves-effect waves-light btn indigo darken-2" href="../../../projects.html">Projects 🚀</a></li>
+    <li><a class="waves-effect waves-light btn green darken-2" href="../../../courses.html">Courses 📚</a></li>
+    <li><a class="waves-effect waves-light btn orange darken-2" href="../../../blog.html">Blog 👨‍💻</a></li>
+    <li><a class="waves-effect waves-light btn red darken-2 " href="../../../contact.html">Contact 📧</a></li>
+    <li><a class="waves-effect waves-light center sidenav-close" href="#!" id="close-sidenav-btn">Close</a></li>
+  </ul>
+  <!-- Navbar end -->
 
-  <!-- Page layout -->
-<div class="row" id="main">
-  <div class="col s12 hide-on-large-only">
-    <ul id="dropdown" class="dropdown-content">
-      <li><a href="#">Close</a></li>
-      <li><a href="../../in3050.html">IN3050</a></li>
-      <li><a href="search-and-optimization.html">Search and optimization</a></li>
-      <li><a href="#!">Evolutionary Algorithms</a></li>
-      <li><a href="supervised-classification.html">Supervised classification</a></li>
-      <li><a href="linear-regression.html">Linear regression</a></li>
-      <li><a href="logistic_regression.html">Logistic regression</a></li>
-      <li><a href="#!">Linear classifiers</a></li>
-    </ul>
-    <a class="btn dropdown-trigger grey darken-4" href="" data-target="dropdown">Subjects<i
-        class="material-icons right">arrow_drop_down</i></a>
-  </div>
-  <!-- Side course navigation -->
-  <div class="col s12 m4 l3 hide-on-small-only">
-    <div class="collection" id="course-nav">
-      <a href="../../in3050.html" class="collection-item">IN3050</a>
-      <a href="search-and-optimization.html" class="collection-item">Search and optimization</a>
-      <a href="#!" class="collection-item">Evolutionary Algorithms</a>
-      <a href="supervised-classification.html" class="collection-item">Supervised classification</a>
-      <a href="linear-regression.html" class="collection-item">Linear regression</a>
-      <a href="logistic_regression.html" class="collection-item active">Logistic regression</a>
-      <a href="#!" class="collection-item">Linear classifiers</a>
-    </div>
-  </div>
-  <!-- Middle content -->
-  <div class="col s12 m4 l6">
-    <h3 class="center-align">Logistic Regression</h3>
-    <img
-      src="https://i0.wp.com/dataaspirant.com/wp-content/uploads/2016/04/logisticregression.png?resize=768%2C384&ssl=1"
-      class="responsive-img center" alt="">
-    <p class="flow-text">
-      How does the logistic regression model work in machine learning?
-      <br>
-      The logistic regression model is one member of the <strong>supervised classification algorithm</strong> family.
-      The building block concepts of logistic regression can be helpful in <strong>deep learning</strong> while building
-      neural networks.
-      <br>
-      <br>
-      Logistic regression classifier is more like a <strong>linear classifier</strong> which uses the calculated
-      logistic (score) to predict the target class.
-      <br>
-      <br>
-      <h5>What is logistic regression?</h5>
-      <blockquote>"Logistic regression measures the relationship between the categorical dependant variable and one or
-        more independent variables by estimating probabilities using a logistic function" (Wikipedia) </blockquote>
-    </p>
-  </div>
-  <!-- Right side content -->
-  <div class="col s12 m4 l3 red">
-    <p>s12 m4</p>
-  </div>
-</div>
+   <!-- Page layout -->
+   <div class="row" id="main">
+     <div class="col s12 hide-on-large-only">
+       <ul id="dropdown" class="dropdown-content">
+         <li><a href="#">Close</a></li>
+         <li><a href="../../in3050.html">IN3050</a></li>
+         <li><a href="search-and-optimization.html">Search and optimization</a></li>
+         <li><a href="#!">Evolutionary Algorithms</a></li>
+         <li><a href="supervised-classification.html">Supervised classification</a></li>
+         <li><a href="linear-regression.html">Linear regression</a></li>
+         <li><a href="logistic_regression.html">Logistic regression</a></li>
+         <li><a href="#!">Linear classifiers</a></li>
+       </ul>
+       <a class="btn dropdown-trigger grey darken-4" href="" data-target="dropdown">Subjects<i
+           class="material-icons right">arrow_drop_down</i></a>
+     </div>
+     <!-- Side course navigation -->
+     <div class="col s12 m2 l2 hide-on-med-and-down">
+       <div class="collection" id="course-nav">
+         <a href="../../in3050.html" class="collection-item">IN3050</a>
+         <a href="search-and-optimization.html" class="collection-item">Search and optimization</a>
+         <a href="#!" class="collection-item">Evolutionary Algorithms</a>
+         <a href="supervised-classification.html" class="collection-item">Supervised classification</a>
+         <a href="linear-regression.html" class="collection-item">Linear regression</a>
+         <a href="logistic_regression.html" class="collection-item active">Logistic regression</a>
+         <a href="#!" class="collection-item">Linear classifiers</a>
+       </div>
+     </div>
+     <!-- Middle content -->
+     <div class="col s12 m12 l8">
+        <div class="container" id="middle-content">
+          <h3 class="center-align">Logistic Regression</h3>
+          <img
+            src="https://i0.wp.com/dataaspirant.com/wp-content/uploads/2016/04/logisticregression.png?resize=768%2C384&ssl=1"
+            class="responsive-img center" alt="">
+          <div class="section">
+            <p class="flow-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis amet soluta ad quos, tenetur a quae reiciendis! Nesciunt doloremque, atque qui molestiae praesentium, voluptatibus ullam magni porro, tempora tempore cum!
+              </p>
+          </div>
+        </div>
+     </div>
+     <!-- Right side content -->
+     <div class="col m2 l2 hide-on-med-and-down">
+       <ul class="section table-of-contents">
+         <h6>Table of contents</h6>
+         <li><a href="#cost-function">Cost function</a></li>
+         <li><a href="#">rangaha</a></li>
+         <li><a href="#">asd</a></li>
+       </ul>
+     </div>
   <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->

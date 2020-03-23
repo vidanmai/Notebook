@@ -20,15 +20,35 @@
 </head>
 
 <body>
-  <div class="topnav" id="myTopnav">
-    <a href="../../../index.html" id="logo">Vi Dan</a>
-    <a href="#projects">Projects 🚀</a>
-    <a href="../../../courses.html" class="active-tab">Courses 📚</a>
-    <a href="#blog ">Blog 🤳</a>
-    <a href="#about">About 👨‍💻</a>
-    <a href="#contact">Contact 📧</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  <!-- Navbar -->
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper" id="navbar">
+        <div class="content-wrapper">
+          <a href="../../../index.html" class="brand-logo active-tab" id="logo">[Notebook]</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"
+              id="sidenav-icon">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li class="tooltipped" data-position="bottom" data-tooltip="Projects"><a href="../../../projects.html"><img
+                  src="../../../icons/rocket.svg" alt="" class="icon"></a></li>
+            <li class="tooltipped" data-position="bottom" data-tooltip="Courses"><a href="../../../courses.html"><img
+                  src="../../../icons/knowledge_color.svg" alt="" class="icon"></a></li>
+            <li class="tooltipped" data-position="bottom" data-tooltip="Blog"><a href="../../../blog.html"><img
+                  src="../../../icons/blogger.svg" alt="" class="icon"></a></li>
+            <li><a class="waves-effect btn red darken-2" href="../../../contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </div>
+  <ul class="sidenav" id="mobile-demo">
+    <li><a class="waves-effect waves-light btn indigo darken-2" href="../../../projects.html">Projects 🚀</a></li>
+    <li><a class="waves-effect waves-light btn green darken-2" href="../../../courses.html">Courses 📚</a></li>
+    <li><a class="waves-effect waves-light btn orange darken-2" href="../../../blog.html">Blog 👨‍💻</a></li>
+    <li><a class="waves-effect waves-light btn red darken-2 " href="../../../contact.html">Contact 📧</a></li>
+    <li><a class="waves-effect waves-light center sidenav-close" href="#!" id="close-sidenav-btn">Close</a></li>
+  </ul>
+  <!-- Navbar end -->
 
   <!-- Page layout -->
   <div class="row" id="main">
@@ -47,7 +67,7 @@
           class="material-icons right">arrow_drop_down</i></a>
     </div>
     <!-- Side course navigation -->
-    <div class="col s12 m4 l3 hide-on-small-only">
+    <div class="col s12 m2 l2 hide-on-med-and-down">
       <div class="collection" id="course-nav">
         <a href="../../in3050.html" class="collection-item">IN3050</a>
         <a href="search-and-optimization.html" class="collection-item">Search and optimization</a>
@@ -59,11 +79,10 @@
       </div>
     </div>
     <!-- Middle content -->
-    <div class="col s12 m4 l6">
-      <h3 class="center-align">Linear Regression</h3>
-        <img
-          src="https://miro.medium.com/max/640/1*LEmBCYAttxS6uI6rEyPLMQ.png"
-          class="responsive-img center" alt="">
+    <div class="col s12 m12 l8">
+      <div class="container" id="middle-content">
+        <h3 class="center-align">Linear Regression</h3>
+        <img src="https://miro.medium.com/max/640/1*LEmBCYAttxS6uI6rEyPLMQ.png" class="responsive-img center" alt="">
         <div class="section">
           <p class="flow-text">
             In Machine Learning, a fundamental algorithm to start with is a linear regression algorithm. This provides
@@ -72,104 +91,135 @@
           </p>
         </div>
         <div class="section">
-            <h5>What is linear regression?</h5>
-            <p class="flow-text">
-                The objective of a linear regression model is to find a relationship between one or more features (independent variables) and a continuous target variable (dependent variable). When there is only feature it is called Uni-variate Linear Regression and if there are multiple features, it is called
-                Multiple Linear Regression.
-            </p>
+          <h5>What is linear regression?</h5>
+          <p class="flow-text">
+            The objective of a linear regression model is to find a relationship between one or more features
+            (independent variables) and a continuous target variable (dependent variable). When there is only feature it
+            is called Uni-variate Linear Regression and if there are multiple features, it is called
+            Multiple Linear Regression.
+          </p>
         </div>
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Linear_regression.svg/1200px-Linear_regression.svg.png"
           class="responsive-img center" alt="" style=background-color:white;>
         <div class="section">
-            <p class="flow-text">
-                Simple linear regression is a type of regression analysis where the number of indepedent variables is one and there is a linear relationship between the indepedent(x) and dependent(y) variable. The red line in the above graph is referred to as the best fit straight line. Based on the given data points, we try to plot a line that models the points the best. The line can be modelled based on the linear equation shown below.
-            </p>
+          <p class="flow-text">
+            Simple linear regression is a type of regression analysis where the number of indepedent variables is one
+            and there is a linear relationship between the indepedent(x) and dependent(y) variable. The red line in the
+            above graph is referred to as the best fit straight line. Based on the given data points, we try to plot a
+            line that models the points the best. The line can be modelled based on the linear equation shown below.
+          </p>
         </div>
         <blockquote>
-            <p class="flow-text center">
-              y = a_0 + a_1 * x
-            </p>
+          <p class="flow-text center">
+            y = a_0 + a_1 * x
+          </p>
         </blockquote>
         <div class="section">
-            <p class="flow-text">The motive of the linear regression algorithm is to find the best values for a_0 and a_1. Before we move on to the algorithm, we must understand important concepts for linear regression.</p>
+          <p class="flow-text">The motive of the linear regression algorithm is to find the best values for a_0 and a_1.
+            Before we move on to the algorithm, we must understand important concepts for linear regression.</p>
         </div>
         <br>
-        <div class="section">
-            <h5>Cost function</h5>
-            <p class="flow-text">
-                The cost function helps us to figure out the best possible values for a_0 and a_1 which would provide the <u>best line</u> for the data points. Since we want the best values for a_0 and a_1, we convert this search problem into a minimization problem where we would like to minimize the error between the <u>predicted value</u> and the <u>actual value</u>.
-            </p>
+        <div class="section scrollspy" id="cost-function">
+          <h5>Cost function</h5>
+          <p class="flow-text">
+            The cost function helps us to figure out the best possible values for a_0 and a_1 which would provide the
+            <u>best line</u> for the data points. Since we want the best values for a_0 and a_1, we convert this search
+            problem into a minimization problem where we would like to minimize the error between the <u>predicted
+              value</u> and the <u>actual value</u>.
+          </p>
         </div>
         <img src="https://miro.medium.com/max/486/1*wQCSNJ486WxL4mZ3FOYtgw.png" class="responsive-img center" alt="">
         <p class="center">Minimization and Cost function</p>
         <div class="section">
-          We choose the above function to minimize. The difference between the <u>predicted values</u> and <u>ground truth values</u> measures the error difference. We square the error difference (2 in exponent) and sum over all data points and divide that value by total number of data points. This cost function is also known as the <strong>Mean Squared Error (MSE) function</strong>. We will use this MSE function to change the values of a_0 and a_1 such that the MSE value settles at the minima.
+          We choose the above function to minimize. The difference between the <u>predicted values</u> and <u>ground
+            truth values</u> measures the error difference. We square the error difference (2 in exponent) and sum over
+          all data points and divide that value by total number of data points. This cost function is also known as the
+          <strong>Mean Squared Error (MSE) function</strong>. We will use this MSE function to change the values of a_0
+          and a_1 such that the MSE value settles at the minima.
         </div>
         <div class="section">
           <h5>Gradient Descent</h5>
           <p class="flow-text">
-            The next important concept needed to understand linear regression is gradient descent. Gradient descent is a method of updating a_0 and a_1 to reduce the cost function (MSE). The idea is that we start with some values for a_0 and a_1 and then we change these values iteratively to reduce the cost. Gradient descent helps us on how to change the values.
+            The next important concept needed to understand linear regression is gradient descent. Gradient descent is a
+            method of updating a_0 and a_1 to reduce the cost function (MSE). The idea is that we start with some values
+            for a_0 and a_1 and then we change these values iteratively to reduce the cost. Gradient descent helps us on
+            how to change the values.
           </p>
         </div>
         <img src="https://miro.medium.com/proxy/0*QwE8M4MupSdqA3M4.png" alt="" class="responsive-img center">
         <div class="section">
           <p class="flow-text">
-            To draw an analogy, imagine a u-curve or a pit in the shape of U and you are standing at the topmost point in the pit. Your objective is to reach the bottom of the pit. The catch is that you can only take a discrete number of steps to reach the bottom. If you decide to take one step at a time, you would eventually reach the bottom of the pit but this would take a longer time. If you choose to take longer steps each time, you would reach sooner but, there is a chance that you might overshoot the bottom of the pit and not exactly the bottom. In the gradient descent algorithm, the number of steps you take is the <u>learning rate</u>. This decides on how fast the algorithm converges to the minima.
+            To draw an analogy, imagine a u-curve or a pit in the shape of U and you are standing at the topmost point
+            in the pit. Your objective is to reach the bottom of the pit. The catch is that you can only take a discrete
+            number of steps to reach the bottom. If you decide to take one step at a time, you would eventually reach
+            the bottom of the pit but this would take a longer time. If you choose to take longer steps each time, you
+            would reach sooner but, there is a chance that you might overshoot the bottom of the pit and not exactly the
+            bottom. In the gradient descent algorithm, the number of steps you take is the <u>learning rate</u>. This
+            decides on how fast the algorithm converges to the minima.
           </p>
         </div>
         <img src="https://miro.medium.com/max/926/0*GrBkYv2vodl_swFI.png" alt="" class="responsive-img center">
         <p class="center">Convex vs non-convex function</p>
         <div class="section">
           <p class="flow-text">
-            Sometimes the cost function can be a non-convex fnction where you could settle at a local minima, but for linear regression, it is always a convex function.
+            Sometimes the cost function can be a non-convex fnction where you could settle at a local minima, but for
+            linear regression, it is always a convex function.
           </p>
         </div>
         <div class="section">
           <p class="flow-text">
             <h5>How do we use gradient descent?</h5>
-            <p class="flow-text">To update a_0 and a_1, we take gradients from the cost function. To find these gradients, we take <u>partial derivatives</u> with resepct to a_0 and a_1. To understand how partial derivatives are found below, it requires some calculus. The partial derivatives are the gradients and they are used to update the values of a_0 and a_1.</p>
+            <p class="flow-text">To update a_0 and a_1, we take gradients from the cost function. To find these
+              gradients, we take <u>partial derivatives</u> with resepct to a_0 and a_1. To understand how partial
+              derivatives are found below, it requires some calculus. The partial derivatives are the gradients and they
+              are used to update the values of a_0 and a_1.</p>
           </p>
         </div>
         <div class="section">
           <h5><strong>Conclusion</strong></h5>
           <p class="flow-text">
-            Linear regression is an algorithm that is basic in Machine Learning. We will later see other methods/algorithms for achieving a plot that models the data points the best.
+            Linear regression is an algorithm that is basic in Machine Learning. We will later see other
+            methods/algorithms for achieving a plot that models the data points the best.
           </p>
         </div>
+      </div>
     </div>
     <!-- Right side content -->
-    <div class="col s12 m4 l3 red">
-      <p>s12 m4</p>
+    <div class="col m2 l2 hide-on-med-and-down">
+      <ul class="section table-of-contents">
+        <h6>Table of contents</h6>
+        <li><a href="#cost-function">Cost function</a></li>
+        <li><a href="#">rangaha</a></li>
+        <li><a href="#">asd</a></li>
+      </ul>
     </div>
-  </div>
-  <!--[if IE]>
+    <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
-  <!-- Add your site or application content here -->
-  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script>
-    window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')
-  </script>
+    <!-- Add your site or application content here -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+      window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')
+    </script>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () {
-      ga.q.push(arguments)
-    };
-    ga.q = [];
-    ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto');
-    ga('set', 'transport', 'beacon');
-    ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
-  <!-- Materialize js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="../../../js/plugins.js"></script>
-  <script src="../../../js/main.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+      window.ga = function () {
+        ga.q.push(arguments)
+      };
+      ga.q = [];
+      ga.l = +new Date;
+      ga('create', 'UA-XXXXX-Y', 'auto');
+      ga('set', 'transport', 'beacon');
+      ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+    <!-- Materialize js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../../../js/plugins.js"></script>
+    <script src="../../../js/main.js"></script>
 </body>
 
 </html>

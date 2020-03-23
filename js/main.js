@@ -1,15 +1,28 @@
-console.log("hello world")
+console.log("hello world");
 
 window.onscroll = function () {
-    makeNavTransparent()
+    makeNavTransparent();
 };
+//Find out if darkMode is enabled on local computer
+//let darkMode = localStorage.getItem('darkMode');
 
 function makeNavTransparent() {
     let nav = document.getElementById("navbar");
     if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-        nav.style.background = "#121212";
-        nav.style.transition = "all .1s";
-
+        /*
+        if(localStorage.getItem("darkMode") === "enabled") {
+            nav.style.background = "#121212";
+            nav.style.borderBottom = "1px solid #303030";
+            nav.style.transition = "background .2s";
+        } else {
+            nav.style.background = "#FFF";
+            nav.style.borderBottom = "1px solid lightgrey";
+            nav.style.transition = "background .2s";
+        }
+        */
+       nav.style.background = "#121212";
+       nav.style.borderBottom = "1px solid #303030";
+       nav.style.transition = "background .2s";
     } else {
         nav.style.backgroundColor = "transparent";
         nav.style.border = "0";

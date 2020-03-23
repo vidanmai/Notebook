@@ -20,15 +20,35 @@
 </head>
 
 <body>
-  <div class="topnav" id="myTopnav">
-    <a href="../../../index.html" id="logo">Vi Dan</a>
-    <a href="#projects">Projects 🚀</a>
-    <a href="courses.html" class="active-tab">Courses 📚</a>
-    <a href="#blog ">Blog 🤳</a>
-    <a href="#about">About 👨‍💻</a>
-    <a href="#contact">Contact 📧</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  <!-- Navbar -->
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper" id="navbar">
+        <div class="content-wrapper">
+          <a href="../../../index.html" class="brand-logo" id="logo">[Notebook]</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"
+              id="sidenav-icon">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li class="tooltipped" data-position="bottom" data-tooltip="Projects"><a href="../../../projects.html"><img
+                  src="../../../icons/rocket.svg" alt="" class="icon"></a></li>
+            <li class="tooltipped" data-position="bottom" data-tooltip="Courses"><a href="../../../courses.html"><img
+                  src="../../../icons/knowledge_color.svg" alt="" class="icon"></a></li>
+            <li class="tooltipped" data-position="bottom" data-tooltip="Blog"><a href="../../../blog.html"><img
+                  src="../../../icons/blogger.svg" alt="" class="icon"></a></li>
+            <li><a class="waves-effect btn red darken-2" href="../../../contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </div>
+  <ul class="sidenav" id="mobile-demo">
+    <li><a class="waves-effect waves-light btn indigo darken-2" href="../../../projects.html">Projects 🚀</a></li>
+    <li><a class="waves-effect waves-light btn green darken-2" href="../../../courses.html">Courses 📚</a></li>
+    <li><a class="waves-effect waves-light btn orange darken-2" href="../../../blog.html">Blog 👨‍💻</a></li>
+    <li><a class="waves-effect waves-light btn red darken-2 " href="../../../contact.html">Contact 📧</a></li>
+    <li><a class="waves-effect waves-light center sidenav-close" href="#!" id="close-sidenav-btn">Close</a></li>
+  </ul>
+  <!-- Navbar end -->
 
   <!-- Page layout -->
   <div class="row" id="main">
@@ -47,7 +67,7 @@
           class="material-icons right">arrow_drop_down</i></a>
     </div>
     <!-- Side course navigation -->
-    <div class="col s12 m4 l3 hide-on-small-only">
+    <div class="col s12 m2 l2 hide-on-med-and-down">
       <div class="collection" id="course-nav">
         <a href="../../in3050.html" class="collection-item">IN3050</a>
         <a href="search-and-optimization.html" class="collection-item active">Search and optimization</a>
@@ -59,71 +79,57 @@
       </div>
     </div>
     <!-- Middle content -->
-    <div class="col s12 m4 l6">
-      <h3>Search and Optimization</h3>
-
-      <ul class="collapsible expandable">
-        <li class="active">
-          <div class="collapsible-header red">Continous optimization</div>
-          <div class="collapsible-body"><span>
-              <strong>Continous optimization</strong> is the mathematical discipline which
-              is concerned with finding the <u>maxima</u> and <u>minima</u> of functions, possibly subject to
-              constraints.
-            </span>
-          </div>
-        </li>
-        <li class="active">
-          <div class="collapsible-header green">Discrete optimization</div>
-          <div class="collapsible-body"><span>
-              <strong>Discrete optimization</strong> is the activity of looking thoroughly in order to find an item with
-              specified properties among a collection of items.
-            </span>
-          </div>
-        </li>
-      </ul>
-      <p class="flow-text">
-        <br>
-        <h5>Some optimization methods include:</h5>
-        <ol>
-          <li class="flow-text">Exhaustive Search</li>
-          <li class="flow-text">Greedy search and Hill climbing</li>
-          <li class="flow-text">Simulated annealing</li>
-          <li class="flow-text">Gradient descent/ascent</li>
-        </ol>
-      </p>
+    <div class="col s12 m12 l8">
+      <div class="container" id="middle-content">
+        <h3 class="center-align">Search and optimization</h3>
+        <img
+          src="https://i0.wp.com/dataaspirant.com/wp-content/uploads/2016/04/logisticregression.png?resize=768%2C384&ssl=1"
+          class="responsive-img center" alt="">
+        <div class="section">
+          <p class="flow-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis amet soluta ad quos, tenetur a quae
+            reiciendis! Nesciunt doloremque, atque qui molestiae praesentium, voluptatibus ullam magni porro, tempora
+            tempore cum!
+          </p>
+        </div>
+      </div>
     </div>
     <!-- Right side content -->
-    <div class="col s12 m4 l3 red">
-      <p>s12 m4</p>
+    <div class="col m2 l2 hide-on-med-and-down">
+      <ul class="section table-of-contents">
+        <h6>Table of contents</h6>
+        <li><a href="#cost-function">Cost function</a></li>
+        <li><a href="#">rangaha</a></li>
+        <li><a href="#">asd</a></li>
+      </ul>
     </div>
-  </div>
-  <!--[if IE]>
+    <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
-  <!-- Add your site or application content here -->
-  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script>
-    window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')
-  </script>
+    <!-- Add your site or application content here -->
+    <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+      window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')
+    </script>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () {
-      ga.q.push(arguments)
-    };
-    ga.q = [];
-    ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto');
-    ga('set', 'transport', 'beacon');
-    ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
-  <!-- Materialize js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="../../../js/plugins.js"></script>
-  <script src="../../../js/main.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+      window.ga = function () {
+        ga.q.push(arguments)
+      };
+      ga.q = [];
+      ga.l = +new Date;
+      ga('create', 'UA-XXXXX-Y', 'auto');
+      ga('set', 'transport', 'beacon');
+      ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+    <!-- Materialize js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../../../js/plugins.js"></script>
+    <script src="../../../js/main.js"></script>
 </body>
 
 </html>

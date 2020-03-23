@@ -19,102 +19,130 @@
 </head>
 
 <body>
-  <!-- Navbar -->
-  <div class="navbar-fixed">
-    <nav>
-      <div class="nav-wrapper" id="navbar">
-        <div class="content-wrapper">
-          <a href="index.html" class="brand-logo active-tab" id="logo">[Notebook]</a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"
-              id="sidenav-icon">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-            <li class="tooltipped" data-position="bottom" data-tooltip="Projects"><a href=" #projects.html"><img
-                  src="icons/rocket.svg" alt="" class="icon"></a></li>
-            <li class="tooltipped" data-position="bottom" data-tooltip="Courses"><a href=" courses.html"><img
-                  src="icons/knowledge_color.svg" alt="" class="icon"></a></li>
-            <li class="tooltipped" data-position="bottom" data-tooltip="Blog"><a href=" blog.html"><img
-                  src="icons/blogger.svg" alt="" class="icon"></a></li>
-            <li><a class="waves-effect btn red" href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </div>
-  <ul class="sidenav" id="mobile-demo">
-    <li><a href="#projects.html">Projects</a></li>
-    <li><a href="courses.html">Courses</a></li>
-    <li><a href="#contact.html">Contact</a></li>
-  </ul>
-  <!-- Navbar end -->
+ <!-- Navbar -->
+ <div class="navbar-fixed">
+   <nav>
+     <div class="nav-wrapper" id="navbar">
+       <div class="content-wrapper">
+         <a href="index.html" class="brand-logo active-tab" id="logo">[Notebook]</a>
+         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"
+             id="sidenav-icon">menu</i></a>
+         <ul class="right hide-on-med-and-down">
+           <li class="tooltipped" data-position="bottom" data-tooltip="Projects"><a href="projects.html"><img
+                 src="icons/rocket.svg" alt="" class="icon"></a></li>
+           <li class="tooltipped" data-position="bottom" data-tooltip="Courses"><a href="courses.html"><img
+                 src="icons/knowledge_color.svg" alt="" class="icon"></a></li>
+           <li class="tooltipped" data-position="bottom" data-tooltip="Blog"><a href="blog.html"><img
+                 src="icons/blogger.svg" alt="" class="icon"></a></li>
+           <li><a class="waves-effect btn red darken-2" href="contact.html">Contact</a></li>
+           <li>
+             <div class="switch dark-mode-toggle" id="dark-mode-toggle">
+               <label id="dark-mode-label">
+                 Light
+                 <input id="dark-mode-input" type="checkbox">
+                 <span class="lever"></span>
+                 Dark
+               </label>
+             </div>
+           </li>
+         </ul>
+       </div>
+     </div>
+   </nav>
+ </div>
+ <ul class="sidenav" id="mobile-demo">
+   <li><a class="waves-effect waves-light btn indigo darken-2" href="projects.html">Projects 🚀</a></li>
+   <li><a class="waves-effect waves-light btn green darken-2" href="courses.html">Courses 📚</a></li>
+   <li><a class="waves-effect waves-light btn orange darken-2" href="blog.html">Blog 👨‍💻</a></li>
+   <li><a class="waves-effect waves-light btn red darken-2 " href="contact.html">Contact 📧</a></li>
+   <li><a class="waves-effect waves-light center sidenav-close" href="#!" id="close-sidenav-btn">Close</a></li>
+   <li>
+     <div class="switch dark-mode-toggle center" id="mobile-dark-mode-toggle">
+       <label id="dark-mode-label">
+         Light
+         <input id="dark-mode-input" type="checkbox">
+         <span class="lever"></span>
+         Dark
+       </label>
+     </div>
+   </li>
+ </ul>
+ <!-- Navbar end -->
   
-  <div class="container" id="main">
-    <h3 class="center green">Courses</h3>
-    <br>
-    <div class="course-grid">
-      <div class="course">
-        <div class="card grey darken-4 box">
-          <a href="courses/in1010.html">
-            <div class="card-image">
-              <img class="responsive-img"
-                src="img/java.JPG">
-              <a href="courses/in1010.html" class="btn-floating halfway-fab waves-effect waves-light red"><i
-                  class="material-icons">keyboard_arrow_right</i></a>
-            </div>
-            <div class="card-content">
-              <p>IN1010 - teori</p>
-            </div>
+  <div class="content" id="main">
+    <div class="container" id="middle-content">
+      <h3 class="white-text center green darken-2">Courses 📚</h3>
+      <br>
+      <div class="course-grid green darken-2">
+        <div class="course">
+          <div class="card grey darken-4">
+            <a href="courses/in1010.html">
+              <div class="card-image">
+                <img class="responsive-img" src="img/java.JPG">
+                <a href="courses/in1010.html" class="btn-floating halfway-fab waves-effect waves-light red"><i
+                    class="material-icons">keyboard_arrow_right</i></a>
+              </div>
+              <div class="card-content">
+                <p>IN1010 - teori</p>
+              </div>
+          </div>
+          </a>
         </div>
-        </a>
-      </div>
-      <div class="course">
-        <div class="card grey darken-4 box">
-          <a href="courses/in3050.html">
-            <div class="card-image">
-              <img class="responsive-img"
-                src="https://cdn.appenresources.com/wp-content/uploads/2019/10/iStock-1181216327-750x422.jpg">
-              <a href="courses/in3050.html" class="btn-floating halfway-fab waves-effect waves-light red"><i
-                  class="material-icons">keyboard_arrow_right</i></a>
-            </div>
-            <div class="card-content">
-              <p>IN3050 - teori</p>
-            </div>
+        <div class="course">
+          <div class="card grey darken-4">
+            <a href="courses/in3050.html">
+              <div class="card-image">
+                <img class="responsive-img"
+                  src="https://cdn.appenresources.com/wp-content/uploads/2019/10/iStock-1181216327-750x422.jpg">
+                <a href="courses/in3050.html" class="btn-floating halfway-fab waves-effect waves-light red"><i
+                    class="material-icons">keyboard_arrow_right</i></a>
+              </div>
+              <div class="card-content">
+                <p>IN3050 - teori</p>
+              </div>
+          </div>
+          </a>
         </div>
-        </a>
-      </div>
-      <div class="course">
-        <div class="card grey darken-4 box">
-          <a href="courses/in2150.html">
-            <div class="card-image">
-              <img class="responsive-img"
-                src="https://image.freepik.com/free-vector/contact-us-concept-landing-page_52683-18636.jpg">
-              <a href="courses/in2150.html" class="btn-floating halfway-fab waves-effect waves-light red large"><i
-                  class="material-icons">keyboard_arrow_right</i></a>
-            </div>
-            <div class="card-content">
-              <p>IN2150 - teori</p>
-            </div>
+        <div class="course">
+          <div class="card grey darken-4">
+            <a href="courses/in2150.html">
+              <div class="card-image">
+                <img class="responsive-img"
+                  src="https://image.freepik.com/free-vector/contact-us-concept-landing-page_52683-18636.jpg">
+                <a href="courses/in2150.html" class="btn-floating halfway-fab waves-effect waves-light red large"><i
+                    class="material-icons">keyboard_arrow_right</i></a>
+              </div>
+              <div class="card-content">
+                <p>IN2150 - teori</p>
+              </div>
+          </div>
+          </a>
         </div>
-        </a>
       </div>
+      <br>
+      <br>
+      <table>
+        <tr id="tableHeader">
+          <th>Course</th>
+          <th>Name</th>
+          <th>Link</th>
+        </tr>
+        <tr>
+          <td>IN1010</th>
+          <td>Objektorientert programmering</th>
+          <td><a href="/courses/IN1010.html">Theory</a></th>
+        </tr>
+        <tr>
+          <td>IN3050</th>
+          <td>Introduksjon til kunstig intelligens og maskinlæring</th>
+          <td><a href="/courses/IN3050.html">Theory</a></th>
+        </tr>
+      </table>
     </div>
-    <br>
-    <table>
-      <tr id="tableHeader">
-        <th>Course</th>
-        <th>Name</th>
-        <th>Link</th>
-      </tr>
-      <tr>
-        <td>IN1010</th>
-        <td>Objektorientert programmering</th>
-        <td><a href="/courses/IN1010.html">Theory</a></th>
-      </tr>
-      <tr>
-        <td>IN3050</th>
-        <td>Introduksjon til kunstig intelligens og maskinlæring</th>
-        <td><a href="/courses/IN3050.html">Theory</a></th>
-      </tr>
-    </table>
+  </div>
+  <div class="container">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur explicabo ut ex voluptatum quisquam. Minus quis, et eaque enim facere modi cum laudantium nobis veniam dicta sunt inventore, minima sed!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ex quasi error non dolorum saepe. Nesciunt delectus nam consequuntur iste dolor exercitationem? Autem, doloremque quas illo a magnam reiciendis. Inventore.</p>
   </div>
   <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -128,6 +156,7 @@
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="js/plugins.js"></script>
+  <script src="js/darkmode.js"></script>
   <script src="js/main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->

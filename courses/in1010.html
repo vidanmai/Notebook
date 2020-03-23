@@ -20,15 +20,35 @@
 </head>
 
 <body>
-  <div class="topnav" id="myTopnav">
-    <a href="../index.html" id="logo">Vi Dan</a>
-    <a href="#projects">Projects 🚀</a>
-    <a href="../courses.html" class="active-tab">Courses 📚</a>
-    <a href="#blog ">Blog 🤳</a>
-    <a href="#about">About 👨‍💻</a>
-    <a href="#contact">Contact 📧</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-  </div>
+    <!-- Navbar -->
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper" id="navbar">
+          <div class="content-wrapper">
+            <a href="../index.html" class="brand-logo active-tab" id="logo">[Notebook]</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"
+                id="sidenav-icon">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li class="tooltipped" data-position="bottom" data-tooltip="Projects"><a href="../projects.html"><img
+                    src="../icons/rocket.svg" alt="" class="icon"></a></li>
+              <li class="tooltipped" data-position="bottom" data-tooltip="Courses"><a href="../courses.html"><img
+                    src="../icons/knowledge_color.svg" alt="" class="icon"></a></li>
+              <li class="tooltipped" data-position="bottom" data-tooltip="Blog"><a href="../blog.html"><img
+                    src="../icons/blogger.svg" alt="" class="icon"></a></li>
+              <li><a class="waves-effect btn red darken-2" href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <ul class="sidenav" id="mobile-demo">
+      <li><a class="waves-effect waves-light btn indigo darken-2" href="../projects.html">Projects 🚀</a></li>
+      <li><a class="waves-effect waves-light btn green darken-2" href="../courses.html">Courses 📚</a></li>
+      <li><a class="waves-effect waves-light btn orange darken-2" href="../blog.html">Blog 👨‍💻</a></li>
+      <li><a class="waves-effect waves-light btn red darken-2 " href="../contact.html">Contact 📧</a></li>
+      <li><a class="waves-effect waves-light center sidenav-close" href="#!" id="close-sidenav-btn">Close</a></li>
+    </ul>
+    <!-- Navbar end -->
   <div class="row" id="main">
     <h3>IN1010 😃</h3>
     <img class="responsive-img" src="https://media.snl.no/system/images/137794/standard_Java_programming_language_logo.svg" alt="java snl.no">
@@ -43,6 +63,7 @@
   <script>
     window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="../js/plugins.js"></script>
   <script src="../js/main.js"></script>
 
