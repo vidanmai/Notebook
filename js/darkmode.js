@@ -40,7 +40,7 @@ function checkDarkMode() {
     } else {
         disableDarkMode();
         disableDarkModeMobile();
-        sun.style.display = "none";
+        sun.style.display = "inline";
     }
 }
 
