@@ -34,13 +34,12 @@ const disableDarkModeMobile = () => {
 
 function checkDarkMode() {
     if(darkMode === "enabled") {
-        document.body.classList.add("darkmode");
-        localStorage.setItem("darkMode", "enabled");
-        const darkModeInput = document.querySelector("#dark-mode-input");
-        const mobileInput = document.querySelector("#mobile-dark-mode-input");
-        const sun = document.getElementById("sun");
-        darkModeInput.checked = true;
-        mobileInput.checked = true;
+        enableDarkMode();
+        enableDarkModeMobile();
+        sun.style.display = "none";
+    } else {
+        disableDarkMode();
+        disableDarkModeMobile();
         sun.style.display = "none";
     }
 }
