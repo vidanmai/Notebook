@@ -28,6 +28,18 @@
          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"
              id="sidenav-icon">menu</i></a>
          <ul class="right hide-on-med-and-down">
+           <!-- right side items -->
+          <li>
+            <div class="switch dark-mode-toggle" id="dark-mode-toggle">
+              <label id="dark-mode-label">
+                <img id="sun" class="darkmode-icon" src="icons/sun.svg" alt="">
+                <input id="dark-mode-input" type="checkbox">
+                <span class="lever"></span>
+                <img id="moon" class="darkmode-icon" src="icons/nights_stay-white-18dp.svg" alt="">
+              </label>
+            </div>
+          </li>
+          <!-- Rest of right side -->
            <li class="tooltipped" data-position="bottom" data-tooltip="Projects"><a href="projects.html"><img
                  src="icons/rocket.svg" alt="" class="icon"></a></li>
            <li class="tooltipped" data-position="bottom" data-tooltip="Courses"><a href="courses.html"><img
@@ -35,16 +47,6 @@
            <li class="tooltipped" data-position="bottom" data-tooltip="Blog"><a href="blog.html"><img
                  src="icons/blogger.svg" alt="" class="icon"></a></li>
            <li><a class="waves-effect btn red darken-2" href="contact.html">Contact</a></li>
-           <li>
-             <div class="switch dark-mode-toggle" id="dark-mode-toggle">
-               <label id="dark-mode-label">
-                 Light
-                 <input id="dark-mode-input" type="checkbox">
-                 <span class="lever"></span>
-                 Dark
-               </label>
-             </div>
-           </li>
          </ul>
        </div>
      </div>
@@ -56,16 +58,18 @@
    <li><a class="waves-effect waves-light btn orange darken-2" href="blog.html">Blog 👨‍💻</a></li>
    <li><a class="waves-effect waves-light btn red darken-2 " href="contact.html">Contact 📧</a></li>
    <li><a class="waves-effect waves-light center sidenav-close" href="#!" id="close-sidenav-btn">Close</a></li>
+   <!-- Dark mode toggle for mobile -->
    <li>
      <div class="switch dark-mode-toggle center" id="mobile-dark-mode-toggle">
        <label id="dark-mode-label">
          Light
-         <input id="dark-mode-input" type="checkbox">
+         <input id="mobile-dark-mode-input" type="checkbox">
          <span class="lever"></span>
          Dark
        </label>
      </div>
    </li>
+   <!-- darkmode mobile toggle end  -->
  </ul>
  <!-- Navbar end -->
   
@@ -139,10 +143,6 @@
         </tr>
       </table>
     </div>
-  </div>
-  <div class="container">
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur explicabo ut ex voluptatum quisquam. Minus quis, et eaque enim facere modi cum laudantium nobis veniam dicta sunt inventore, minima sed!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ex quasi error non dolorum saepe. Nesciunt delectus nam consequuntur iste dolor exercitationem? Autem, doloremque quas illo a magnam reiciendis. Inventore.</p>
   </div>
   <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>

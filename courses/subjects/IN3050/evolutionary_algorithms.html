@@ -29,6 +29,19 @@
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"
                             id="sidenav-icon">menu</i></a>
                     <ul class="right hide-on-med-and-down">
+                        <!-- dark mode toggle -->
+                        <li>
+                            <div class="switch dark-mode-toggle" id="dark-mode-toggle">
+                                <label id="dark-mode-label">
+                                    <img id="sun" class="darkmode-icon" src="../../../icons/sun.svg" alt="">
+                                    <input id="dark-mode-input" type="checkbox">
+                                    <span class="lever"></span>
+                                    <img id="moon" class="darkmode-icon" src="../../../icons/nights_stay-white-18dp.svg"
+                                        alt="">
+                                </label>
+                            </div>
+                        </li>
+                        <!-- dark mode toggle end  -->
                         <li class="tooltipped" data-position="bottom" data-tooltip="Projects"><a
                                 href="../../../projects.html"><img src="../../../icons/rocket.svg" alt=""
                                     class="icon"></a></li>
@@ -50,6 +63,18 @@
         <li><a class="waves-effect waves-light btn orange darken-2" href="../../../blog.html">Blog 👨‍💻</a></li>
         <li><a class="waves-effect waves-light btn red darken-2 " href="../../../contact.html">Contact 📧</a></li>
         <li><a class="waves-effect waves-light center sidenav-close" href="#!" id="close-sidenav-btn">Close</a></li>
+        <!-- Dark mode toggle for mobile -->
+        <li>
+            <div class="switch dark-mode-toggle center" id="mobile-dark-mode-toggle">
+                <label id="dark-mode-label">
+                    Light
+                    <input id="mobile-dark-mode-input" type="checkbox">
+                    <span class="lever"></span>
+                    Dark
+                </label>
+            </div>
+        </li>
+        <!-- darkmode mobile toggle end  -->
     </ul>
     <!-- Navbar end -->
 
@@ -74,17 +99,17 @@
             <div class="collection" id="course-nav">
                 <a href="../../in3050.html" class="collection-item">IN3050</a>
                 <a href="search-and-optimization.html" class="collection-item">Search and optimization</a>
-                <a href="#!" class="collection-item">Evolutionary Algorithms</a>
+                <a href="evolutionary_algorithms.html" class="collection-item active">Evolutionary Algorithms</a>
                 <a href="supervised-classification.html" class="collection-item">Supervised classification</a>
                 <a href="linear-regression.html" class="collection-item">Linear regression</a>
-                <a href="logistic_regression.html" class="collection-item active">Logistic regression</a>
+                <a href="logistic_regression.html" class="collection-item">Logistic regression</a>
                 <a href="#!" class="collection-item">Linear classifiers</a>
             </div>
         </div>
         <!-- Middle content -->
         <div class="col s12 m12 l8">
             <div class="container" id="middle-content">
-                <h3 class="center-align">Logistic Regression</h3>
+                <h3 class="center-align">Evolutionary Algorithms</h3>
                 <img src="https://i0.wp.com/dataaspirant.com/wp-content/uploads/2016/04/logisticregression.png?resize=768%2C384&ssl=1"
                     class="responsive-img center" alt="">
                 <div class="section">
@@ -131,6 +156,7 @@
         <!-- Materialize js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="../../../js/plugins.js"></script>
+        <script src="../../../js/darkmode.js"></script>
         <script src="../../../js/main.js"></script>
 </body>
 

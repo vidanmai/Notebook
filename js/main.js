@@ -6,29 +6,6 @@ window.onscroll = function () {
 //Find out if darkMode is enabled on local computer
 //let darkMode = localStorage.getItem('darkMode');
 
-function makeNavTransparent() {
-    let nav = document.getElementById("navbar");
-    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-        /*
-        if(localStorage.getItem("darkMode") === "enabled") {
-            nav.style.background = "#121212";
-            nav.style.borderBottom = "1px solid #303030";
-            nav.style.transition = "background .2s";
-        } else {
-            nav.style.background = "#FFF";
-            nav.style.borderBottom = "1px solid lightgrey";
-            nav.style.transition = "background .2s";
-        }
-        */
-       nav.style.background = "#121212";
-       nav.style.borderBottom = "1px solid #303030";
-       nav.style.transition = "background .2s";
-    } else {
-        nav.style.backgroundColor = "transparent";
-        nav.style.border = "0";
-    }
-}
-
 const toolTip = document.querySelectorAll('.tooltipped');
 M.Tooltip.init(toolTip, {});
 
