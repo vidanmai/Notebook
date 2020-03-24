@@ -70,6 +70,7 @@ function darkModeListener() {
             disableDarkModeMobile();
             console.log("Enabled lightmode");
         }
+        makeNavTransparent();
     });
 }
 

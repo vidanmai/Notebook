@@ -21,7 +21,9 @@
 
 /* Rubik font */
 @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
-
+* {
+  box-sizing: border-box;
+}
 :root {
   --text-color: #242424;
   --background-color: rgb(230, 230, 230);
@@ -29,7 +31,7 @@
   --card-color: #212121;
   --card-text-color: white;
   --logo-color: #43a047;
-  --sidenav-background: rgba(12, 12, 12, 0.856);
+  --sidenav-background: rgba(255, 255, 255, 0.75);
   --section-background: #FFF;
   --ff-body: 'Roboto',
   sans-serif;
@@ -68,8 +70,10 @@ body {
 nav {
   background-color: transparent;
   box-shadow: none !important;
+  /*
   height: 8vh;
   line-height: 8vh;
+  */
 }
 
 nav i {
@@ -173,7 +177,7 @@ label {
 }
 
 .sidenav li>a {
-  color: white;
+  color: var(--text-color);
   font-size: large;
   justify-content: space-between;
 }
@@ -185,11 +189,6 @@ label {
 .sidenav li>a.btn-flat,
 .sidenav li>a.btn-floating {
   margin: 20px 30px;
-}
-
-nav .sidenav-trigger i {
-  height: 56px;
-  line-height: 63px;
 }
 
 #close-sidenav-btn {
@@ -215,22 +214,28 @@ nav .sidenav-trigger i {
 
 .course-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(5, minmax(17rem, 1fr));
+  grid-auto-flow: row;
+  overflow-x: scroll;
+  grid-gap: 2rem;
   width: 100%;
-  overflow: hidden;
+  overflow-x: scroll;
   height: auto;
-  font-family: 'Roboto';
-  font-weight: bold;
   padding-top: 2rem;
   padding-bottom: 2rem;
   border-radius: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .card {
-  width: 70%;
   margin-left: auto;
   margin-right: auto;
   transition: all .15s ease-in-out;
+}
+
+.card img {
+  height: 20vh;
 }
 
 .card-content, .card-content p {
@@ -295,8 +300,8 @@ nav .sidenav-trigger i {
   border-radius: 1rem;
   padding-left: 5rem;
   padding-right: 5rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .content-box {
@@ -635,21 +640,42 @@ textarea {
   }
 }
 
-/* For tablet and mobile */
-@media screen and (max-width: 768px) and (max-height:1024px) {
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+/*iPad Pro */
+@media (min-width: 1024px) and (max-width: 1280px) {
+
+  #middle-content {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .card img {
+    height: 15vh;
+  }
 
   #logo {
+    margin-left: 1rem;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #logo {
     font-size: 1.2rem;
-  }
-
-  .course-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1.75rem;
-  }
-
-  .card {
-    height: 100%;
-    width: 75%;
   }
 
   .table-of-contents {
@@ -660,101 +686,70 @@ textarea {
 
   #middle-content {
     background-color: transparent;
+    width: 70%;
     padding: 0;
   }
-  
+
   .content-box {
-     background-color: transparent;
-     padding: 0;
-  }
-}
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-  /* STYLES GO HERE */
-}
-
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-width : 320px) and (max-width : 480px) {
-  /* Styles */
-
-  .course-grid {
-    grid-template-columns: auto;
-  }
-
-  .content-wrapper {
-    width: 100%;
-  }
-}
-
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) {
-  /* Styles */
-  
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-  /* Styles */
-}
-
-/* For smartphone portrait nav */
-@media only screen and (max-width: 992px) and (orientation: landscape) {
-  nav {
-    height: 16vh;
-  }
-  nav .brand-logo {
-    line-height: 63px;
-  }
-}
-
-/* iPads (portrait) ----------- */
-@media only screen and (min-width : 768px) and (max-height: 1366px) and (orientation: portrait) {
-  /* Styles */
-
-  nav li a {
-    font-size: 1rem;
-  }
-
-  .course-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1rem;
-  }
-
-  .card img {
-    height: 10vh;
-  }
-
-  .content-wrapper {
-    width: 90%;
-  }
-}
-
-@media only screen and (min-width : 768px) and (max-height: 1366px) and (orientation: landscape) {
-  /* Styles */
-  .course-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1rem;
+    background-color: transparent;
+    padding: 0;
   }
 
   .card img {
     height: 20vh;
   }
+  
+}
+/* Media queries */
+@media (min-width: 1281px) {
+  /* Bigger nav */
+  nav {
+    height: 8vh;
+    line-height: 8vh;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  #middle-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 
 }
 
-/* Desktops and laptops ----------- */
-@media only screen and (min-width : 1224px) {
-  /* Styles */
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  #middle-content {
+    background-color: transparent;
+    width: 98%;
+    padding: 0;
+  }
+
+  .card img {
+    height: 40vh;
+  }
 }
 
-/* Large screens ----------- */
-@media only screen and (min-width : 1824px) {
-  /* Styles */
-}
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
 
-/* iPhone 4 ----------- */
-@media only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-  /* Styles */
-}
+@media (min-width: 320px) and (max-width: 480px) {
+  #middle-content {
+    background-color: transparent;
+    width: 98%;
+    padding: 0;
+  }
 
+}

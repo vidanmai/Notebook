@@ -105,7 +105,7 @@
     </div>
     <!-- Middle content -->
     <div class="col s12 m12 l8">
-      <div class="content container" id="middle-content">
+      <div class="content container flow-text" id="middle-content">
         <h3 class="center-align">Supervised classification</h3>
         <img src="https://miro.medium.com/max/977/1*DjUEt5--t6lCjYG_MuZlLg.png" class="responsive-img center" alt="">
         <br>
@@ -133,6 +133,8 @@
         <div id="supervised-learning" class="section scrollspy">
           <h5>Supervised Learning</h5>
           <p class="flow-text">
+            <strong>Supervised learning</strong> is the machine learning task of determining a function from labeled data. For example, in a machine learning algorithm that detects if a post is spam or not, the training set would include posts labeled as "spam" and posts labeled as "not spam" to help teach the algorithm how to recognize the difference. Supervised learning algorithms infer a <strong>function</strong> from labeled data and uses this function on new examples. Since the algorithm receives a data set as input that already has a correct answer associated with it (target), the algorithm will learn by comparing its output with the correct answer, and if it finds errors, it adjusts the model accordingly. The training continues untiles the algorithm outputs information within the desired accuracy range.
+            <br><br>
             We need a well defined set of observations, O (possible inputs) and a set of target values, T (possible
             output values).
             <br>
@@ -148,32 +150,25 @@
           </div>
         </div>
         <div id="classification" class="section scrollspy">
-          <h5 class="center">Classification</h5>
+          <h5>Classification</h5>
           <div class="row">
-            <div class="col s12 m6">
+            <div class="col s12 m6 l6">
               <p class="flow-text">
-                How can we decide to which class the new item belongs?
-                <br>
-                <br>
-                We have to look for similarities to objects in the various classes.
-                <br>
-                <br>
-                To do to this we need to:
+                A linear classifier will always propose a linear decision border.
                 <ul class="flow-text">
-                  <li>- Describe attributes of the objects</li>
-                  <li>- Find similarities in terms of attributes</li>
+                  <li>(line, plane, hyper-plane)</li>
+                  <li>Whether the set is linearly separable or not</li>
                 </ul>
-                <br>
-                <br>
               </p>
+              <p>The perceptron is a linear classifier.</p>
             </div>
-            <div class="col s12 m6">
-              <img src="../../../img/classification.JPG" alt="" class="responsive-img box center">
+            <div class="col s12 m6 l6">
+              <img src="img/classification.JPG" alt="" class="responsive-img">
             </div>
           </div>
         </div>
         <div class="section scrollspy">
-          <h5 class="center">Machine learning in python</h5>
+          <h5>Machine learning in python</h5>
           <p class="flow-text">To do machine learning, we need data. To make it simple, we use scikit-learn to construct
             a
             synthetic dataset with:</p>
@@ -187,7 +182,7 @@
           </ul>
         </div>
         <div class="section scrollspy">
-          <h5 class="center">ML algorithms and visualization</h5>
+          <h5>ML algorithms and visualization</h5>
           <p class="flow-text">To illustrate ML algorithms, it is easiest to use: </p>
           <ul class="list flow-text">
             <li>2 numerical features</li>
@@ -207,16 +202,16 @@
           <h5 class="center">Distance</h5>
           <p class="flow-text">The assumption is based on points that are close together in feature space are similar.
             There are some notion of distance in <u>feature space</u>, normally Euclidean distance (L2).
-            <img src="img/feature_space.JPG" alt="" class="responsive-img center">
           </p>
+          <img src="img/feature_space.JPG" alt="" class="responsive-img center">
         </div>
         <div class="section">
-          <h5 class="center">More classes</h5>
+          <h5>More classes</h5>
           <p class="flow-text">
             A binary classifier with odd <i>k</i> always reaches a decision. With more than 2 classes, there might be a
             draw.
             <br>Possible ways out:
-            <ul>
+            <ul class="bullet-list">
               <li>Alt. 1: Back off to k-1, etc. until there is a majority class</li>
               <li>Alt. 2: Weight classes by distance from target, take the weighted max.</li>
             </ul>
@@ -268,9 +263,91 @@
             <strong>w</strong> is a vector of real-valued weights, <strong>w * x</strong> is the dot product.
           </p>
         </div>
-        <div class="section">
-          <h5><strong>Conclusion</strong></h5>
+        <div class="section scrollspy">
+          <h5>The algorithm</h5>
           <p class="flow-text">
+            Let's recall the dot product of two vectors of length n is given by:
+          </p>
+          <img src="img/dot_product.png" alt="" class="responsive-img center">
+          <p class="flow-text">
+            The function f(x) = b + <strong>w . x</strong> is a linear combination of <u>weight</u> and <u>feature</u> vectors. Perceptron is therefore a linear classifier - an algorithm that predicts using a linear predictor function.
+            <br>
+            <br>
+            The weights signify the effectiveness of each feature x_i in <strong>x</strong> on the model's behavior. Higher the weight w_i, of a feature x_i, higher is it's influence on the output. On the other hand, the bias <i>'b'</i> is like the intercept in the linear equation. It's a constant that helps the model adjust in a way that best fits the data. <strong>The bias term</strong> assumes an imaginary input feature coefficient x0 = 1.
+            <br>
+            <br>
+            The model can be trained using the following algorithm:
+          </p>
+          <img src="img/perceptron_algorithm.png" alt="" class="responsive-img">
+        </div>
+        <div class="section scrollspy">
+          <h5>Training one perceptron</h5>
+          <ol class="flow-text">
+            <li>Initialize: set all weights to small random numbers: w_1, w_1, ... w_m</li>
+              <li>Reapeat until {some criteria}
+                <br>Consider one training instance
+                <br>Inputs: x_1, x_2, ... x_m
+                <br>Label: <i>t</i> which is 1 or 0
+                <br>Calculate the output of the perceptron:
+                <br>
+                <br>
+                <img src="img/formula.PNG" alt="" class="responsive-img left">
+                <br>
+                <br>
+                If <i>y</i> = <i>t</i>, do nothing, if y =/ t, update weights.
+              </li>
+          </ol>
+        </div>
+        <div class="section scrollspy">
+          <img src="img/update_weights.JPG" alt="" class="responsive-img">
+        </div>
+        <div class="section scrollspy">
+          <h5>Linear separability</h5>
+          <p class="flow-text">
+            A set is linearly separable if there is a straight line in the feature plane such that all points in one
+            class fall on one side and all points in the other class fall at the other side.
+            <br><br>
+            For more than two features, this generalises to a hyper-plane.
+          </p>
+        </div>
+        <div class="section scrollspy">
+          <h5>Linear classifier</h5>
+          <div class="row">
+            <div class="col s12 m6 l6">
+              <p class="flow-text">
+                A linear classifier will always propose a linear decision border.
+                <ul class="flow-text">
+                  <li>(line, plane, hyper-plane)</li>
+                  <li>Whether the set is linearly separable or not</li>
+                </ul>
+              </p>
+              <p>The perceptron is a linear classifier.</p>
+            </div>
+            <div class="col s12 m6 l6">
+              <img src="img/linear_classifier.JPG" alt="" class="responsive-img">
+            </div>
+          </div>
+        </div>
+        <div class="section scrollspy">
+          <h5>Perceptron Convergence Theorem</h5>
+          <p class="flow-text">
+            If the training set is linearly sperarable, the perceptron algorithm will (sooner or later) find a linear decision border and stop updating.
+            <br>Unless the learning rate <i>n</i> is too big.
+            Comment:
+            <br>
+            There are normally more than one solution, which generalizes differently to test data.
+          </p>
+        </div>
+        <div class="section scrollspy">
+          <h5>Limitations</h5>
+          <blockquote class="flow-text"><i>A property of the Perceptron is that if the dataset is linearly separable, then the algorithm is guaranteed to converge at some point!</i></blockquote>
+          <p class="flow-text">
+            A single layer perceptron works only if the dataset is linearly separable. The algorithm is used only for Binary Classification problems. However, we can extend the algorithm to solve a multiclass classification problem by introducing one perceptron per class. i.e., each perceptron result in a 0 or 1 signifying whether or not the sample belongs to that class.
+          </p>
+        </div>
+        <div class="section scrollspy" id="conclusion">
+          <h5><strong>Conclusion</strong></h5>
+          <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nesciunt, sequi vitae fugiat consequuntur
             autem, laborum beatae inventore tempora dicta, cum repudiandae a libero eius laboriosam delectus? Sit, illum
             vitae?
@@ -285,6 +362,7 @@
         <li><a href="#machine-learning">Machine Learning</a></li>
         <li><a href="#supervised-learning">Supervised learning</a></li>
         <li><a href="#classification">Classification</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
       </ul>
   </div>
   <!--[if IE]>
