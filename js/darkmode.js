@@ -50,10 +50,12 @@ function darkModeListener() {
         const sun = document.getElementById("sun");
         if (darkModeInput.checked === true) {
             enableDarkMode();
+            enableDarkModeMobile();
             sun.style.display = "none";
             console.log("Enabled darkmode");
         } else {
             disableDarkMode();
+            disableDarkModeMobile
             sun.style.display = "inline";
             console.log("Enabled lightmode");
         }
@@ -65,9 +67,13 @@ function darkModeListener() {
         const darkModeInput = document.querySelector('#mobile-dark-mode-input');
         if (darkModeInput.checked === true) {
             enableDarkModeMobile();
+            enableDarkMode();
+            sun.style.display = "none";
             console.log("Enabled darkmode");
         } else {
             disableDarkModeMobile();
+            disableDarkMode();
+            sun.style.display = "inline";
             console.log("Enabled lightmode");
         }
         makeNavTransparent();

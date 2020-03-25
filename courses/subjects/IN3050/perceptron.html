@@ -1,0 +1,359 @@
+
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <!--Google icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../../../css/normalize.css">
+    <link rel="stylesheet" href="../../../css/main.css">
+
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper" id="navbar">
+                <div class="content-wrapper">
+                    <a href="../../../index.html" class="brand-logo active-tab" id="logo">[Notebook]</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"
+                            id="sidenav-icon">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <!-- dark mode toggle -->
+                        <li>
+                            <div class="switch dark-mode-toggle" id="dark-mode-toggle">
+                                <label id="dark-mode-label">
+                                    <img id="sun" class="darkmode-icon" src="../../../icons/sun.svg" alt="">
+                                    <input id="dark-mode-input" type="checkbox">
+                                    <span class="lever"></span>
+                                    <img id="moon" class="darkmode-icon" src="../../../icons/nights_stay-white-18dp.svg"
+                                        alt="">
+                                </label>
+                            </div>
+                        </li>
+                        <!-- dark mode toggle end  -->
+                        <li class="tooltipped" data-position="bottom" data-tooltip="Projects"><a
+                                href="../../../projects.html"><img src="../../../icons/rocket.svg" alt=""
+                                    class="icon"></a></li>
+                        <li class="tooltipped" data-position="bottom" data-tooltip="Courses"><a
+                                href="../../../courses.html"><img src="../../../icons/knowledge_color.svg" alt=""
+                                    class="icon"></a></li>
+                        <li class="tooltipped" data-position="bottom" data-tooltip="Blog"><a
+                                href="../../../blog.html"><img src="../../../icons/blogger.svg" alt="" class="icon"></a>
+                        </li>
+                        <li><a class="waves-effect btn red darken-2" href="../../../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a class="waves-effect waves-light btn indigo darken-2" href="../../../projects.html">Projects 🚀</a></li>
+        <li><a class="waves-effect waves-light btn green darken-2" href="../../../courses.html">Courses 📚</a></li>
+        <li><a class="waves-effect waves-light btn orange darken-2" href="../../../blog.html">Blog 👨‍💻</a></li>
+        <li><a class="waves-effect waves-light btn red darken-2 " href="../../../contact.html">Contact 📧</a></li>
+        <li><a class="waves-effect waves-light center sidenav-close" href="#!" id="close-sidenav-btn">Close</a></li>
+        <!-- Dark mode toggle for mobile -->
+        <li>
+            <div class="switch dark-mode-toggle center" id="mobile-dark-mode-toggle">
+                <label id="dark-mode-label">
+                    Light
+                    <input id="mobile-dark-mode-input" type="checkbox">
+                    <span class="lever"></span>
+                    Dark
+                </label>
+            </div>
+        </li>
+        <!-- darkmode mobile toggle end  -->
+    </ul>
+    <!-- Navbar end -->
+
+    <!-- Page layout -->
+    <div class="row" id="main">
+        <div class="col s12 hide-on-large-only">
+            <ul id="dropdown" class="dropdown-content">
+                <li><a href="#">Close</a></li>
+                <li><a href="../../in3050.html">IN3050</a></li>
+                <li><a href="search-and-optimization.html">Search and optimization</a></li>
+                <li><a href="evolutionary_algorithms.html">Evolutionary Algorithms</a></li>
+                <li><a href="supervised-classification.html">Supervised classification</a></li>
+                <li><a href="perceptron.html">Perceptron</a></li>
+                <li><a href="linear-regression.html">Linear regression</a></li>
+                <li><a href="logistic_regression.html">Logistic regression</a></li>
+                <li><a href="#!">Linear classifiers</a></li>
+            </ul>
+            <a class="btn dropdown-trigger grey darken-4" href="" data-target="dropdown">Subjects<i
+                    class="material-icons right">arrow_drop_down</i></a>
+        </div>
+        <!-- Side course navigation -->
+        <div class="col s12 m2 l2 hide-on-med-and-down">
+            <div class="collection" id="course-nav">
+                <a href="../../in3050.html" class="collection-item">IN3050</a>
+                <a href="search-and-optimization.html" class="collection-item">Search and optimization</a>
+                <a href="evolutionary_algorithms.html" class="collection-item">Evolutionary Algorithms</a>
+                <a href="supervised-classification.html" class="collection-item">Supervised classification</a>
+                <a href="perceptron.html" class="collection-item active">Perceptron</a>
+                <a href="linear-regression.html" class="collection-item">Linear regression</a>
+                <a href="logistic_regression.html" class="collection-item">Logistic regression</a>
+                <a href="#!" class="collection-item">Linear classifiers</a>
+            </div>
+        </div>
+        <!-- Middle content -->
+        <div class="col s12 m12 l8">
+            <div class="content container flow-text" id="middle-content">
+                <h3 class="center-align">Perceptron</h3>
+                <!-- Perceptron -->
+                <div class="section scrollspy">
+                    <img src="img/perceptron.JPG" alt="" class="responsive-img center">
+                    <br>
+                    <ol class="flow-text">
+                        <li>A set of inputs: x_1, x_2, ... x_m</li>
+                        <li>A set of weights: w_1, w_2, ... w_m</li>
+                        <li>An adder</li>
+                        <li>An activation function</li>
+                        <img src="img/activation_function.JPG" alt="" class="responsive-img">
+                    </ol>
+                    <h6>Perceptrons are binary classifiers (0/1)</h6>
+                    <br>
+                    <h5>Definition</h5>
+                    <hr>
+                    <p>
+                        The perceptron is an algorithm for a learning for learning a binary classifier called a
+                        <strong>threshold
+                            function</strong>: a function that maps its input <strong>x</strong> (a real valued vector)
+                        to an output
+                        value <strong>f(x)</strong> (a single binary value).
+                    </p>
+                    <img class="white responsive-img center" src="img/perceptron_formula.svg" alt="">
+                    <p class="flow-text">
+                        <strong>w</strong> is a vector of real-valued weights, <strong>w * x</strong> is the dot
+                        product.
+                    </p>
+                    <div class="img-section">
+                        <img src="img/linear_graph.png" alt="">
+                    </div>
+                    <p>
+                        A perceptron is more specifically a <strong>linear  classification</strong> algorithm, because it uses a line to determine an input's class. If we draw that line on a plot, we call that line a <strong>decision boundary.</strong>
+                        <br><br>
+                    </p>
+                </div>
+                <div class="section scrollspy">
+                    <h5>The algorithm</h5>
+                    <hr>
+                    <p>The perceptron algorithm was one of the first artificial neural networks to be produced and is the building block for one of the most commonly used neural networks, the <strong>multilayer perceptron</strong>.
+                    </p>
+                    <br>
+                    <h5>Properties</h5>
+                    The perceptron algorithm is frequently used in <strong>supervised learning</strong>, which is a machine learning task that has the advantage of being trained on labeled data. This is contrasted with <strong>unsupervised learning</strong>, which is trained on unlabeled data. Specifically, the perceptron algorithm focuses on binary classified data, objects that are either members of one class or another. Additionally, it allows for online learning, which simply means that it processes elements in the training dataset one at a time (which can be useful for large datasets).
+                    <div class="img-section">
+                        <img src="img/separating_hyperplane.png" alt="" class="white">
+                    </div>
+                    <div class="img-description">
+                        An example of binary classified data and decision boundaries used by classifiers.
+                    </div>
+                    Furthermore, the perceptron algorithm is a type of <strong>linear classifier</strong> which classifies data points by using a linear combination of the variables used. As seen in the graph above, a linear classifier uses lines (e.g. H1, H2, or H3) to classify data points - any objects on one side of the line is part of one class and any object on the other side is part of the other class. In this example, a successful linear classifier could use H1 or H2 to discriminate between the two classes, whereas H3 would be a poor <strong>decision boundary</strong>.
+                    <br><br>
+                    An Interesting consequence of the perceptron's properties is that it is unable to learn an XOR function! As we see above, OR and AND functions are <em>linearly separable</em>, which means that there exists a line that can separate all data points of one class from all data points of the other. However the XOR function is not linearly separable, and therefore the perceptron algorithm (a linear classifier) cannot successfully learn the concept. This is a principak reason why the perceptron algorithm by itself is not used for complex machine learning tasks, but is rather a building block for a neural network that can handle linearly inseparable classifications.
+                    <br><br>
+                    Given an input with <i>k</i> variables x_1, x_2, ... x_k, a line is a linear combination of these variables w_1*x_1 + w_2*x_2 + ... + w_k * x_k + b = 0, where w_0, w_1 ..., w_k and b are constants. Note that this can also be written as <strong><em>w * b + b</em></strong> = 0, where * is the <strong>dot product</strong> between the two vectors <strong><i>w</i></strong> and <strong><i>x</i></strong>.
+                    <br><br>
+                    The perceptron algorithm returns values of w_0, w_1, ..., w_k and i <i>b</i> such that data points on one side of the line are of one class and data points on the other side are of the other. Mathematically, the values of <strong><em>w * x</em></strong> + b > 0, the classifier returns 1; otherwise, it returns 0. Note that 1 represents memebership of one class and 0 represents membership of the other. This can be seen more clearly with the AND operator.
+                    <div class="img-section">
+                        <img src="img/and_operator.png" alt="" class="white">
+                    </div>
+                    <div class="img-description">
+                        The AND operation between two numbers: A red dot represents one class(x_1 and x_2 = 0) and a blue dot represents the other class (x_1 and x_2 = 1). The line is the result of the perceptron algorithm, which separates all data points of one class from those of the other.
+                    </div>
+                    <p>
+                        So what does <strong><i>w</i></strong> and <i>b</i> stand for? <strong><i>w</i></strong> represents the weights of the <i>k</i> variables. Simply, a variable's weight determines how steep the line is relative to that variable. A weight is needed for every variable; otherwise, the line would be flat relative to that variable, which may prevent the line from successfully classifying the data. Furthermore, <i>b</i> represents the <em>bias</em> of the data. Essentially, this prevents the line from being dependent on the <strong>origin</strong> (the point (0,0)) - the bias shifts the line up or down to better classify the data.
+                    </p>
+                    <p class="flow-text">
+                        Let's recall the dot product of two vectors of length n is given by:
+                    </p>
+                    <img src="img/dot_product.png" alt="" class="responsive-img center">
+                    <p class="flow-text">
+                        The function f(x) = b + <strong>w . x</strong> is a linear combination of <u>weight</u> and
+                        <u>feature</u>
+                        vectors. Perceptron is therefore a linear classifier - an algorithm that predicts using a linear
+                        predictor
+                        function.
+                        <br>
+                        <br>
+                        The weights signify the effectiveness of each feature x_i in <strong>x</strong> on the model's
+                        behavior. Higher
+                        the weight w_i, of a feature x_i, higher is it's influence on the output. On the other hand, the
+                        bias <i>'b'</i>
+                        is like the intercept in the linear equation. It's a constant that helps the model adjust in a
+                        way that best
+                        fits the data. <strong>The bias term</strong> assumes an imaginary input feature coefficient x0
+                        = 1.
+                        <br>
+                        <br>
+                        The model can be trained using the following algorithm:
+                    </p>
+                    <img src="img/perceptron_algorithm.png" alt="" class="responsive-img">
+                </div>
+                <div class="section scrollspy">
+                    <h5>Supervised learning</h5>
+                    <hr>
+                    <p>
+                        The perceptron algorithm learns to separate data by changing weights and bias over time, where time is denoted as the number of times the algorithm has been run. As such, <b><em>w(t)</em></b> represents the value of the weights at time <i>t</i> and <i>b(t)</i> represents the value of the bias at time <i>t</i>.
+                        <br><br>
+                        Additionally, &eta; represents the <strong>learning rate</strong>, that is, how quickly the algorithm responds to changes. This value has the bound 0 < a <= 1. &eta; cannot be 0, as this would mean that no learning occurs. If &eta; is a large value, the algorithm has a propensity of <strong>oscillating</strong> around the solution.
+                    </p>
+                    <p>
+                        To elucidate (make it more clear) these concepts, the formal steps of the perceptron algorithm are detailed below. In the following <i>d_i</i> represents the correct output value for input <i>x_i</i>: one class is given <i>d_i</i> = 1 if <i>x_i</i> is a member of that class and <i>d_i</i> = 0 otherwise.
+                    </p>
+                    <ol>
+                        <li>Begin by setting <strong><em>w(0), b(0), t</em></strong> = 0.</li>
+                        <li>For each input <strong><em>x_i</em></strong>, determine whether <strong><em>w(t) * x_i + b</em></strong> > 0. Let <em>y_i</em> be the output for input <strong><em>x_i</em></strong> (1 if true, 0 if false).
+                        </li>
+                        <li>
+                            The weights and bias are now updated for the next iteration of the algorithm: <strong><em>w(t + 1) = w(t)</em> + &eta;<em>(d_i - y_i)x_i</em></strong> and <strong><em>b(t + 1) = b(t) + &eta;(d_i - y_i)</em></strong> for all inputs.
+                        </li>
+                        <li>
+                            If the learning is offline (if all the inputs can be scanned multiple times), steps 2 and 3 can be repeated until errors are minimized. 
+                            <br>Note <i>t</i> is incremented on every iteration.
+                        </li>
+                        <p>
+                            A well chosen learning rate (&eta;) will help the perceptron algorithm terminate to the correct value quicker. With a smaller &eta;, the algorithm would take more iterations to finish, whereas a larger &eta; could rsult in the algorithm oscillating forever.
+                        </p>
+                    </ol>
+                </div>
+                <div class="section scrollspy">
+                    <h5>Training one perceptron</h5>
+                    <ol class="flow-text">
+                        <li>Initialize: set all weights to small random numbers: w_1, w_1, ... w_m</li>
+                        <li>Reapeat until {some criteria}
+                            <br>Consider one training instance
+                            <br>Inputs: x_1, x_2, ... x_m
+                            <br>Label: <i>t</i> which is 1 or 0
+                            <br>Calculate the output of the perceptron:
+                            <br>
+                            <br>
+                            <img src="img/formula.PNG" alt="" class="responsive-img left">
+                            <br>
+                            <br>
+                            If <i>y</i> = <i>t</i>, do nothing, if y =/ t, update weights.
+                        </li>
+                    </ol>
+                </div>
+                <div class="section scrollspy">
+                    <img src="img/update_weights.JPG" alt="" class="responsive-img">
+                </div>
+                <div class="section scrollspy">
+                    <h5>Linear separability</h5>
+                    <p class="flow-text">
+                        A set is linearly separable if there is a straight line in the feature plane such that all
+                        points in one
+                        class fall on one side and all points in the other class fall at the other side.
+                        <br><br>
+                        For more than two features, this generalises to a hyper-plane.
+                    </p>
+                </div>
+                <div class="section scrollspy">
+                    <h5>Linear classifier</h5>
+                    <div class="row">
+                        <div class="col s12 m6 l6">
+                            <p class="flow-text">
+                                A linear classifier will always propose a linear decision border.
+                                <ul class="flow-text">
+                                    <li>(line, plane, hyper-plane)</li>
+                                    <li>Whether the set is linearly separable or not</li>
+                                </ul>
+                            </p>
+                            <p>The perceptron is a linear classifier.</p>
+                        </div>
+                        <div class="col s12 m6 l6">
+                            <img src="img/linear_classifier.JPG" alt="" class="responsive-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="section scrollspy">
+                    <h5>Perceptron Convergence Theorem</h5>
+                    <p class="flow-text">
+                        If the training set is linearly sperarable, the perceptron algorithm will (sooner or later) find
+                        a linear
+                        decision border and stop updating.
+                        <br>Unless the learning rate <i>n</i> is too big.
+                        <br>
+                        Comment:
+                        <br>
+                        There are normally more than one solution, which generalizes differently to test data.
+                    </p>
+                </div>
+                <div class="section scrollspy">
+                    <h5>Limitations</h5>
+                    <blockquote class="flow-text"><i>A property of the Perceptron is that if the dataset is linearly
+                            separable, then the
+                            algorithm is guaranteed to converge at some point!</i></blockquote>
+                    <p class="flow-text">
+                        A single layer perceptron works only if the dataset is linearly separable. The algorithm is used
+                        only for Binary
+                        Classification problems. However, we can extend the algorithm to solve a multiclass
+                        classification problem by
+                        introducing one perceptron per class. i.e., each perceptron result in a 0 or 1 signifying
+                        whether or not the
+                        sample belongs to that class.
+                    </p>
+                </div>
+                <div class="section scrollspy">
+                    <h5>Summary</h5>
+                    <p>
+                        The perceptron algorithm is one of the most commonly used machine learning algorithms for binary classification. Basically any task that involves classification into two groups can use the perceptron! Furthermore, the <strong>multilayer perceptron</strong> uses the perceptron algorithm to distinguish classes that are not linearly separable, which increases the number of tasks in which the perceptron can be used!
+                        <br><br>
+                        Overall, the perceptron algorithm is one of the main building blocks of <strong>neural networks</strong> and its understanding is crucial for the development of more complex networks.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Right side content -->
+        <div class="col m2 l2 hide-on-med-and-down">
+            <ul class="section table-of-contents">
+                <h6>Table of contents</h6>
+                <li><a href="#machine-learning">Machine Learning</a></li>
+                <li><a href="#supervised-learning">Supervised learning</a></li>
+                <li><a href="#classification">Classification</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+            </ul>
+        </div>
+        <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+        <!-- Add your site or application content here -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script>
+            window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')
+        </script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga = function () {
+                ga.q.push(arguments)
+            };
+            ga.q = [];
+            ga.l = +new Date;
+            ga('create', 'UA-XXXXX-Y', 'auto');
+            ga('set', 'transport', 'beacon');
+            ga('send', 'pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async></script>
+        <!-- Materialize js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="../../../js/plugins.js"></script>
+        <script src="../../../js/darkmode.js"></script>
+        <script src="../../../js/main.js"></script>
+</body>
+</html>

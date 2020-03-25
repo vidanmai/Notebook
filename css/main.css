@@ -323,6 +323,42 @@ label {
   margin-bottom: 1.2em;
 }
 
+.section {
+
+}
+
+strong {
+  color: #2196f3;
+}
+
+.img-section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  
+}
+
+.img-section img {
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ol li {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.img-description {
+  padding-top: 0.2rem;
+  color: grey;
+  font-size: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  padding-bottom: 1rem;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   padding: 1rem;

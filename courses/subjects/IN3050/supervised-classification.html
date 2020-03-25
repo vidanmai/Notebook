@@ -78,12 +78,14 @@
   <!-- Page layout -->
   <div class="row" id="main">
     <div class="col s12 hide-on-large-only">
+      <!-- Mobile dropdown -->
       <ul id="dropdown" class="dropdown-content">
         <li><a href="#">Close</a></li>
         <li><a href="../../in3050.html">IN3050</a></li>
         <li><a href="search-and-optimization.html">Search and optimization</a></li>
         <li><a href="evolutionary_algorithms.html">Evolutionary Algorithms</a></li>
         <li><a href="supervised-classification.html">Supervised classification</a></li>
+        <li><a href="perceptron.html">Perceptron</a></li>
         <li><a href="linear-regression.html">Linear regression</a></li>
         <li><a href="logistic_regression.html">Logistic regression</a></li>
         <li><a href="#!">Linear classifiers</a></li>
@@ -98,6 +100,7 @@
         <a href="search-and-optimization.html" class="collection-item">Search and optimization</a>
         <a href="evolutionary_algorithms.html" class="collection-item">Evolutionary Algorithms</a>
         <a href="supervised-classification.html" class="collection-item active">Supervised classification</a>
+        <a href="perceptron.html" class="collection-item">Perceptron</a>
         <a href="linear-regression.html" class="collection-item">Linear regression</a>
         <a href="logistic_regression.html" class="collection-item">Logistic regression</a>
         <a href="#!" class="collection-item">Linear classifiers</a>
@@ -144,6 +147,51 @@
             <br>
             When Y is learned, it can be used to <strong>predict</strong> values for new items, y(o).
           </p>
+          <div class="section scrollspy">
+            <h5>Risks</h5>
+            <p>
+              In determining how good a specific supervised learning algorithm is, two types of risks can be minimized:
+              <br><br>
+              - Empirical risk: Empirical is the <strong>expected</strong> loss of the function <i>y</i> that the supervised learning algorithm infers from the traiing dataset. For example, if <i>y</i> correctly maps all training data points o_i, to their respective labels t_i, the empirical risk is 0.
+              <br><br>
+              In minimizing empirical risk, the supervised learning algorithm is taught to match the training data as well as possible. However, as shown in the image below, a solution can minimize empirical risk without being a good candidate function for unknown data points. This is called <strong>overfitting</strong>, which occurs when the proposed function focuses more on noise rather than the actual data, as seen below with the blue line.
+            </p>
+            <div class="img-section">
+              <img src="img/overfitting_graph.png" alt="" class="responsive-img white center">
+            </div>
+            <div class="img-description">
+              For the given set of red input points, both the green and blue lines minimize error to 0. However the
+              green line may be more succesful at predicting the coordinates of unknown data points, since it seems to
+              <strong>generalize</strong> the data better.
+            </div>
+            <p>
+              - Structural risk: Structural risk is used to prevent the supervised learning algorithm from overfitting the training data. Structural risk minimiaztion introduces a <em>regularization penalty</em> that can prefer certain solutions over others.
+              <br><br>
+              A good way of determining an appropriate value for (lambda) is by using <strong>cross validation</strong>, a method that trains the supervised algorithm on training data and tests its performance on a <em>validation</em> dataset (data points where the correct label is known). The algorithm is then updated to mnimize its error on the validation set, while still being trained on the training dataset. An example of this in action is described in <strong>ridge regression</strong>, and is widely used to determine functions that perform well on known data.
+            </p>
+          </div>
+          <div class="section scrollspy">
+            <h5>Challenges</h5>
+            <ol class="flow-text">
+              <li>Bias-variance tradeoff - Suppose a supervised learning algorithm is trained on multiple datasets. If the algorithm is unable to correctly label a specific data point, it is said to be <em>biased</em> for that input. Additionally, if the algorithm produces different output values when trained on different datasets, it is said to have high <em>variance</em>. Empirical risk focues on bias, whereas structural risk focuses on variance. There is usually a tradeoff between bias and variance, where a low bias implies high variance and vice-versa. A problem for supervised algorithms is finding the balance between these two concepts that works best with unknown data points.
+                <div class="img-section">
+                  <img src="img/bias_variance.png" alt="" class="white">
+                  <div class="img-description">
+                    The blue curve minimizes the error of data points (low bias) but has high variance. Conversely, the black line does not minimize the errors (has a higher bias), but fits the data well (low variance).
+                  </div>
+                </div>
+              </li>
+              <li>
+                Complexity - The function that the supervised learning algorithm is trying to mimic could be either simple or complex. If the expected function is simple, the algorithm should have low variance to fit the data well. However, if the expected function is complex, the algorithm should have high variance to adapt to unknown data points. Supervised learning algorithms should be able to determine variance appropriately based on the amount of data and the type of function to be expected.
+              </li>
+              <li>
+                Many dimensions - When a supervised learning algorithm is given a dataset consisting of many dimensions, it may attempt to identify trends between irrelevant factors. This increases the <strong>variance</strong> of the inferred function and can decrease the accuracy of the algorithm. Two ways of combating this issue includes running a different algorithm to discard irrelevant variables and reducing the input data to a lower number of dimensions.
+              </li>
+              <li>
+                If the training data has errors in its labeling or in its data value, the supervised learning algorithm should not attempt to exactly match the training examples. This can lead to <strong>overfitting</strong> and will not perform well for unknown values. Additionally, if the training data contains redundant information, supervised learning algorithms may perform poorly due to overrelying on specific examples. Filtering the data or regularizing the algorithm properly can mitigate these two issues.
+              </li>
+            </ol>
+          </div>
           <div class="section scrollspy">
             <h5 class="center">Supervised learning - two types</h5>
             <img src="../../../img/types_learning.JPG" alt="" class="responsive-img center">
@@ -241,112 +289,8 @@
             <br>Dont use the same set for tuning as for final evaluation.
           </p>
         </div>
-        <div class="section scrollspy">
-          <h5 class="center">Perceptron</h5>
-          <img src="img/perceptron.JPG" alt="" class="responsive-img center">
-          <br>
-          <ol class="flow-text">
-            <li>A set of inputs: x_1, x_2, ... x_m</li>
-            <li>A set of weights: w_1, w_2, ... w_m</li>
-            <li>An adder</li>
-            <li>An activation function</li>
-            <img src="img/activation_function.JPG" alt="" class="responsive-img">
-          </ol>
-          <h6>Perceptrons are binary classifiers (0/1)</h6>
-          <br>
-          <h5>Definition</h5>
-          <p>
-            The perceptron is an algorithm for a learning for learning a binary classifier called a <strong>threshold function</strong>: a function that maps its input <strong>x</strong> (a real valued vector) to an output value <strong>f(x)</strong> (a single binary value).
-          </p>
-          <img class="white responsive-img center" src="img/perceptron_formula.svg" alt="">
-          <p class="flow-text">
-            <strong>w</strong> is a vector of real-valued weights, <strong>w * x</strong> is the dot product.
-          </p>
-        </div>
-        <div class="section scrollspy">
-          <h5>The algorithm</h5>
-          <p class="flow-text">
-            Let's recall the dot product of two vectors of length n is given by:
-          </p>
-          <img src="img/dot_product.png" alt="" class="responsive-img center">
-          <p class="flow-text">
-            The function f(x) = b + <strong>w . x</strong> is a linear combination of <u>weight</u> and <u>feature</u> vectors. Perceptron is therefore a linear classifier - an algorithm that predicts using a linear predictor function.
-            <br>
-            <br>
-            The weights signify the effectiveness of each feature x_i in <strong>x</strong> on the model's behavior. Higher the weight w_i, of a feature x_i, higher is it's influence on the output. On the other hand, the bias <i>'b'</i> is like the intercept in the linear equation. It's a constant that helps the model adjust in a way that best fits the data. <strong>The bias term</strong> assumes an imaginary input feature coefficient x0 = 1.
-            <br>
-            <br>
-            The model can be trained using the following algorithm:
-          </p>
-          <img src="img/perceptron_algorithm.png" alt="" class="responsive-img">
-        </div>
-        <div class="section scrollspy">
-          <h5>Training one perceptron</h5>
-          <ol class="flow-text">
-            <li>Initialize: set all weights to small random numbers: w_1, w_1, ... w_m</li>
-              <li>Reapeat until {some criteria}
-                <br>Consider one training instance
-                <br>Inputs: x_1, x_2, ... x_m
-                <br>Label: <i>t</i> which is 1 or 0
-                <br>Calculate the output of the perceptron:
-                <br>
-                <br>
-                <img src="img/formula.PNG" alt="" class="responsive-img left">
-                <br>
-                <br>
-                If <i>y</i> = <i>t</i>, do nothing, if y =/ t, update weights.
-              </li>
-          </ol>
-        </div>
-        <div class="section scrollspy">
-          <img src="img/update_weights.JPG" alt="" class="responsive-img">
-        </div>
-        <div class="section scrollspy">
-          <h5>Linear separability</h5>
-          <p class="flow-text">
-            A set is linearly separable if there is a straight line in the feature plane such that all points in one
-            class fall on one side and all points in the other class fall at the other side.
-            <br><br>
-            For more than two features, this generalises to a hyper-plane.
-          </p>
-        </div>
-        <div class="section scrollspy">
-          <h5>Linear classifier</h5>
-          <div class="row">
-            <div class="col s12 m6 l6">
-              <p class="flow-text">
-                A linear classifier will always propose a linear decision border.
-                <ul class="flow-text">
-                  <li>(line, plane, hyper-plane)</li>
-                  <li>Whether the set is linearly separable or not</li>
-                </ul>
-              </p>
-              <p>The perceptron is a linear classifier.</p>
-            </div>
-            <div class="col s12 m6 l6">
-              <img src="img/linear_classifier.JPG" alt="" class="responsive-img">
-            </div>
-          </div>
-        </div>
-        <div class="section scrollspy">
-          <h5>Perceptron Convergence Theorem</h5>
-          <p class="flow-text">
-            If the training set is linearly sperarable, the perceptron algorithm will (sooner or later) find a linear decision border and stop updating.
-            <br>Unless the learning rate <i>n</i> is too big.
-            Comment:
-            <br>
-            There are normally more than one solution, which generalizes differently to test data.
-          </p>
-        </div>
-        <div class="section scrollspy">
-          <h5>Limitations</h5>
-          <blockquote class="flow-text"><i>A property of the Perceptron is that if the dataset is linearly separable, then the algorithm is guaranteed to converge at some point!</i></blockquote>
-          <p class="flow-text">
-            A single layer perceptron works only if the dataset is linearly separable. The algorithm is used only for Binary Classification problems. However, we can extend the algorithm to solve a multiclass classification problem by introducing one perceptron per class. i.e., each perceptron result in a 0 or 1 signifying whether or not the sample belongs to that class.
-          </p>
-        </div>
         <div class="section scrollspy" id="conclusion">
-          <h5><strong>Conclusion</strong></h5>
+          <h5>Conclusion</h5>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nesciunt, sequi vitae fugiat consequuntur
             autem, laborum beatae inventore tempora dicta, cum repudiandae a libero eius laboriosam delectus? Sit, illum
