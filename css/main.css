@@ -33,10 +33,12 @@
   --logo-color: #43a047;
   --sidenav-background: rgba(255, 255, 255, 0.75);
   --section-background: #FFF;
+  --math-bg: #DCC7AA;
   --ff-body: 'Roboto',
   sans-serif;
 
   --green-color: #43a047;
+  --dark-green-color: #388e3c;
   --red-color: #f44336;
 }
 
@@ -49,6 +51,7 @@
    --logo-color: #FFF;
    --sidenav-background: rgba(12, 12, 12, 0.856);
    --section-background: #191c20;
+   --math-bg: #388e3c;
    --ff-body: 'Roboto',
    sans-serif;
 
@@ -399,6 +402,11 @@ table, th, td {
 #tableHeader {
   background-color: var(--green-color);
   color: white;
+}
+
+.math {
+  background-color: var(--math-bg);
+  padding: 10px;
 }
 
 th {

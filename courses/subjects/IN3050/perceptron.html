@@ -205,6 +205,66 @@
                     <img src="img/perceptron_algorithm.png" alt="" class="responsive-img">
                 </div>
                 <div class="section scrollspy">
+                    <h5>Visualizing Linear Separability</h5>
+                    <hr>
+                    <h6><u>Calculating the decision boundary of a single perceptron:</u></h6>
+                    <p>
+                        Here we will look at the maths of taking a perceptron's inputs, weights, bias and turning it into a line on a plot.
+                        <br><br>
+                        The first thing to consider is that for this certain case, we are only intersted in plotting a deicision boundary in a 2-D space. This means that our input vector must also be 2-dimensional, and each input in the vector can be represented as a point on a graph.
+                    </p>
+                    <div class="img-section">
+                        <img src="img/labeled_training_data.png" alt="" class="white">
+                    </div>
+                    <div class="img-description">
+                        Labeled training data plotted on a graph
+                    </div>
+                    <div class="img-section">
+                        <img src="img/labeled_data_table.JPG" alt="">
+                    </div>
+                    <p>
+                        For example, the following training data can be plotted like the following:
+                    </p>
+                    <table>
+                        <tr>
+                            <th>x_1</th>
+                            <th>x_2</th>
+                            <th>label</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>1</td>
+                        </tr>
+                    </table>
+                    <p>
+                        Where x_1 is the x and x_2 is the y.
+                        <br><br>
+                    </p>
+                    <div class="section math">
+                        <code>
+                            weights: [0.2, -0.1]
+                            <br>
+                            bias: -0.29
+                        </code>
+                    </div>
+                </div>
+                <div class="section scrollspy">
                     <h5>Supervised learning</h5>
                     <hr>
                     <p>
