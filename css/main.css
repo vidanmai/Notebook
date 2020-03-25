@@ -738,11 +738,7 @@ textarea {
 }
 /* Media queries */
 @media (min-width: 1281px) {
-  /* Bigger nav */
-  nav {
-    height: 8vh;
-    line-height: 8vh;
-  }
+  /* CSS */
 }
 
 /* 
