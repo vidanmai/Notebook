@@ -25,7 +25,7 @@
   box-sizing: border-box;
 }
 :root {
-  --text-color: #242424;
+  --text-color: #212121;
   --background-color: rgb(230, 230, 230);
   --nav-color: #FFF;
   --card-color: #212121;
@@ -34,6 +34,7 @@
   --sidenav-background: rgba(255, 255, 255, 0.75);
   --section-background: #FFF;
   --math-bg: #DCC7AA;
+  --gist-bg: #f5f5f5;
   --ff-body: 'Roboto',
   sans-serif;
 
@@ -51,7 +52,8 @@
    --logo-color: #FFF;
    --sidenav-background: rgba(12, 12, 12, 0.856);
    --section-background: #191c20;
-   --math-bg: #388e3c;
+   --math-bg: #283593;
+   --gist-bg: #121212;
    --ff-body: 'Roboto',
    sans-serif;
 
@@ -86,6 +88,31 @@ nav i {
 .nav-wrapper {
   
 }
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #222222;
+  box-shadow: inset 0 0 5px rgb(39, 39, 39);
+  border-radius: 0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(49, 49, 49);
+  border-radius: 0;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #353535;
+}
+/* Scrollbar end */
 
 .content-wrapper {
   width: 98%;
@@ -358,6 +385,7 @@ ol li {
   font-size: 14px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
   width: 90%;
   padding-bottom: 1rem;
 }
@@ -380,18 +408,85 @@ p {
   font-size: 1.3rem;
 }
 
-table {
-  width: 100%;
-  table-layout: fixed;
+/* Github gist */
+
+body .gist .gist-file {
+  border: none;
+  background-color: transparent;
 }
 
- td a {
-   font-size: large;
-   color: var(--green-color);
-   text-decoration: underline;
+body .gist .gist-data {
+  overflow: auto;
+  word-wrap: normal;
+  background-color: transparent;
+  border-radius: 3px;
+  border: 1px solid;
+  border-color: #616161;
 }
 
-table, th, td {
+body .gist tr, body .gist td {
+  background-color: transparent;
+  border: none;
+}
+
+body .gist .blob-num {
+  color: var(--text-color);
+}
+
+body .gist .blob-code-inner {
+  color: var(--text-color);
+}
+
+body .gist .pl-s {
+  color: var(--text-color);
+}
+
+body .gist .blob-num:hover {
+  color: red;
+}
+
+body .gist .pl-en {
+  color: #e040fb;
+}
+
+body .gist .pl-c1 {
+  color: #2196f3;
+}
+
+body .gist .highlight {
+  background-color: var(--gist-bg);
+}
+
+body .gist .gist-meta {
+  background-color: var(--gist-bg);
+  color: var(--text-color);
+  border-left: 1px solid #616161;
+  border-right: 1px solid #616161;
+  border-bottom: 1px solid #616161;
+}
+
+body .gist .gist-meta a {
+  color: var(--green-color);
+}
+
+/* Gist end */
+
+table.highlight>tbody>tr:hover {
+  background-color: transparent;
+  /* whatever color you want */
+}
+
+
+td a {
+  font-size: large;
+  color: var(--green-color);
+  text-decoration: underline;
+}
+
+
+table,
+th,
+td {
   font-weight: lighter;
   border: 1px solid var(--text-color);
   border-collapse: collapse;
@@ -399,7 +494,11 @@ table, th, td {
   overflow-x: auto;
 }
 
-#tableHeader {
+tr:nth-child(even) {
+  background-color: rgba(148, 148, 148, 0.281);
+}
+
+thead {
   background-color: var(--green-color);
   color: white;
 }
@@ -407,24 +506,7 @@ table, th, td {
 .math {
   background-color: var(--math-bg);
   padding: 10px;
-}
-
-th {
-  font-weight: bold;
-  font-size: large;
-}
-
-th, td {
-  text-align: left;
-  padding: 10px;
-}
-
-th {
-  height: 3em;
-}
-
-tr:nth-child(odd) {
-  background-color: rgba(0, 0, 0, 0.20);
+  border-radius: 3px;
 }
 
 a {
@@ -692,6 +774,10 @@ textarea {
 /*iPad Pro */
 @media (min-width: 1024px) and (max-width: 1280px) {
 
+  #main {
+    margin-top: 5vh;
+  }
+
   #middle-content {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -702,6 +788,7 @@ textarea {
   .container {
     width: 90%;
   }
+  
 
   .card img {
     height: 15vh;
@@ -717,7 +804,11 @@ textarea {
   ##Screen = B/w 768px to 1024px
 */
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  #main {
+    margin-top: 2vh;
+  }
   #logo {
     font-size: 1.2rem;
   }
@@ -729,13 +820,12 @@ textarea {
   }
 
   #middle-content {
-    background-color: transparent;
-    width: 70%;
-    padding: 0;
+    width: 80%;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .content-box {
-    background-color: transparent;
     padding: 0;
   }
 
@@ -770,9 +860,9 @@ textarea {
 @media (min-width: 481px) and (max-width: 767px) {
 
   #middle-content {
-    background-color: transparent;
-    width: 98%;
-    padding: 0;
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
   }
 
   .card img {
@@ -786,10 +876,13 @@ textarea {
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
+  body {
+    background-color: var(--section-background);
+  }
   #middle-content {
-    background-color: transparent;
-    width: 98%;
-    padding: 0;
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
   }
 
 }

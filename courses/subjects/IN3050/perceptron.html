@@ -78,7 +78,9 @@
         <!-- darkmode mobile toggle end  -->
     </ul>
     <!-- Navbar end -->
-
+    <!-- Load darkmode before other scripts -->
+    <script src="../../../js/darkmode.js"></script>
+    <!-- Main body content -->
     <!-- Page layout -->
     <div class="row" id="main">
         <div class="col s12 hide-on-large-only">
@@ -114,6 +116,41 @@
             <div class="content container flow-text" id="middle-content">
                 <h3 class="center-align">Perceptron</h3>
                 <!-- Perceptron -->
+                <div class="img-section">
+                    <img class="box" src="img/perceptron_dog.gif" alt="">
+                </div>
+                <div class="img-description">
+                    A simple neural network architecture consisting of perceptrons
+                </div>
+                <div class="section scrollspy">
+                    <h5>Introduction</h5>
+                    <hr>
+                    <p>
+                        A perceptron is not the Sigmoid neuron we use in ANNs (Artificial Neural Networks) or any deep learning networks today.
+                    </p>
+                    <div class="img-section">
+                        <img src="img/perceptron_1.png" alt="" class="white">
+                    </div>
+                    <p>
+                        The perceptron model is a more general computational model than McCulloch-Pitts neuron. It takes
+                        an input, aggregates it (weighted sum) and returns 1 only if the aggregated sum is more than
+                        some threshold else returns 0. Rewriting the threshold and making it a constant input with a
+                        variable weight, we would end up with something like the following:
+                    </p>
+                    <div class="img-section">
+                        <img src="img/perceptron_2.png" alt="" class="white">
+                    </div>
+                    <p>
+                        A single perceptron can only be used to implement <b>linearly separable</b> functions. It takes  both real and boolean inputs and associates a set of <b>weights</b> to them, along with a <b>bias</b> (the threshold thing I mentioned above). We learn the <b>weights</b>, we get the <b>function</b>. Let's use a perceptron to learn an OR function.
+                    </p>
+                    <h5>OR function Using A Perceptron</h5>
+                    <div class="img-section">
+                        <img src="img/perceptron_or.png" alt="" class="white">
+                    </div>
+                    <p>
+                        What's going on above is that we defined a few conditions (the weighted sum has to be more than or equal to 0 when the output is 1) based on the OR function output for various sets of inputs, we solved for weights based on these conditions and we got a line that perfectly separates positive inputs from those of negative.
+                    </p>
+                </div>
                 <div class="section scrollspy">
                     <img src="img/perceptron.JPG" alt="" class="responsive-img center">
                     <br>
@@ -205,6 +242,10 @@
                     <img src="img/perceptron_algorithm.png" alt="" class="responsive-img">
                 </div>
                 <div class="section scrollspy">
+                    <h5>Implementation in Python</h5>
+                    <script src="https://gist.github.com/Thomascountz/77670d1fd621364bc41a7094563a7b9c.js"></script>
+                </div>
+                <div class="section scrollspy">
                     <h5>Visualizing Linear Separability</h5>
                     <hr>
                     <h6><u>Calculating the decision boundary of a single perceptron:</u></h6>
@@ -226,35 +267,40 @@
                         For example, the following training data can be plotted like the following:
                     </p>
                     <table>
-                        <tr>
-                            <th>x_1</th>
-                            <th>x_2</th>
-                            <th>label</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>5</td>
-                            <td>1</td>
-                        </tr>
+                        <thead>
+                            <tr>
+                                <th>x_1</th>
+                                <th>x_2</th>
+                                <th>label</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
                     </table>
                     <p>
                         Where x_1 is the x and x_2 is the y.
                         <br><br>
+                        Once I've asked a perceptron to learn how to classify these labeled inputs, I get the following results:
                     </p>
                     <div class="section math">
                         <code>
@@ -262,6 +308,152 @@
                             <br>
                             bias: -0.29
                         </code>
+                    </div>
+                    <p>
+                        And, when I ask it to classify an input that wasn't in the training dataset, I get an intuitive result.
+                    </p>
+                    <div class="img-section">
+                        <img src="img/perceptron_classify.png" alt="" class="white">
+                    </div>
+                    <div class="img-description">Perceptron classifying a new input, shown as a square</div>
+                    <p>
+                        We can visually guess that the new input (5, 4) belongs in the same class as the other blue inputs, (though there are exceptions). We can also imagine the line that the perceptron might be drawing, but how can we plot that line?
+                    </p>
+                </div>
+                <div class="section scrollspy">
+                    <h5>Maths</h5>
+                    <p>
+                        Remember, the summation of that our perceptron uses to determine its output is the <strong>dot product</strong> of the inputs and weight vectors, plus the bias:
+                    </p>
+                    <div class="math">
+                        <code>w * x + b</code>
+                    </div>
+                    <p>
+                        When our inputs and weights vectors are of 2-dimensions, the long form of our <strong>dot product</strong> summation looks like this:
+                    </p>
+                    <div class="math">
+                        <code>
+                            w_1 * x_1 + w_2 * x_2 + b
+                        </code>
+                    </div>
+                    <p>
+                        Since we are considering x_1 to be the x and x_2 to be the y, we can rewrite it:
+                    </p>
+                    <div class="math">
+                        <code>
+                            w_1*x + w_2*y + b
+                        </code>
+                    </div>
+                    <p>
+                        That looks a lot like the standard equation for a line!
+                    </p>
+                    <div class="math">
+                        <code>
+                            Ax + By - C = 0
+                        </code>
+                    </div>
+                    <p>
+                        We can now solve for two points on our graph: the <code>x-intercept</code>:
+                    </p>
+                    <div class="math">
+                        <code>
+                            x = - (b - w_2*y) / w_1
+                            <br><br>
+                            if y == 0
+                            <br><br>
+                            x = -(b - w_2 * 0) / w_1
+                            <br><br>
+                            x = -b / w_1
+                        </code>
+                    </div>
+                    <p>And the <code>y-intercept</code>:
+                    </p>
+                    <div class="math">
+                        <code>
+                            y = -(b - w_1 * x) / w_2
+                            <br><br>
+                            if x == 0
+                            <br><br>
+                             y 0 -(b - w_1 * 0) / w_2
+                             <br><br>
+                             y = -b / w_2
+                        </code>
+                    </div>
+                    <p>With those two points, we can find the slope, <code>m</code>:</p>
+                    <div class="math">
+                        point_1 = (0, -b / w_2)
+                        <br>
+                        point_2 = (-b / w_1, 0)
+                        <br><br>
+                        m = (y_2 - y_1) / (x_2 - x_1)
+                        <br><br>
+                        m = (0 - -(b / w_2) / (-b / w_1) - 0)
+                        <br><br>
+                        m = -(b / w_2) / (b / w_1)
+                    </div>
+                    <p>
+                        Now, we have the two values we need to construct our line in slope-intercept form:
+                    </p>
+                    <div class="math">
+                        <code>
+                            slope = -(b / w_2) / (b / w_1)
+                            <br>
+                            y-intercept = -b / w_2
+                            <br><br>
+                            y = (-(b / w_2) / (b / w_1))x + (-b / w_2)
+                        </code>
+                    </div>
+                    <p>
+                        Plugging in our numbers from the dataset above, we get the following:
+                    </p>
+                    <div class="math">
+                        <code>
+                            y = (-(-0.29 / -0.1) / (-0.29 / 0.2))x + (-(-0.29) / -0.1)
+                            <br><br>
+                            y = (-2.9 / 1.45)x + (-2.9)
+                            <br><br>
+                            y = 2x - 2.9
+                        </code>
+                    </div>
+                </div>
+                <div class="section scrollspy">
+                    <h5>Plotting the Line</h5>
+                    <div class="img-section">
+                        <img src="img/line_plot.png" alt="" class="white">
+                    </div>
+                    <div class="img-description">
+                        y = 2x - 2.9
+                    </div>
+                </div>
+                <div class="section scrollspy">
+                    <h5>Summary of finding decision boundary</h5>
+                    <p>
+                        For a perceptron with a 2-dimensional input vector, plug in your weights and bias into the standard form equation of a line:
+                    </p>
+                    <div class="math">
+                        <code>
+                            w_1 * x + w_2 * y + b = 0
+                        </code>
+                    </div>
+                    <p>
+                        Solve for the <code>x-</code> and <code>y-intercepts</code> in order to find two points on the line:
+                    </p>
+                    <div class="math">
+                        <code>
+                            x-intercept = (0, -b / w_2)
+                            <br>
+                            y-intercept = (-b / w_1, 0)
+                        </code>
+                    </div>
+                    <p>Solve for the slope:</p>
+                    <div class="math">
+                        <code>
+                            m = -(b / w_2) / (b / w_1)
+                        </code>
+                    </div>
+                    <p>Fill in the slope-intercept form equation: <i>y</i> = <em>mx</em> + <i>b</i></p>
+                    <div class="math">
+                        <code>y = (-(b / w_2) / (b / w_1))x + (-b / w_2)</code>
                     </div>
                 </div>
                 <div class="section scrollspy">
@@ -413,7 +605,6 @@
         <!-- Materialize js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="../../../js/plugins.js"></script>
-        <script src="../../../js/darkmode.js"></script>
         <script src="../../../js/main.js"></script>
 </body>
 </html>
