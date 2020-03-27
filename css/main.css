@@ -244,7 +244,7 @@ label {
 
 .course-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(17rem, 1fr));
+  grid-template-columns: repeat(5, minmax(16.5rem, 1fr));
   grid-auto-flow: row;
   overflow-x: scroll;
   grid-gap: 2rem;
@@ -256,6 +256,8 @@ label {
   border-radius: 0.5rem;
   padding-left: 2rem;
   padding-right: 2rem;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
 }
 
 .card {
@@ -269,13 +271,12 @@ label {
 }
 
 .card-content, .card-content p {
-  background-color: var(--card-color);
   color: var(--card-text-color);
 }
 
 .card:hover {
-  transform: scale(1.05);
-  transition: all .1s ease-in-out;
+  transform: scale(1.1);
+  transition: all .175s ease-in-out;
 }
 
 .collapsible {
@@ -850,12 +851,29 @@ textarea {
     padding-right: 2rem;
   }
 
+  .card img {
+    height: 20vh;
+  }
+
 }
 
 /* 
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px
 */
+
+@media (min-width: 481px) and (max-width: 1023px) and (orientation: landscape) {
+
+  #middle-content {
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .card img {
+    height: 40vh;
+  }
+}
 
 @media (min-width: 481px) and (max-width: 767px) {
 
