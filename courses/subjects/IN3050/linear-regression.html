@@ -25,7 +25,7 @@
     <nav>
       <div class="nav-wrapper" id="navbar">
         <div class="content-wrapper">
-          <a href="../../../index.html" class="brand-logo active-tab" id="logo">[Notebook]</a>
+          <a href="../../../index.html" class="brand-logo" id="logo">[Notebook]</a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"
               id="sidenav-icon">menu</i></a>
           <ul class="right hide-on-med-and-down">
@@ -43,7 +43,7 @@
             <!-- dark mode toggle end  -->
             <li class="tooltipped" data-position="bottom" data-tooltip="Projects"><a href="../../../projects.html"><img
                   src="../../../icons/rocket.svg" alt="" class="icon"></a></li>
-            <li class="tooltipped" data-position="bottom" data-tooltip="Courses"><a href="../../../courses.html"><img
+            <li class="tooltipped active-tab" data-position="bottom" data-tooltip="Courses"><a href="../../../courses.html"><img
                   src="../../../icons/knowledge_color.svg" alt="" class="icon"></a></li>
             <li class="tooltipped" data-position="bottom" data-tooltip="Blog"><a href="../../../blog.html"><img
                   src="../../../icons/blogger.svg" alt="" class="icon"></a>
@@ -113,6 +113,113 @@
         <h3 class="center-align">Linear Regression</h3>
         <div class="img-section">
           <img src="img/linear_regression.png" alt="" class="white">
+        </div>
+        <div class="section scrollspy">
+          <h5>Regression</h5>
+          <hr>
+          <p>In classification, the target set is a set of catgories:
+            <br>- The goal is to predict one of these
+            <br>In regression, the target set is real numbers:
+            <br>-The goal is to predict y_j = f(x_j) which is close to the true t_j (target value)
+            <br>It is a general problem of function approximation or interpolation.
+            <br>-Working out the value between values that we know
+          </p>
+        </div>
+        <div class="section scrollspy">
+          <h5>Linear Regression</h5>
+          <hr>
+          <h6>What is Linear Regression?</h6>
+          <p>
+            The objective of a linear regression model is to find a relationship between one or more features (independent variables) and a continous target varaible (dependent variable). 
+            We need some idea regarding the kind of functions we are looking for. The simplest is to assume a linear function:</p>
+          <div class="img-section">
+            <img src="img/linear_function.JPG" alt="" class="white">
+          </div>
+          <p>
+            When there is only one input variable, it is called simple linear regression:
+            <br>- <b>f(x_1) = w_0 + w_1 * x_1</b>
+            <br>- A straight line
+            <br>- Easy to draw
+            <br>
+            In the general case:
+            <br><b>f(x) = w_0 + w_1 * x_1 + w_2 * x_2 + ... w_m * x_m</b>
+            <br>- It describes a hyper-plane and is harder to draw
+          </p>
+        </div>
+        <div class="section scrollspy">
+          <h5>Warming Up - A Few Basics of Linear Algebra</h5>
+          <hr>
+          <h6>Vector</h6>
+          A vector can be definde in more than one way. For a physicist, a vector i anything that sits anywhere in space, has a magnitude and direction. For a Computer Science guy, a vector is just a data structure used to store some data - integers, strings etc. I would like you to imagine a vector the Mathematician way, where a vector is an arrow spanning space with its tail at the origin. This is not the best mathematical way to describe a vector but as long as you get the intuition, you're good to go.
+          <h5>Vector Representations</h5>
+          <p>A 2-dimensional vector can be represented on a 2D plane as follows:</p>
+          <div class="img-section">
+            <img src="img/vector_repr.png" alt="" class="white">
+          </div>
+          <p>Carrying the idea forward to 3 dimensions, we get an arrow in 3D space as follows:</p>
+          <div class="img-section">
+            <img src="img/vector_3d.png" alt="" class="white">
+          </div>
+        </div>
+        <div class="section scrollspy">
+          <h5>Dot Product of Two Vectors</h5>
+          <p>
+            Imagine you have two vectors oh size <b>n + 1</b>, <b>w</b> and <b>x</b>, the dot product of these vectors (<b>w.x</b>) could be computed as follows:
+          </p>
+          <div class="img-section">
+            <img src="img/dot_product_two_vectors.png" alt="" class="white">
+          </div>
+          <p>
+            Here, <b>w</b> and <b>x</b> are just two lonely arrows in an <b>n + 1</b> dimensional space (and intuitively, their dot product quantifies how much one vector is going in the direction of the other). So technically, the perceptron was only computing a lame dot product (before checking if it's greater or less than 0). The decision boundary line which a perceptron gives out that separates positive examples from the negative ones is really just <b>w . x</b> = 0.
+          </p>
+        </div>
+        <div class="section scrollspy">
+          <h5>Angle Between Two Vectors</h5>
+          <p>Now the same old dot product can be computed differently if you knew the angle between the vectors and their individual magnitudes. Here's how:</p>
+          <div class="img-section">
+            <img src="img/two_vector_angle.png" alt="" class="white">
+          </div>
+          <p>
+            The other way around, you can get the angle between two vectors, if only you knew the vectors, given you know how to calculate vector magnitudes and their vanilla dot product.
+          </p>
+        </div>
+        <div class="section scrollspy">
+          <h5>Hypothesis of Linear Regression</h5>
+          <p>The linear regression model can bre represented by the following equation</p>
+          <div class="img-section">
+            <img src="img/lin_reg_hypothesis.png" alt="">
+          </div>
+          <p>
+            Y is the predicted value
+            <br>Theta_0 is the bias term.
+            <br>Theta_1, ... Theta_n are the model paramters.
+            <br>x_1, x_2, ... x_n are the feature values.
+            <br>The above hypothesis can be represented by
+          </p>
+          <div class="img-section">
+            <img src="img/hypo_repr.png" alt="" class="white">
+          </div>
+          <p>
+            where Theta is the model's parameter vector including the Bias term Theta_0
+            <br><em>x</em> is the feature vector with x_0 = 1.
+          </p>
+        </div>
+        <div class="section scrollspy">
+          <h5>Training a Linear Regression Model</h5>
+          <p>Training of the model here means to find the parameters so that the model best fits the data.</p>
+          <hr>
+          <h5><i>How do we determine the best <u>fit line</u>?</i></h5>
+          <p>
+            The line for which the <em>error</em>        between the predicted values and the observed values is called the best fit line or the <b>regression</b> line. These errors are also called <b><i>residuals</i></b>. The Residuals can be visualized by the vertical lines from the observed data value to the regression line.
+          </p>
+          <div class="img-section">
+            <img src="img/regression_line.png" alt="" class="white">
+          </div>
+        </div>
+        <div class="section scrollspy">
+          <h5>Mean Square Error (MSE)</h5>
+          <hr>
+          <p>We need a way to tell whether a line is a good fit to the data, and whether one line is better than another. The goal is to minimize the error.</p>
         </div>
         <div class="section scrollspy">
           <h5>Implementation of Gradient Descent with Linear Regression</h5>

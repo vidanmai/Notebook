@@ -72,23 +72,6 @@ body {
   color: var(--text-color);
 }
 
-nav {
-  background-color: transparent;
-  box-shadow: none !important;
-  /*
-  height: 8vh;
-  line-height: 8vh;
-  */
-}
-
-nav i {
-  color: var(--text-color);
-}
-
-.nav-wrapper {
-  
-}
-
 /* Scrollbar */
 /* width */
 ::-webkit-scrollbar {
@@ -112,7 +95,21 @@ nav i {
 ::-webkit-scrollbar-thumb:hover {
   background: #353535;
 }
+
 /* Scrollbar end */
+
+nav {
+  background-color: transparent;
+  box-shadow: none !important;
+}
+
+nav i {
+  color: var(--text-color);
+}
+
+.nav-wrapper {
+  
+}
 
 .content-wrapper {
   width: 98%;
@@ -122,14 +119,17 @@ nav i {
 
 nav li a {
   font-size: 1.5rem;
-  margin-left: 10px;
-  margin-right: 10px;
   border-radius: 5px;
 }
 
 nav ul li {
   padding-left: 0.3rem;
   padding-right: 0.3rem;
+}
+
+nav ul li .icon {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 #logo {
@@ -362,17 +362,17 @@ strong {
   color: #2196f3;
 }
 
-.img-section {
+.img-section .formula-section {
   padding-top: 1rem;
-  padding-bottom: 1rem;
-  
+  padding-bottom: 1rem; 
 }
 
 .img-section img {
-  width: 100%;
+  display: block;
+  width: auto;
+  max-width: 100%;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 ol li {
