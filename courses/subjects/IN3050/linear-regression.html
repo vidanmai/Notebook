@@ -215,11 +215,32 @@
           <div class="img-section">
             <img src="img/regression_line.png" alt="" class="white">
           </div>
+          <p>
+            When you want to build a model(linear regression model), you want to use the least-squares error method that is minimizing the "total" euclidean distance between a line and the data points. Theoretically the coefficients of this line can be found using calculus but in practice, algorithm will perform a gradient descent which is faster.
+            <br><br>
+            Once you have your model, you want to evaluate its performances. In the case of regression, it would be good to compute a metric that evaluates "how far" the model is to the actual data points (or test set data) in average. The MSE (Mean Squared Error) is a good estimate for this.
+            <br>In Summary, the LSE is a method that builds a model and MSE is a metric that evaluates your model's performances.
+          </p>
         </div>
         <div class="section scrollspy">
           <h5>Mean Square Error (MSE)</h5>
           <hr>
           <p>We need a way to tell whether a line is a good fit to the data, and whether one line is better than another. The goal is to minimize the error.</p>
+          <div class="img-section">
+            <img src="img/mse_line.png" alt="" class="white">
+          </div>
+          <p>
+            <ul class="flow-text">
+              <li>The <b>purple dots</b> are the points on the graph. Each point as an x-coordinate and a y-coordinate.
+              </li>
+              <li>
+                The <b>blue line</b> is our prediction line. This is a line that passes through all the points and fits them in the best way. This line contains the predicted points.
+              </li>
+              <li>
+                The <b>red line</b> between each purple point and the prediction line are the <b>errors</b>. Each error is the distance from the point to its predicted point.
+              </li>
+            </ul>
+          </p>
         </div>
         <div class="section scrollspy">
           <h5>Implementation of Gradient Descent with Linear Regression</h5>
