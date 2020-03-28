@@ -316,6 +316,21 @@ label {
   background-color: var(--green-color);
 }
 
+.dropdown-content li {
+  background-color: var(--background-color);
+  text-align: left;
+}
+
+.dropdown-content li:hover {
+  background-color: var(--background-color);
+  filter:brightness(150%);
+}
+
+.dropdown-content li>a,
+.dropdown-content li>span {
+  color: var(--green-color);
+}
+
 #main {
   margin-top: 5vh;
 }

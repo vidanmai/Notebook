@@ -1,0 +1,157 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <!--Google icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper" id="navbar">
+                <div class="content-wrapper">
+                    <a href="../../index.html" class="brand-logo" id="logo">[Notebook]</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"
+                            id="sidenav-icon">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <!-- dark mode toggle -->
+                        <li>
+                            <div class="switch dark-mode-toggle" id="dark-mode-toggle">
+                                <label id="dark-mode-label">
+                                    <img id="sun" class="darkmode-icon" src="../../icons/sun.svg" alt="">
+                                    <input id="dark-mode-input" type="checkbox">
+                                    <span class="lever"></span>
+                                    <img id="moon" class="darkmode-icon" src="../../icons/nights_stay-white-18dp.svg"
+                                        alt="">
+                                </label>
+                            </div>
+                        </li>
+                        <!-- dark mode toggle end  -->
+                        <!-- Main nav -->
+                        <li class="tooltipped" data-position="bottom" data-tooltip="Projects"><a
+                                href="../../projects/"><img src="../../icons/rocket.svg" alt="" class="icon"></a></li>
+                        <li class="tooltipped" data-position="bottom" data-tooltip="Courses"><a
+                                href="../index.html"><img src="../../icons/knowledge_color.svg" alt="" class="icon"></a>
+                        </li>
+                        <li class="tooltipped" data-position="bottom" data-tooltip="Blog"><a href="../../blog/"><img
+                                    src="../../icons/blogger.svg" alt="" class="icon"></a>
+                        </li>
+                        <li><a class="waves-effect btn red darken-2" href="../../contact.html">Contact</a></li>
+                    </ul>
+                    <!-- Main nav end -->
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Sidenav -->
+    <ul class="sidenav" id="mobile-demo">
+        <li><a class="waves-effect waves-light btn indigo darken-2" href="../../projects/">Projects 🚀</a></li>
+        <li><a class="waves-effect waves-light btn green darken-2" href="../index.html">Courses 📚</a></li>
+        <li><a class="waves-effect waves-light btn orange darken-2" href="../../blog/">Blog 👨‍💻</a></li>
+        <li><a class="waves-effect waves-light btn red darken-2 " href="../../contact.html">Contact 📧</a></li>
+        <li><a class="waves-effect waves-light center sidenav-close" href="#!" id="close-sidenav-btn">Close</a></li>
+        <!-- Dark mode toggle for mobile -->
+        <li>
+            <div class="switch dark-mode-toggle center" id="mobile-dark-mode-toggle">
+                <label id="dark-mode-label">
+                    Light
+                    <input id="mobile-dark-mode-input" type="checkbox">
+                    <span class="lever"></span>
+                    Dark
+                </label>
+            </div>
+        </li>
+        <!-- darkmode mobile toggle end  -->
+    </ul>
+    <!-- Navbar end -->
+    <!-- Load darkmode before other scripts -->
+    <script src="../../js/darkmode.js"></script>
+    <!-- Main body content -->
+    <!-- Page layout -->
+    <div class="row" id="main">
+        <div class="col s12 hide-on-large-only">
+            <ul id="dropdown" class="dropdown-content">
+                <li><a href="#">Close</a></li>
+                <li><a href="index.html">IN1010</a></li>
+            </ul>
+            <a class="btn dropdown-trigger grey darken-4" href="" data-target="dropdown">Subjects<i
+                    class="material-icons right">arrow_drop_down</i></a>
+        </div>
+        <!-- Side course navigation -->
+        <div class="col s12 m2 l2 hide-on-med-and-down">
+            <div class="collection" id="course-nav">
+                <a href="index.html" class="collection-item active">IN1010</a>
+                <a href="#" class="collection-item">Temp</a>
+                <a href="#" class="collection-item">Temp</a>
+            </div>
+        </div>
+        <!-- Middle content -->
+        <div class="col s12 m12 l8">
+            <div class="container" id="middle-content">
+                <h3 class="center-align">IN1010</h3>
+                <img src="img/java_coffee.jpg" class="responsive-img center" alt="">
+                <div class="section">
+                    <p class="flow-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis amet soluta ad quos, tenetur a
+                        quae
+                        reiciendis! Nesciunt doloremque, atque qui molestiae praesentium, voluptatibus ullam magni
+                        porro, tempora
+                        tempore cum!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Right side content -->
+        <div class="col m2 l2 hide-on-med-and-down">
+            <ul class="section table-of-contents">
+                <h6>Table of contents</h6>
+                <li><a href="#cost-function">Cost function</a></li>
+                <li><a href="#">rangaha</a></li>
+                <li><a href="#">asd</a></li>
+            </ul>
+        </div>
+        <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+        <!-- Add your site or application content here -->
+        <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script>
+            window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')
+        </script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga = function () {
+                ga.q.push(arguments)
+            };
+            ga.q = [];
+            ga.l = +new Date;
+            ga('create', 'UA-XXXXX-Y', 'auto');
+            ga('set', 'transport', 'beacon');
+            ga('send', 'pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async></script>
+        <!-- Materialize js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="../../js/plugins.js"></script>
+        <script src="../../js/main.js"></script>
+</body>
+
+</html>

@@ -12,9 +12,9 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/blog.css">
 
     <meta name="theme-color" content="#fafafa">
 </head>
@@ -26,41 +26,40 @@
             <nav>
                 <div class="nav-wrapper" id="navbar">
                     <div class="content-wrapper">
-                        <a href="index.html" class="brand-logo" id="logo">[Notebook]</a>
+                        <a href="../index.html" class="brand-logo" id="logo">[Notebook]</a>
                         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"
                                 id="sidenav-icon">menu</i></a>
                         <ul class="right hide-on-med-and-down">
-                            <!-- dark mode toggle -->
+                            <!-- right side items -->
                             <li>
                                 <div class="switch dark-mode-toggle" id="dark-mode-toggle">
                                     <label id="dark-mode-label">
-                                        <img id="sun" class="darkmode-icon" src="icons/sun.svg" alt="">
+                                        <img id="sun" class="darkmode-icon" src="../icons/sun.svg" alt="">
                                         <input id="dark-mode-input" type="checkbox">
                                         <span class="lever"></span>
-                                        <img id="moon" class="darkmode-icon" src="icons/nights_stay-white-18dp.svg"
+                                        <img id="moon" class="darkmode-icon" src="../icons/nights_stay-white-18dp.svg"
                                             alt="">
                                     </label>
                                 </div>
                             </li>
-                            <!-- dark mode toggle end  -->
+                            <!-- Rest of right side -->
                             <li class="tooltipped" data-position="bottom" data-tooltip="Projects"><a
-                                    href="projects.html"><img src="icons/rocket.svg" alt="" class="icon"></a></li>
-                            <li class="tooltipped" data-position="bottom" data-tooltip="Courses"><a
-                                    href="courses.html"><img src="icons/knowledge_color.svg" alt="" class="icon"></a>
-                            </li>
-                            <li class="tooltipped" data-position="bottom" data-tooltip="Blog"><a href="blog.html"><img
-                                        src="icons/blogger.svg" alt="" class="icon"></a></li>
-                            <li><a class="waves-effect btn red darken-2" href="contact.html">Contact</a></li>
+                                    href="../projects/"><img src="../icons/rocket.svg" alt="" class="icon"></a></li>
+                            <li class="tooltipped" data-position="bottom" data-tooltip="Courses"><a href="../courses/"><img
+                                        src="../icons/knowledge_color.svg" alt="" class="icon"></a></li>
+                            <li class="tooltipped" data-position="bottom" data-tooltip="Blog"><a href="index.html"><img
+                                        src="../icons/blogger.svg" alt="" class="icon"></a></li>
+                            <li><a class="waves-effect btn red darken-2" href="../contact.html">Contact</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </div>
         <ul class="sidenav" id="mobile-demo">
-            <li><a class="waves-effect waves-light btn indigo darken-2" href="projects.html">Projects 🚀</a></li>
-            <li><a class="waves-effect waves-light btn green darken-2" href="courses.html">Courses 📚</a></li>
-            <li><a class="waves-effect waves-light btn orange darken-2" href="blog.html">Blog 👨‍💻</a></li>
-            <li><a class="waves-effect waves-light btn red darken-2 " href="contact.html">Contact 📧</a></li>
+            <li><a class="waves-effect waves-light btn indigo darken-2" href="../projects/">Projects 🚀</a></li>
+            <li><a class="waves-effect waves-light btn green darken-2" href="../courses/">Courses 📚</a></li>
+            <li><a class="waves-effect waves-light btn orange darken-2" href="index.html">Blog 👨‍💻</a></li>
+            <li><a class="waves-effect waves-light btn red darken-2 " href="../contact.html">Contact 📧</a></li>
             <li><a class="waves-effect waves-light center sidenav-close" href="#!" id="close-sidenav-btn">Close</a></li>
             <li>
                 <!-- Dark mode toggle for mobile -->
@@ -76,7 +75,7 @@
         </ul>
         <!-- Navbar end -->
         <!-- Load darkmode before other scripts -->
-        <script src="js/darkmode.js"></script>
+        <script src="../js/darkmode.js"></script>
         <!-- Main body content -->
         <div class="hero-text">
             <h1 class="center" id="landing-header">Welcome to my blog!</h1>
@@ -90,11 +89,11 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script>
-        window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')
+        window.jQuery || document.write('<script src="../js/vendor/jquery-3.4.1.min.js"><\/script>')
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/main.js"></script>
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>
         window.ga = function () {
