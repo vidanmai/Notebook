@@ -59,10 +59,10 @@
    </div>
    <!-- Sidenav -->
    <ul class="sidenav" id="mobile-demo">
-     <li><a class="waves-effect waves-light btn indigo darken-2" href="../projects.html">Projects 🚀</a></li>
-     <li><a class="waves-effect waves-light btn green darken-2" href="../courses.html">Courses 📚</a></li>
-     <li><a class="waves-effect waves-light btn orange darken-2" href="../blog.html">Blog 👨‍💻</a></li>
-     <li><a class="waves-effect waves-light btn red darken-2 " href="../contact.html">Contact 📧</a></li>
+     <li><a class="waves-effect waves-light btn indigo darken-2" href="../../projects/">Projects 🚀</a></li>
+     <li><a class="waves-effect waves-light btn green darken-2" href="../index.html">Courses 📚</a></li>
+     <li><a class="waves-effect waves-light btn orange darken-2" href="../../blog/">Blog 👨‍💻</a></li>
+     <li><a class="waves-effect waves-light btn red darken-2 " href="../../contact.html">Contact 📧</a></li>
      <li><a class="waves-effect waves-light center sidenav-close" href="#!" id="close-sidenav-btn">Close</a></li>
      <!-- Dark mode toggle for mobile -->
      <li>
@@ -89,6 +89,7 @@
          <li><a href="index.html">IN3050</a></li>
          <li><a href="search-and-optimization.html">Search and optimization</a></li>
          <li><a href="evolutionary_algorithms.html">Evolutionary Algorithms</a></li>
+         <li><a href="machine_learning.html">Machine Learning</a></li>
          <li><a href="supervised-classification.html">Supervised classification</a></li>
          <li><a href="perceptron.html">Perceptron</a></li>
          <li><a href="linear-regression.html">Linear regression</a></li>
@@ -106,6 +107,7 @@
            optimization</a>
          <a href="evolutionary_algorithms.html" class="collection-item">Evolutionary
            Algorithms</a>
+        <a href="machine_learning.html" class="collection-item">Machine Learning</a>
          <a href="supervised-classification.html" class="collection-item">Supervised
            classification</a>
          <a href="perceptron.html" class="collection-item">Perceptron</a>
@@ -116,7 +118,7 @@
      </div>
     <!-- Middle content -->
     <div class="col s12 m12 l8">
-      <div class="container" id="middle-content">
+      <div class="content container flow-text" id="middle-content">
         <h3 class="center-align">Linear Regression</h3>
         <div class="img-section">
           <img src="img/linear_regression.png" alt="" class="white">
@@ -248,6 +250,192 @@
               </li>
             </ul>
           </p>
+        </div>
+        <div class="section scrollspy">
+          <h5>Model Representation</h5>
+          <hr>
+          <p>
+            First, the goal of most machine learning algorithms is to construct a model: a hypothesis that can be used
+            to estimate Y based on X. The hypothesis, or model, maps <em>inputs</em> to <em>outputs</em>. So, for
+            example, say I train a model based on a bunch of housing data that includes the size of the house and the
+            sale of price. By training a model, I can give you an estimate of how much you can sell your house for based
+            on it's size. This is an example of a regression problem - given some input, we want to predict a continuous
+            output.
+            <br><br>
+            The hypothesis is usually presented as:
+          </p>
+          <div class="img-section">
+            <img src="img/lin_reg_hypo.png" alt="" class="white">
+          </div>
+          <div class="img-description">Hypothesis</div>
+          <p>The theta values are the <em>parameters.</em>
+            <br><br>
+            Some quick examples of how we visualize the hypothesis:
+            <br><br>
+            Theta_0 = 1.5
+            <br>Theta_1 = 0
+            <br><br>
+            This yields <strong>h(x) = 1.5 + 0x</strong>.
+            <br>0x means no slope, and y will always be the constant <b>1.5</b>. This looks like:
+          </p>
+          <div class="img-section">
+            <img src="img/constant_function.png" alt="" class="white">
+          </div>
+          <p>How about:
+            <br><br>
+            Theta_0 = 1
+            <br>Theta_1 = 0.5
+          </p>
+          <div class="img-section">
+            <img src="img/function_slope.png" alt="" class="white">
+          </div>
+          <div class="img-description">h(x) = 1 + 0.5x</div>
+          <p>
+            The goal of creating a model is to choose paramters, or theta values, so that (x) is close to y for the training data, x and y. So for this data:
+          </p>
+          <div class="math">
+            <code>
+              x = [1, 1, 2, 3, 4, 3, 4, 6, 4]
+              <br>y = [2, 1, 0.5, 1, 3, 3, 2, 5, 4]
+            </code>
+          </div>
+          <div class="img-section">
+            <img src="img/points_graph.png" alt="" class="white">
+          </div>
+          <p>We will find a line of best fit using <strong><i>linear regression</i></strong>.</p>
+        </div>
+        <div class="section scrollspy">
+          <h5>Cost Function</h5>
+          <hr>
+          <p>We need a function that will minimize the parameters over our dataset. One common function that is often used is <strong>mean squared error</strong>. Which measure the difference between the estimator (the dataset) and the estimated value (the prediction). It looks like this:
+          </p>
+          <div class="img-section">
+            <img src="img/mse.png" alt="" class="white">
+            <div class="img-description">Mean Squared Error</div>
+          </div>
+          <p>
+            It turns out we can <u>adjust the equation a little</u> to make the calculation down the track a little more simple. We end up with:
+          </p>
+          <div class="img-section">
+            <img src="img/mse_simple.png" alt="" class="white">
+          </div>
+          <p>Let's apply this cost function to the following data:</p>
+          <div class="img-section">
+            <img src="img/graph_dataset.png" alt="" class="white">
+          </div>
+          <p>For now we will calculate some theta values, and plot the cost function by hand. Since this function passes through the origion (0, 0), we are only looking at a single value of theta. We can refer to the cost function as J(&theta;).
+            <br><br>
+            For J(1), we get 0. No surprise - a value of J(1) yields a straight line that fits the data perfectly. How about J(0.5)?
+          </p>
+          <div class="img-section">
+            <img src="img/graph_dataset_2.png" alt="" class="white">
+            <div class="img-description">J(0.5)</div>
+          </div>
+          <p>
+            The MSE function gives us a value of 0.58. Lets plot both our values so far:
+            <br><br>
+            J(1) = 0
+            J(0.5) = 0.58
+          </p>
+          <div class="img-section">
+            <img src="img/graph_dataset_3.png" alt="" class="white">
+            <div class="img-description">
+              With J(1) and J(0.5)
+            </div>
+          </div>
+          <p>We go ahead and caculate more values of J(&theta;).</p>
+          <div class="img-section">
+            <img src="img/graph_dataset_4.png" alt="" class="white">
+          </div>
+          <p>And if we join the dots together nicely...</p>
+          <div class="img-section">
+            <img src="img/graph_dataset_5.png" alt="" class="white">
+            <div class="img-description">
+              Visualizing the cost function J(&theta;)
+            </div>
+          </div>
+          <p>We can see that the cost function is at a minimum when &theta; = 1. This makes sense - our initial data is a straight line with a slope of 1 (the orange line in the figure above).
+          </p>
+        </div>
+        <div class="section scrollspy">
+          <h5>Gradient Descent</h5>
+          <hr>
+          <p>
+            We minimized J(&theta;) by trial and error above - just trying lots of values and visually inspecting the
+            resulting graph. Surely, there must be a better way? This is where Gradient Descent comes in to play.
+            <b>Gradient Descent</b> is a general function for minimizing a function, in this case the Mean Squared Error
+            cost function.
+            <br><br>
+            Gradient Descent basically, just does what we were doing by hand - changing the &theta; values, or
+            parameters, bit by bit, until we hopefully arrived at a minimum.
+            <br><br>
+            We start by initializing &theta;_0 and &theta;_1 to any two values, say 0 for both, and go from there.
+            Formally the algorithm is as follows:
+          </p>
+          <div class="img-section">
+            <img src="img/gradient_descent.png" alt="" class="white">
+            <div class="img-description">
+              Gradient Descent
+            </div>
+          </div>
+          where &alpha;, is the learning rate, or how quickly we want to move towards the minimum. If &alpha; is too large, we can overshoot.
+          <div class="img-section">
+            <img src="img/gd_visualization.png" alt="" class="white">
+            <div class="img-description">Visualization of Gradient Descent</div>
+          </div>
+          <p>
+            To demonstrate the gradient descent algorithm, we initialize the model parameters with 0 The equation becomes Y = 0. Gradient Descent algorithm now tries to update the value of the parameters so that we arrive at the best fit line.
+            <br><br>
+            When the learning rate &alpha; is very slow, the gradient descent takes longer time to find the best fit line.
+          </p>
+          <div class="img-section">
+            <img src="img/gd_algo_viz.gif" alt="" class="white">
+          </div>
+          <p>When the learning rate is normal</p>
+          <div class="img-section">
+            <img src="img/gd_algo_viz._2.gif" alt="" class="white">
+          </div>
+          <p>When the learning is arbitrarily high, gradient descent algorithm keeps overshooting the best fit line and may even fail to find the best line.</p>
+          <div class="img-section">
+            <img src="img/gd_algo_viz._3.gif" alt="" class="white">
+          </div>
+        </div>
+        <div class="section scrollspy">
+          <h5>Bringing it all together - Linear Regression</h5>
+          <hr>
+          <p>Quickly summarizing</p>
+          <br><br>
+          <p>We have a <b>hypothesis</b>:</p>
+          <div class="img-section">
+            <img src="img/lin_reg_hypo.png" alt="" class="white">
+            <div class="img-description">Hypothesis</div>
+          </div>
+          <p>Which we need to fit our training data. We can use a cost function such as <b>Mean Squared Error</b>:
+          </p>
+          <div class="img-section">
+            <img src="img/mse.png" alt="" class="white">
+            <div class="img-description">
+              Mean Squared Error
+            </div>
+          </div>
+          <p>Which we can minimize using <b>Gradient Descent</b>:
+          </p>
+          Which leads to the machine learning algorithm, <b>Linear Regression</b>. The last piece of the puzzle we need to solve to have a working a linear regression model is the partial derivative of the cost function:
+          <div class="img-description">
+            <img src="img/partial_derivative.png" alt="" class="white">
+            <div class="img-description">Partial Derivative of the Cost Function which we need to calculate</div>
+          </div>
+          <p>
+            Which turns out to be:
+          </p>
+          <div class="img-section">
+            <img src="img/pd_cost_function.png" alt="" class="white">
+          </div>
+          <p>Which then gives us linear regression!</p>
+          <div class="img-section">
+            <img src="img/lin_reg_formula.png" alt="" class="white">
+            <div class="img-description">Linear Regression</div>
+          </div>
         </div>
         <div class="section scrollspy">
           <h5>Implementation of Gradient Descent with Linear Regression</h5>

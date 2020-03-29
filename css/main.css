@@ -377,7 +377,9 @@ strong {
   color: #2196f3;
 }
 
-.img-section .formula-section {
+.img-section {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem; 
 }
@@ -396,14 +398,15 @@ ol li {
 }
 
 .img-description {
-  padding-top: 0.2rem;
   color: grey;
   font-size: 14px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0.5rem;
   text-align: center;
   width: 90%;
-  padding-bottom: 1rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -851,10 +854,6 @@ textarea {
   
 }
 /* Media queries */
-@media (min-width: 1281px) {
-  /* CSS */
-}
-
 /* 
   ##Device = Tablets, Ipads (landscape)
   ##Screen = B/w 768px to 1024px
@@ -886,7 +885,7 @@ textarea {
   }
 
   .card img {
-    height: 40vh;
+    height: 30vh;
   }
 }
 
@@ -899,7 +898,20 @@ textarea {
   }
 
   .card img {
-    height: 40vh;
+    height: 25vh;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+
+  #middle-content {
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .card img {
+    height: 35vh;
   }
 }
 
@@ -918,4 +930,11 @@ textarea {
     margin: 0;
   }
 
+}
+
+/* For long vertical screens*/
+@media (min-height: 800px) {
+  .card img {
+    height: 20vh;
+  }
 }
