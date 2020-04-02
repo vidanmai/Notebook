@@ -119,15 +119,130 @@
         </div>
         <!-- Middle content -->
         <div class="col s12 m12 l8">
-            <div class="container" id="middle-content">
+            <div class="container flow-text" id="middle-content">
                 <h3 class="center-align">Multi-Layer Perceptron Network</h3>
                 <img src="img/mlp.png"
                     class="responsive-img center" alt="">
-                <div class="section">
-                    <p class="flow-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis amet soluta ad quos, tenetur a
-                        quae reiciendis! Nesciunt doloremque, atque qui molestiae praesentium, voluptatibus ullam magni
-                        porro, tempora tempore cum!
+                <div class="section scrollspy">
+                    <h4>Concepts</h4>
+                    <hr>
+                </div>
+                <div class="section scrollspy">
+                    <h5>Neural Network</h5>
+                    <p>
+                        Neural networks are a class of machine learning algorithms used to model complex patterns in
+                        datasets using multiple hidden layers and non-linear activation functions. A neural network
+                        takes an input, passes it through multiple layers of hidden neurons (mini-functions with
+                        unique coefficients that must be learned), and outputs a prediction representing the
+                        combined input of <u>all the neurons</u>.
+                    </p>
+                    <div class="img-section">
+                        <img src="img/neural_network.png" alt="" class="white">
+                    </div>
+                </div>
+                <div class="section scrollspy">
+                    <h5>Neuron</h5>
+                    <p>
+                        A neuron takes a group of weighted inputs, applies an activation function, and returns an
+                        output.
+                    </p>
+                    <div class="img-section">
+                        <img src="img/neuron.png" alt="" class="white">
+                    </div>
+                    <p>Inputs to a neuron can either be features from a training set or outputs from a previous layer's
+                        neurons. Weights are applied to the inputs as they travel along the synapes to reach the neuron.
+                        The neuron then applies an activation function to the "sum of weighted inputs" from each
+                        incoming synapse and passes the result on to all the neurons in the next layer.</p>
+                </div>
+                <div class="section scrollspy">
+                    <h5>Synapse</h5>
+                    <p>Synapses are like roads in a neural network. They connect inputs to neurons, neurons to neurons,
+                        and neurons to outputs. In order to get from one neuron to another, you have to travel along the
+                        synapse paying the "toll2 weight along the way. Each connection between two neurons has a unique
+                        synapse with a unique weight attached to it. When we talk about updating weights in a network,
+                        we're really talking about adjusting the weight on these synapses.
+                    </p>
+                </div>
+                <div class="section scrollspy">
+                    <h5>Weights</h5>
+                    <p>Weights are parameters that machine learning algorithms multiply with the inputs so we can
+                        retrieve a function to fit the predicted data.</p>
+                </div>
+                <div class="section scrollspy">
+                    <h5>Bias</h5>
+                    <p>
+                        Bias terms are additional constants attached to the neurons and added to the weighted input
+                        before the activation function is applied. Bias terms help model represent patterns that do not
+                        necessarily pass through the origin. For example, if all the features were 0, would the output
+                        also be zero? Is it possible there is some base value open which the features have an effect?
+                        Bias terms typically accompany weights and must also be learned by the model.
+                    </p>
+                </div>
+                <div class="section scrollspy">
+                    <h5>Layers</h5>
+                    <div class="img-section">
+                        <img src="img/nn_layers.png" alt="" class="white">
+                    </div>
+                </div>
+                <div class="section scrollspy">
+                    <h6>Input Layer</h6>
+                    <p>
+                        The input layer holds the data the model will train on. Each neuron in the input layer
+                        represents a unique attribute in the dataset (e.g. height, hair color, etc.).
+                    </p>
+                </div>
+                <div class="section scrollspy">
+                    <h6>Hidden Layer</h6>
+                    <p>
+                        The hidden layer sits between the input and output layers and applies in an activation function before passing on the results. There are often multiple hidden layers in a network. In traditional networks, hidden layers are typically fully-connected layers - each neuron receives input from all the previous layer's neurons and sends its output to every neuron in the next layer. This contrasts with how convolutional layers work when the neurons send their output to only some of the neurons in the next layer.
+                    </p>
+                </div>
+                <div class="section scrollspy">
+                    <h6>Output Layer</h6>
+                    <p>
+                        The final layer in a network. It receives input from the previous hidden layer, optionally applies an activation function and returns an output representing the model's prediction.
+                    </p>
+                </div>
+                <div class="section scrollspy">
+                    <h5>Weighted Input</h5>
+                    <p>A neuron's input equals the seum of weighted outputs from all neurons in the previous layer. Each input is multiplied by the weight associated with the synapse connecting the input to the current neuron. If there are 3 inputs or neurons in the previous layer, each neuron in the current layer will have 3 distinct weights - one for each synapse.
+                    </p>
+                    <h6>Single input</h6>
+                    <div class="img-section">
+                        <img src="img/single_input.JPG" alt="" class="white">
+                    </div>
+                    <h6>Multiple inputs</h6>
+                    <div class="img-section">
+                        <img src="img/multiple_inputs.JPG" alt="" class="white">
+                    </div>
+                </div>
+                <div class="section scrollspy">
+                    <h5>Activation Functions</h5>
+                    <p>Activation functions live inside neural network layers and modify the data they receive before passing it to the next layer. Activation functions give neural networks their power - allowing to model complex non-linear relationships. By modifying the inputs with non-linear functions, neural networks can model highly complex relationships between features. Popular activation functions include <strong>relu</strong> and <strong>sigmoid</strong>.
+                        <br><br>
+                        Activation functions typically have the following properties:
+                        <ul>
+                            <li>
+                                <b>Non-linear</b> - In linear regression, we're limited to a prediciton equation that looks like a straight line. This fits very well for simpel datasets with a one-to-one relationship between the inputs and outputs, but what if the patterns in our dataset were non-linear (e.g. x^2, sin, log)? To model these relationships we need a non-linear prediction equation. Activation functions provide this non-linearity.
+                            </li>
+                            <li>
+                                <b>Continuously differentiable</b> - To improve the model with <strong>gradient descent</strong>, we need the output to have a nice slope so we can compute error derivatives with respect to the weights. If our neuron instead outputed 0 or 1 (perceptron), we wouldn't know in which direction to update the weights to reduce the error.
+                            </li>
+                            <li>
+                                <b>Fixed Range</b> - Activation functions typically squash the input data into a narrow range that makes training the model more stable and efficient.
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="section scrollspy">
+                    <h5>Loss Functions</h5>
+                    A loss function, or cost function is a wrapper around the model's predict function that tells us "how good" the model is at making predictions for a given set of parameters. The loss function has its own curve and its own derivatives. The slope of this curve tells us how to change our parameters to make the model more accurate. We use the model to make predictions. We use the cost function to update our parameters. The cost function can take a variety form as there are many different cost functions available. Popular loss functions include: <strong>MSE (L2)</strong> and <strong>Cross-entropy Loss</strong>.
+                </div>
+                <div class="section scrollspy">
+                    <h5>Forwardpropagation</h5>
+                    <hr>
+                    <p>
+                        
                     </p>
                 </div>
             </div>
@@ -145,7 +260,7 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
         <!-- Add your site or application content here -->
-        <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+        <script src="../../js/vendor/modernizr-3.8.0.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script>

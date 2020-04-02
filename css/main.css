@@ -117,12 +117,17 @@ nav i {
   margin-right: auto;
 }
 
+ul li {
+  margin-left: 2rem;
+}
+
 nav li a {
   font-size: 1.5rem;
   border-radius: 5px;
 }
 
 nav ul li {
+  margin-left: 0;
   padding-left: 0.3rem;
   padding-right: 0.3rem;
 }
@@ -411,7 +416,8 @@ ol li {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .green-box {
