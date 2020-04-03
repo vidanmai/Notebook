@@ -117,10 +117,6 @@ nav i {
   margin-right: auto;
 }
 
-ul li {
-  margin-left: 2rem;
-}
-
 nav li a {
   font-size: 1.5rem;
   border-radius: 5px;
@@ -321,6 +317,10 @@ label {
   background-color: var(--green-color);
 }
 
+.dropdown-content {
+  background-color: var(--background-color);
+}
+
 .dropdown-content li {
   background-color: var(--background-color);
   text-align: left;
@@ -329,6 +329,7 @@ label {
 .dropdown-content li:hover {
   background-color: var(--background-color);
   filter:brightness(150%);
+  width: 100%;
 }
 
 .dropdown-content li>a,
