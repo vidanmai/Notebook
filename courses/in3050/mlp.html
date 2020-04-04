@@ -130,7 +130,7 @@
                     <hr>
                 </div>
                 <div class="section scrollspy">
-                    <h5>Neural Network</h5>
+                    <h4>Neural Network</h4>
                     <p>
                         Neural networks are a class of machine learning algorithms used to model complex patterns in
                         datasets using multiple hidden layers and non-linear activation functions. A neural network
@@ -143,7 +143,7 @@
                     </div>
                 </div>
                 <div class="section scrollspy">
-                    <h5>Neuron</h5>
+                    <h4>Neuron</h4>
                     <p>
                         A neuron takes a group of weighted inputs, applies an activation function, and returns an
                         output.
@@ -157,7 +157,7 @@
                         incoming synapse and passes the result on to all the neurons in the next layer.</p>
                 </div>
                 <div class="section scrollspy">
-                    <h5>Synapse</h5>
+                    <h4>Synapse</h4>
                     <p>Synapses are like roads in a neural network. They connect inputs to neurons, neurons to neurons,
                         and neurons to outputs. In order to get from one neuron to another, you have to travel along the
                         synapse paying the "toll2 weight along the way. Each connection between two neurons has a unique
@@ -166,12 +166,12 @@
                     </p>
                 </div>
                 <div class="section scrollspy">
-                    <h5>Weights</h5>
+                    <h4>Weights</h4>
                     <p>Weights are parameters that machine learning algorithms multiply with the inputs so we can
                         retrieve a function to fit the predicted data.</p>
                 </div>
                 <div class="section scrollspy">
-                    <h5>Bias</h5>
+                    <h4>Bias</h4>
                     <p>
                         Bias terms are additional constants attached to the neurons and added to the weighted input
                         before the activation function is applied. Bias terms help model represent patterns that do not
@@ -181,45 +181,45 @@
                     </p>
                 </div>
                 <div class="section scrollspy">
-                    <h5>Layers</h5>
+                    <h4>Layers</h4>
                     <div class="img-section">
                         <img src="img/nn_layers.png" alt="" class="white">
                     </div>
                 </div>
                 <div class="section scrollspy">
-                    <h6>Input Layer</h6>
+                    <h5>Input Layer</h5>
                     <p>
                         The input layer holds the data the model will train on. Each neuron in the input layer
                         represents a unique attribute in the dataset (e.g. height, hair color, etc.).
                     </p>
                 </div>
                 <div class="section scrollspy">
-                    <h6>Hidden Layer</h6>
+                    <h5>Hidden Layer</h5>
                     <p>
                         The hidden layer sits between the input and output layers and applies in an activation function before passing on the results. There are often multiple hidden layers in a network. In traditional networks, hidden layers are typically fully-connected layers - each neuron receives input from all the previous layer's neurons and sends its output to every neuron in the next layer. This contrasts with how convolutional layers work when the neurons send their output to only some of the neurons in the next layer.
                     </p>
                 </div>
                 <div class="section scrollspy">
-                    <h6>Output Layer</h6>
+                    <h5>Output Layer</h5>
                     <p>
                         The final layer in a network. It receives input from the previous hidden layer, optionally applies an activation function and returns an output representing the model's prediction.
                     </p>
                 </div>
                 <div class="section scrollspy">
-                    <h5>Weighted Input</h5>
+                    <h4>Weighted Input</h4>
                     <p>A neuron's input equals the seum of weighted outputs from all neurons in the previous layer. Each input is multiplied by the weight associated with the synapse connecting the input to the current neuron. If there are 3 inputs or neurons in the previous layer, each neuron in the current layer will have 3 distinct weights - one for each synapse.
                     </p>
-                    <h6>Single input</h6>
+                    <h5>Single input</h5>
                     <div class="img-section">
                         <img src="img/single_input.JPG" alt="" class="white">
                     </div>
-                    <h6>Multiple inputs</h6>
+                    <h5>Multiple inputs</h5>
                     <div class="img-section">
                         <img src="img/multiple_inputs.JPG" alt="" class="white">
                     </div>
                 </div>
                 <div class="section scrollspy">
-                    <h5>Activation Functions</h5>
+                    <h4>Activation Functions</h4>
                     <p>Activation functions live inside neural network layers and modify the data they receive before passing it to the next layer. Activation functions give neural networks their power - allowing to model complex non-linear relationships. By modifying the inputs with non-linear functions, neural networks can model highly complex relationships between features. Popular activation functions include <strong>relu</strong> and <strong>sigmoid</strong>.
                         <br><br>
                         Activation functions typically have the following properties:
@@ -237,11 +237,11 @@
                     </p>
                 </div>
                 <div class="section scrollspy">
-                    <h5>Loss Functions</h5>
+                    <h4>Loss Functions</h4>
                     A loss function, or cost function is a wrapper around the model's predict function that tells us "how good" the model is at making predictions for a given set of parameters. The loss function has its own curve and its own derivatives. The slope of this curve tells us how to change our parameters to make the model more accurate. We use the model to make predictions. We use the cost function to update our parameters. The cost function can take a variety form as there are many different cost functions available. Popular loss functions include: <strong>MSE (L2)</strong> and <strong>Cross-entropy Loss</strong>.
                 </div>
                 <div class="section scrollspy">
-                    <h5>Forwardpropagation</h5>
+                    <h4>Forwardpropagation</h4>
                     <hr>
                     <p>
                         <!-- TODO -->
@@ -251,15 +251,174 @@
                     </p>
                 </div>
                 <div class="section scrollspy">
-                    <h5>Backpropagation</h5>
+                    <h4>Backpropagation</h4>
                     <hr>
                     <p>
                         The goals of Backpropagation are straightforward: adjust each weight in the network in proportion to how much it contributes to overall error. If we iteratively reduce weach weight's error, eventually we'll have a series of weights that produce good predictions.
                     </p>
-                    <h5>Refreshing Chain Rule</h5>
+                    <h4>Refreshing Chain Rule</h4>
                     <p>
-
+                        Forward propagation can be seen as a long series of nested equations. If you think of feed forwarding this way, then backpropagation is merely an application of the <strong>Chain rule</strong> to find the <b>Derivatives</b> of cost with respect to any variable in the nested equation. Given a forward propagation function:
                     </p>
+                    <div class="img-section">
+                        <img src="img/forward_prop_function.JPG" alt="" class="white">
+                    </div>
+                    <p>
+                        A, B, and C are activation functions at different layers. Using the chain rule, we can calculate the derivative of f(x) with respect to x:
+                    </p>
+                    <div class="img-section">
+                        <img src="img/forward_prop_function_derivative.JPG" alt="" class="white">
+                    </div>
+                    How about finding the derivative with respect to B (partial derivative)? To find the derivative with respect to B, you can pretend <b>B(C(x))</b> is a constant, replace it with a placeholder variable B, and proceed to find the derivative normally with respect to B.
+                    <div class="img-section">
+                        <img src="img/b_derivative.JPG" alt="" class="white">
+                    </div>
+                    <p>The simple technique extends to any variable within a funciton and allows us to precisely pinpoint the exact impact each variable has on the total output.</p>
+                    <h4>Applying the Chain Rule</h4>
+                    <p>Let's use the chain rule to calculate the derivative of cost with respect to any weight in the network. The chain rule will help us identify how much each weight contributes to our overall error and the direction to update each weight to reduce our error. The equations we need to make a prediction, and calculate total error, or cost:</p>
+                    <div class="img-section">
+                        <img src="img/backprop_equations.png" alt="" class="white">
+                    </div>
+                    <p>
+                        Given a network consisting of a single neuron, total cost could be calculated as: 
+                    </p>
+                    <div class="img-section">
+                        <img src="img/single_neuron_cost.JPG" alt="" class="white">
+                    </div>
+                    <p>
+                        Using the chain rule, we can easily find the derivative of cost with respect to weight W:
+                    </p>
+                    <div class="img-section">
+                        <img src="img/single_n_deriv_cost.JPG" alt="" class="white">
+                    </div>
+                    <p>
+                        Now that we have an equation to calculate the derivative of cost with respect to any weight. Let's take a look back at our toy neural network example above:
+                    </p>
+                    <div class="img-section">
+                        <img src="img/toy_nn.JPG" alt="" class="white">
+                    </div>
+                    <p>
+                        What is the derivative of cost with respect to <b><i>W_o</i></b>?
+                    </p>
+                    <div class="img-section">
+                        <img src="img/deriv_cost_wo.JPG" alt="" class="white">
+                    </div>
+                    <p>
+                        And what about with respect to the weights in the hidden layer <b><i>W_h</i></b>? To find out we keep going further back in our function by applying the chain rule recursively until we get to the function that has the W_h term.
+                    </p>
+                    <div class="img-section">
+                        <img src="img/deriv_cost_weights.JPG" alt="" class="white">
+                    </div>
+                    <p>
+                        And just for fun, what if the network had 10 hidden layers? What is the derivative of cost for
+                        the first weight w_1?
+                    </p>
+                    <div class="img-section">
+                        <img src="img/w_1_10_hidden_layers.JPG" alt="" class="white">
+                    </div>
+                    <p>
+                        See the pattern? The number of calculations required to compute the cost derivatives increases as our network grows deeper. Notice also the redundancy in our derivative calculations. Each layer's cost derivative appends two new terms to the terms that have already been calculated by the layers above it. What if there was a way to save our work and avoid these duplicate calculations?
+                    </p>
+                    <h4>Saving work with memoization</h4>
+                    <p>
+                        Memoization is a computer science term which simply means: don't recompute the same thing over and over. In memoization we store previously computed results to avoid recalculating the same function. It's handy for speeding up recursive functions of which backpropagation is one. Notice the pattern in the derivative equations below:
+                    </p>
+                    <div class="img-section">
+                        <img src="img/deriv_memoization.JPG" alt="" class="white">
+                    </div>
+                    <p>
+                        Each of these layers are recomputing the same derivatives. Instead of writing out long derivative equations for every weight, we can use <b>memoization</b> to save our work as we backpropgate error through the network. To do this, we define 3 equations (below), whihch together encapsulate all the calculations needed for backpropagation. The math is the same, but the equations provide a nice shorthand we can use to track whihch calculations we've already performed and save our work as we move backwards through the network. 
+                    </p>
+                    <div class="img-section">
+                        <img src="img/backprop_equations.png" alt="" class="white">
+                    </div>
+                    <div class="note">
+                        <h5>Note</h5>
+                        <p>
+                            We can also use the sigmoid function as activation function.
+                        </p>
+                    </div>
+                    <br><br>
+                    We first calculate the output layer error and pass the result to the hidden layer before it. After
+                    calculating the hidden layer error, we pass its error value back to the previous hidden layer before
+                    it and so on. As we move backwards through the network, we apply the activation function (sigmoid or
+                    ReLU) at every layer to calculate the derivative of cost with respect to that layer's weights. This
+                    resulting derivative tells us in which direction to adjust our weights to reduce the overall cost.
+                    <br><br>
+                    <div class="note">
+                        <h5>Note</h5>
+                        <p>
+                            The term <i>layer error</i> refers to the derivative of cost with respect to layer's
+                            input. It answers the question: how does the cost function output change when the input
+                            to that layer changes?
+                        </p>
+                    </div>
+                    <h4>Output Layer Error</h4>
+                    <p>
+                        To calculate output layer error we need to find the derivative of cost with respect to the
+                        output layer input, <b>Z_o</b>. It answers the question - how are the final layer's weights
+                        impacting overall error in the network? The derivative is then:
+                    </p>
+                    <div class="img-section">
+                        <img src="img/output_layer_derivative.JPG" alt="" class="white">
+                    </div>
+                    To simplify notation, ML practicioners typically replace the (target - prediction) *
+                    activation_function'(Z_o) with the error term <b><i>E_o</i></b>. So our formula for output layer
+                    error equals:
+                    </p>
+                    <div class="img-section">
+                        <img src="img/out_error_term.JPG" alt="" class="white">
+                    </div>
+                    <h4>Hidden Layer Error</h4>
+                    <p>To calculate hidden layer error we need to find the derivative of cost with respect to the hidden layer input, Z_h.
+                    </p>
+                    <div class="img-section">
+                        <img src="img/deriv_cost_zh.JPG" alt="" class="white">
+                    </div>
+                    <p>
+                        Next we can swap in the E_o  term above to avoid duplication and create a new simplified equation for hidden layer error:
+                    </p>
+                    <div class="img-section">
+                        <img src="img/hidden_error_term.JPG" alt="" class="white">
+                    </div>
+                    <p>
+                        This formula serves as the core for backpropagation. We calculate the current layer's error, and pass the weighted error back to the previous layer, continuing until we arrive at our first hidden layer. Along the way we update the weights using the derivative of cost with respect to each weight.
+                    </p>
+                    <h4>Derivative of cost with respect to any weight</h4>
+                    <p>
+                        Let's return to our formula for the derivative of cost with respect to the output layer W_o:
+                    </p>
+                    <div class="img-section">
+                        <img src="img/output_layer_derivative.JPG" alt="" class="white">
+                    </div>
+                    <p>
+                        We know we can replace the first part with our equation for output layer error E_o. <b>H</b> represents the hidden layer actiation.
+                    </p>
+                    <div class="img-section">
+                        <img src="img/simplified_wo.JPG" alt="" class="white">
+                    </div>
+                    <p>
+                        So to find the derivative of cost with respect to any weight in our network, we simply multiply the corresponding layer's error times its input (the previous layer's output).
+                    </p>
+                    <div class="img-section">
+                        <img src="img/deriv_cost_any_weight.JPG" alt="" class="white">
+                    </div>
+                    <div class="note">
+                        <h5>Note</h5>
+                        <p>
+                            Input refers to the activation from the previous layer, not the weighted input <b>Z</b>.
+                        </p>
+                    </div>
+                    <h4>Summary</h4>
+                    <p>The final 3 equations that together form the foundation of backpropagation.
+                    </p>
+                    <div class="img-section">
+                        <img src="img/final_backprop_equations.JPG" alt="" class="white">
+                    </div>
+                    <p>Here is the process visualized using the toy network example above:</p>
+                    <div class="img-section">
+                        <img src="img/backprop_visually.png" alt="" class="white">
+                    </div>
                 </div>
             </div>
         </div>

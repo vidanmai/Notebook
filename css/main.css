@@ -34,6 +34,7 @@
   --sidenav-background: rgba(255, 255, 255, 0.75);
   --section-background: #FFF;
   --math-bg: #DCC7AA;
+  --note-bg: #e2e2e2;
   --gist-bg: #f5f5f5;
   --ff-body: 'Roboto',
   sans-serif;
@@ -53,6 +54,7 @@
    --sidenav-background: rgba(12, 12, 12, 0.856);
    --section-background: #191c20;
    --math-bg: #283593;
+   --note-bg: #2a2a2a;
    --gist-bg: #121212;
    --ff-body: 'Roboto',
    sans-serif;
@@ -533,6 +535,18 @@ thead {
   background-color: var(--math-bg);
   padding: 10px;
   border-radius: 3px;
+}
+
+.note h5 {
+  margin: 0;
+  padding: 1rem;
+  background-color: brown;
+}
+
+.note p {
+  margin: 0;
+  padding: 1rem;
+  background-color: var(--note-bg);
 }
 
 a {
