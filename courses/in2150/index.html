@@ -111,50 +111,57 @@
         <!-- Middle content -->
         <div class="col s12 m12 l8">
             <div class="container flow-text" id="middle-content">
-
-                <!-- Create the quill editor container -->
-                
-                <div id="editor">
-                    <p>Hello World!</p>
-                    <p>Some initial <strong>bold</strong> text</p>
-                    <p><br></p>
+                <div class="content" id="content">
+                    <h1 class="center">IN2150</h1>
+                    <img src="img/java_coffee.jpg" class="responsive-img center" alt="">
+                    <div class="section scrollspy">
+                        <h4>Informasjonssystemer (IS)</h4>
+                        <blockquote><i>
+                                "An information system is a group of <b>components</b> that interact to produce
+                                information"
+                            </i>
+                        </blockquote>
+                        <ul>
+                            <li>- Mennesker</li>
+                            <li>- Notatbøker</li>
+                            <li>- Brev</li>
+                            <li>- Telefon</li>
+                            <li>- Datamaskin (hardware + software)</li>
+                        </ul>
+                        <h4>Informasjonssystemer - sosioteknisk</h4>
+                        <p>
+                            Informasjonssystemer har fokus på forbedringen av totaliteten av arbeidsplassen/systemet.
+                        </p>
+                    </div>
                 </div>
-                
-                <button onclick="logHtmlContent()">Log content as HTML</button>
+                <!-- Create the quill editor container -->
+
+                <div id="editor">
+                    <!-- Can put text here-->
+                </div>
+                <a class="waves-effect btn right" onclick="addHtml()">Add content</a>
+                <!-- <button onclick="logHtmlContent()">Log content as HTML</button> -->
                 <!-- Initialize Quill editor -->
                 <script>
-                    var toolbarOptions = [["bold", "italic", "underline", "strike"],
-                    ["blockquote", "code-block"]
+                    var toolbarOptions = [
+                        ["bold", "italic", "underline", "strike"],
+                        ["blockquote", "code-block"]
                     ];
                     var quill = new Quill('#editor', {
                         modules: {
-                            toolbar: toolbarOptions
                         },
                         theme: 'snow'
                     });
+                    function addHtml() {
+                        const content = document.getElementById("content");
+                        content.innerHTML += quill.root.innerHTML;
+                    }
                     function logHtmlContent() {
                         window.delta = quill.getContents();
                         console.log(delta);
                         quill.setContents(window.delta);
                     }
                 </script>
-
-                <h3 class="center-align">IN2150</h3>
-                <img src="img/java_coffee.jpg" class="responsive-img center" alt="">
-                <div class="section scrollspy">
-                    <h5>Informasjonssystemer (IS)</h5>
-                    <blockquote><i>
-                        "An information system is a group of <b>components</b> that interact to produce information"
-                    </i>
-                    </blockquote>
-                    <ul>
-                        <li>- Mennesker</li>
-                        <li>- Notatbøker</li>
-                        <li>- Brev</li>
-                        <li>- Telefon</li>
-                        <li>- Datamaskin (hardware + software)</li>
-                    </ul>
-                </div>
             </div>
         </div>
         <!-- Right side content -->

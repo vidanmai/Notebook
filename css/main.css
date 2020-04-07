@@ -77,7 +77,7 @@ body {
 /* Scrollbar */
 /* width */
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 8px;
 }
 
 /* Track */
@@ -355,9 +355,8 @@ label {
   padding-left: 5rem;
   padding-right: 5rem;
   padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 4rem;
 }
-
 .content-box {
   background-color: var(--section-background);
   border-radius: 1rem;
@@ -820,7 +819,7 @@ textarea {
 
   #middle-content {
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 4rem;
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -863,6 +862,7 @@ textarea {
     width: 80%;
     padding-left: 3rem;
     padding-right: 3rem;
+    padding-bottom: 4rem;
   }
 
   .content-box {
@@ -884,6 +884,7 @@ textarea {
   #middle-content {
     padding-left: 2rem;
     padding-right: 2rem;
+    padding-bottom: 4rem;
   }
 
   .card img {
@@ -903,6 +904,7 @@ textarea {
     width: 100%;
     padding: 1rem;
     margin: 0;
+    padding-bottom: 4rem;
   }
 
   .card img {
@@ -916,6 +918,7 @@ textarea {
     width: 100%;
     padding: 1rem;
     margin: 0;
+    padding-bottom: 4rem;
   }
 
   .card img {
@@ -929,6 +932,7 @@ textarea {
     width: 100%;
     padding: 1rem;
     margin: 0;
+    padding-bottom: 4rem;
   }
 
   .card img {
@@ -949,6 +953,7 @@ textarea {
     width: 100%;
     padding: 1rem;
     margin: 0;
+    padding-bottom: 4rem;
   }
 
 }
