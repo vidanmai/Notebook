@@ -1,6 +1,7 @@
 .grid {
     display: grid;
     grid-template-columns: 40% 60%;
+    height: 100vh;
 }
 
 .intro {
@@ -12,4 +13,47 @@
 .intro h1 {
     padding-left: 1rem;
     border: 3px solid green;
+}
+
+.hero-image {
+    margin: auto;
+    vertical-align: middle;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .grid {
+        grid-template-columns: auto;
+    }
+
+    .intro h1 {
+        font-size: 4rem;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .grid {
+        grid-template-columns: 40% 60%;
+    }
+    .intro h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+    .intro h1 {
+        font-size: 3rem;
+    }
+}
+  
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .grid {
+        grid-template-columns: auto;
+    }
+
+    .intro h1 {
+        font-size: 3.5rem;
+    }
 }
