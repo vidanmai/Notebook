@@ -296,13 +296,14 @@ label {
   border-bottom: 1px solid var(--text-color);
 }
 
-.collection .collection-item {
-  background-color: var(--section-background);
-  border: 1px solid var(--text-color);
+
+.collection {
+  border: 0;
 }
 
-.collection .collection-item:last-child {
-  border-bottom: 2px solid var(--text-color);
+.collection .collection-item {
+  background-color: transparent;
+  border: 0;
 }
 
 .collection a.collection-item {
@@ -311,7 +312,7 @@ label {
 
 .collection .collection-item.active {
   color: var(--text-color);
-  background-color: transparent;
+  background-color: var(--section-background);
   border-left: 10px solid var(--green-color);
 }
 
@@ -508,7 +509,7 @@ table.highlight>tbody>tr:hover {
   /* whatever color you want */
 }
 
-
+/*
 td a {
   font-size: large;
   color: var(--green-color);
@@ -534,7 +535,7 @@ thead {
   background-color: var(--green-color);
   color: white;
 }
-
+*/
 .math {
   background-color: var(--math-bg);
   padding: 10px;
