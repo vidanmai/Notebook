@@ -357,6 +357,11 @@ label {
   padding-top: 1rem;
   padding-bottom: 4rem;
 }
+
+.container ul li {
+  list-style: disc;
+  margin-left: 2rem;
+}
 .content-box {
   background-color: var(--section-background);
   border-radius: 1rem;
@@ -827,7 +832,6 @@ textarea {
   .container {
     width: 90%;
   }
-  
 
   .card img {
     height: 15vh;
