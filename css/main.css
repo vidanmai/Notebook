@@ -101,7 +101,7 @@ body {
 /* Scrollbar end */
 
 nav {
-  background-color: transparent;
+  background-color: var(--section-background);
   box-shadow: none !important;
 }
 

@@ -1,8 +1,5 @@
 console.log("hello world");
 
-window.onscroll = function () {
-    makeNavTransparent();
-};
 //Find out if darkMode is enabled on local computer
 //let darkMode = localStorage.getItem('darkMode');
 
