@@ -536,6 +536,11 @@ thead {
   color: white;
 }
 */
+
+tr {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.25);
+}
+
 .math {
   background-color: var(--math-bg);
   padding: 10px;

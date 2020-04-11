@@ -1,0 +1,243 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <!--Google icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <!-- Theme included stylesheets -->
+    <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
+    <!-- Core build with no theme, formatting, non-essential modules -->
+    <link href="//cdn.quilljs.com/1.3.6/quill.core.css" rel="stylesheet">
+
+    <!-- Main Quill library -->
+    <script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper" id="navbar">
+                <div class="content-wrapper">
+                    <a href="../../index.html" class="brand-logo" id="logo">[Notebook]</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"
+                            id="sidenav-icon">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <!-- dark mode toggle -->
+                        <li>
+                            <div class="switch dark-mode-toggle" id="dark-mode-toggle">
+                                <label id="dark-mode-label">
+                                    <img id="sun" class="darkmode-icon" src="../../icons/sun.svg" alt="">
+                                    <input id="dark-mode-input" type="checkbox">
+                                    <span class="lever"></span>
+                                    <img id="moon" class="darkmode-icon" src="../../icons/nights_stay-white-18dp.svg"
+                                        alt="">
+                                </label>
+                            </div>
+                        </li>
+                        <!-- dark mode toggle end  -->
+                        <!-- Main nav -->
+                        <li class="tooltipped" data-position="bottom" data-tooltip="Projects"><a
+                                href="../../projects/"><img src="../../icons/rocket.svg" alt="" class="icon"></a></li>
+                        <li class="tooltipped" data-position="bottom" data-tooltip="Courses"><a
+                                href="../index.html"><img src="../../icons/knowledge_color.svg" alt="" class="icon"></a>
+                        </li>
+                        <li class="tooltipped" data-position="bottom" data-tooltip="Blog"><a href="../../blog/"><img
+                                    src="../../icons/blogger.svg" alt="" class="icon"></a>
+                        </li>
+                        <li><a class="waves-effect btn red darken-2" href="../../contact.html">Contact</a></li>
+                    </ul>
+                    <!-- Main nav end -->
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Sidenav -->
+    <ul class="sidenav" id="mobile-demo">
+        <li><a class="waves-effect waves-light btn indigo darken-2" href="../../projects/">Projects 🚀</a></li>
+        <li><a class="waves-effect waves-light btn green darken-2" href="../index.html">Courses 📚</a></li>
+        <li><a class="waves-effect waves-light btn orange darken-2" href="../../blog/">Blog 👨‍💻</a></li>
+        <li><a class="waves-effect waves-light btn red darken-2 " href="../../contact.html">Contact 📧</a></li>
+        <li><a class="waves-effect waves-light center sidenav-close" href="#!" id="close-sidenav-btn">Close</a></li>
+        <!-- Dark mode toggle for mobile -->
+        <li>
+            <div class="switch dark-mode-toggle center" id="mobile-dark-mode-toggle">
+                <label id="dark-mode-label">
+                    Light
+                    <input id="mobile-dark-mode-input" type="checkbox">
+                    <span class="lever"></span>
+                    Dark
+                </label>
+            </div>
+        </li>
+        <!-- darkmode mobile toggle end  -->
+    </ul>
+    <!-- Navbar end -->
+    <!-- Load darkmode before other scripts -->
+    <script src="../../js/darkmode.js"></script>
+    <!-- Main body content -->
+    <!-- Page layout -->
+    <div class="row" id="main">
+        <div class="col s12 hide-on-large-only">
+            <ul id="dropdown" class="dropdown-content">
+                <li><a href="#">Close</a></li>
+                <li><a href="index.html">IN2150</a></li>
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">ICT, work and organizing</a></li>
+                <li><a href="information_infrastructures.html">Information Infrastructures</a></li>
+            </ul>
+            <a class="btn dropdown-trigger grey darken-4" href="" data-target="dropdown">Subjects<i
+                    class="material-icons right">arrow_drop_down</i></a>
+        </div>
+        <!-- Side course navigation -->
+        <div class="col s12 m2 l2 hide-on-med-and-down">
+            <div class="collection" id="course-nav">
+                <a href="index.html" class="collection-item">IN2150</a>
+                <a href="#" class="collection-item">Introduction</a>
+                <a href="#" class="collection-item">ICT, work and organizing</a>
+                <a href="#" class="collection-item">Information Infrastructures</a>
+                <a href="information_infrastructures.html" class="collection-item active">Infrastructures and complexity</a>
+            </div>
+        </div>
+        <!-- Middle content -->
+        <div class="col s12 m12 l8">
+            <div class="container flow-text" id="middle-content">
+                <div class="content" id="content">
+                    <h1>Information Infrastructures</h1>
+                    <div class="section scrollspy">
+                        <h4>Heterogenous Information Infrastructure</h4>
+                        <hr>
+                        A collection of diverse IT systems can be heterogenous in different ways:
+                        <ul>
+                            <li>- Data format: syntactic heterogenity</li>
+                            <li>- Meaning of data: semantic heterogenity (some concepts have different eanings (content) in different systems)</li>
+                            <li>- Data structure: structural heterogenity</li>
+                            <li>- Programming languages</li>
+                            <li>- System heterogenity: e.g. hardware, operating system</li>
+                        </ul>
+                        <p>Reason: The collection of systems has 'grown' over time
+                            <br>E.g. organization has changed
+                        </p>
+                    </div>
+                    <div class="section scrollspy">
+                        <h4>Legacy Systems</h4>
+                        <hr>
+                        <p>
+                            Old systems/technology/applications that are still in use because:
+                        </p>
+                        <ul>
+                            <li>It contains important and valuable data</li>
+                            <li>It works fine</li>
+                            <li>It is too costly to change, it must work 24/7</li>
+                        </ul>
+                        <h5>What is the problem with old systems?</h5>
+                        <ul>
+                            <li>Missing documentation/knowledge of system</li>
+                            <li>Not flexible: one cannot add new data fields, new user area, adapt to an organization's evolving work processes etc.</li>
+                            <li>Costly to mantain</li>
+                            <li>Usually designed as "silos" of information</li>
+                        </ul>
+                        <h5>How to live with legacy systems?</h5>
+                        <p>
+                            Different strategies can be drastic (ripe and replace) or evolutionary (enhance and evolve)
+                        </p>
+                        <br><b>Evolutionary - enhance and evolve</b>
+                        <ul>
+                            <li>Code refactoring - restructuring existing code by changing the 'inside' structure but not its external behavior. This requires software archeology and reverse engineering</li>
+                            <li>'Wrapping'</li>
+                            <li>Build a datawarehouse on top</li>
+                            <li>'Migrating'</li>
+                        </ul>
+                        <div class="section scrollspy">
+                            <h5>Standard systems</h5>
+                            <p>Standard software packages</p>
+                            <ul>
+                                <li>Enterprise resource planning (ERP) systems</li>
+                                <li>E.g. SAP suite</li>
+                            </ul>
+                            <p>Some challenges</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Create the quill editor container -->
+                <!-- Rmove comment below for Quill -->
+                <!--
+                <div id="editor">
+                </div>
+                <a class="waves-effect btn right" onclick="addHtml()">Add content</a>
+                <script>
+                    var toolbarOptions = [
+                        ["bold", "italic", "underline", "strike"],
+                        ["blockquote", "code-block"]
+                    ];
+                    var quill = new Quill('#editor', {
+                        modules: {
+                        },
+                        theme: 'snow'
+                    });
+                    function addHtml() {
+                        const content = document.getElementById("content");
+                        content.innerHTML += quill.root.innerHTML;
+                    }
+                    function logHtmlContent() {
+                        window.delta = quill.getContents();
+                        console.log(delta);
+                        quill.setContents(window.delta);
+                    }
+                </script> -->
+            </div>
+        </div>
+        <!-- Right side content -->
+        <div class="col m2 l2 hide-on-med-and-down">
+            <ul class="section table-of-contents">
+                <h6>Table of contents</h6>
+                <li><a href="#cost-function">Cost function</a></li>
+                <li><a href="#">rangaha</a></li>
+                <li><a href="#">asd</a></li>
+            </ul>
+        </div>
+        <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+        <!-- Add your site or application content here -->
+        <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script>
+            window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')
+        </script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga = function () {
+                ga.q.push(arguments)
+            };
+            ga.q = [];
+            ga.l = +new Date;
+            ga('create', 'UA-XXXXX-Y', 'auto');
+            ga('set', 'transport', 'beacon');
+            ga('send', 'pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async></script>
+        <!-- Materialize js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="../../js/plugins.js"></script>
+        <script src="../../js/main.js"></script>
+</body>
+
+</html>
