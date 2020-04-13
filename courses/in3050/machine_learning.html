@@ -143,6 +143,55 @@
                     <b>Error</b>: E, a function that computes the inaccuracies of the network as a function of the outputs <b>y</b> and targets <b>t</b>.
                     </p>
                 </div>
+                <div class="section scrollspy">
+                    <h4>Training, Testing and Validation Sets</h4>
+                    <hr>
+                    <p>We need three sets of data:</p>
+                    <ul>
+                        <li>
+                            The <b>training</b> set to train the algorithm
+                        </li>
+                        <li>
+                            The <b>validation</b> set to keep track of well it is doing as it learns
+                        </li>
+                        <li>
+                            The <b>test</b> set to produce the results.
+                        </li>
+                    </ul>
+                </div>
+                <div class="section scrollspy">
+                    <h4>The Confusion Matrix</h4>
+                    <hr>
+                    <p>The confusion matrix is suitable for classification problems. For regression problems things are more complicated because the results are continuous, and so the most common thing is to instead use the sum-of-squares error.
+                        <br><br>
+                        The confusion matrix is simple. We make a square matrix that contains all the possible classes in both the horizontal and vertical directions. We list the classes along the top of a table as the predicted outputs, and then down the left-hand side as the targets.
+                    </p>
+                    <div class="img-section">
+                        <img src="img/confusion_matrix.png" alt="">
+                    </div>
+                    <h5>True Positive:</h5>
+                    <p>You predicted positive and it's true</p>
+                    <h5>True Negative:</h5>
+                    <p>You predicted negative and it's true</p>
+                    <h5>False Positive:</h5>
+                    <p>You predicted positive and it's false</p>
+                    <h5>False Negative:</h5>
+                    <p>You predicted positive and it's false</p>
+                    <h5>Recall</h5>
+                    <div class="img-section">
+                        <img src="img/recall.png" alt="" class="white">
+                    </div>
+                    <div class="img-description">
+                        How much we predicted correctly out of all the positive classes.
+                    </div>
+                    <h5>Precision</h5>
+                    <div class="img-section">
+                        <img src="img/precision.png" alt="" class="white">
+                    </div>
+                    <div class="img-description">
+                        How many are actually positive.
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Right side content -->
