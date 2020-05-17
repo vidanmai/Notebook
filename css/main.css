@@ -29,6 +29,7 @@
   --background-color: rgb(230, 230, 230);
   --nav-color: #FFF;
   --card-color: #212121;
+  --border-color: lightgrey;
   --card-text-color: white;
   --logo-color: #43a047;
   --sidenav-background: rgba(255, 255, 255, 0.75);
@@ -49,6 +50,7 @@
    --background-color: #121212;
    --nav-color: #FFF;
    --card-color: #212121;
+   --border-color: #303030;
    --card-text-color: #FFF;
    --logo-color: #FFF;
    --sidenav-background: rgba(12, 12, 12, 0.856);
@@ -103,6 +105,7 @@ body {
 nav {
   background-color: var(--section-background);
   box-shadow: none !important;
+  border-bottom: 1px solid var(--border-color);
 }
 
 nav i {
@@ -341,7 +344,7 @@ label {
 }
 
 #main {
-  margin-top: 5vh;
+  margin-top: 3vh;
 }
 
 #course-nav {
@@ -357,6 +360,12 @@ label {
   padding-right: 5rem;
   padding-top: 1rem;
   padding-bottom: 4rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+#middle-content a {
+  font-size: 1.5em;
 }
 
 .container ul li {

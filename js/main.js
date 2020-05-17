@@ -1,5 +1,3 @@
-console.log("hello world");
-
 //Find out if darkMode is enabled on local computer
 //let darkMode = localStorage.getItem('darkMode');
 

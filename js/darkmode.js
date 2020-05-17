@@ -59,7 +59,7 @@ function darkModeListener() {
             sun.style.display = "inline";
             console.log("Enabled lightmode");
         }
-        makeNavTransparent();
+        //makeNavTransparent();
     });
 
 
@@ -76,7 +76,7 @@ function darkModeListener() {
             sun.style.display = "inline";
             console.log("Enabled lightmode");
         }
-        makeNavTransparent();
+        //makeNavTransparent();
     });
 }
 
@@ -94,10 +94,6 @@ function makeNavTransparent() {
             nav.style.borderBottom = "1px solid lightgrey";
             nav.style.transition = "background .2s";
         }
-    } else {
-        //Transparent nav at top
-        nav.style.backgroundColor = "transparent";
-        nav.style.border = "0";
     }
 }
 
