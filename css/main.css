@@ -142,7 +142,7 @@ nav ul li .icon {
   font-family: 'IBM Plex Sans',
   sans-serif;
   letter-spacing: 5px;
-  color: var(--logo-color);
+  color: var(--green-color);
   text-decoration: none;
 }
 
@@ -366,6 +366,10 @@ label {
 
 #middle-content a {
   font-size: 1.5em;
+}
+
+#middle-content a:hover {
+  text-decoration: underline;
 }
 
 .container ul li {
@@ -834,7 +838,7 @@ textarea {
 @media (min-width: 1024px) and (max-width: 1280px) {
 
   #main {
-    margin-top: 5vh;
+    margin-top: 2vh;
   }
 
   #middle-content {
@@ -865,8 +869,9 @@ textarea {
 @media (min-width: 768px) and (max-width: 1023px) {
 
   #main {
-    margin-top: 2vh;
+    margin-top: 0;
   }
+
   #logo {
     font-size: 1.2rem;
   }
@@ -882,6 +887,7 @@ textarea {
     padding-left: 3rem;
     padding-right: 3rem;
     padding-bottom: 4rem;
+    margin-top: 1vh;
   }
 
   .content-box {
@@ -900,10 +906,15 @@ textarea {
 */
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  #main {
+    margin: 0;
+  }
+
   #middle-content {
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 4rem;
+    margin: 0;
   }
 
   .card img {
@@ -932,7 +943,9 @@ textarea {
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-
+  #main {
+    margin: 0;
+  }
   #middle-content {
     width: 100%;
     padding: 1rem;
@@ -968,6 +981,9 @@ textarea {
   body {
     background-color: var(--section-background);
   }
+  #main {
+    margin: 0;
+  }
   #middle-content {
     width: 100%;
     padding: 1rem;
@@ -975,6 +991,14 @@ textarea {
     padding-bottom: 4rem;
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0.5rem;
+  }
 }
 
 /* For long vertical screens*/
